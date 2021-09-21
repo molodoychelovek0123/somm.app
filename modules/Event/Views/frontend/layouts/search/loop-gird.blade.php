@@ -56,6 +56,11 @@
             </span>
         </div>
     @endif
+    @if(!empty($date = $row->duration))
+        <div class="start-time">
+            {{ __("Event date: :date",['date'=>$date]) }}
+        </div>
+    @endif
     @if(!empty($time = $row->start_time))
         <div class="start-time">
             {{ __("Start Time: :time",['time'=>$time]) }}
@@ -63,7 +68,7 @@
     @endif
     <div class="info">
         <div class="duration">
-            {{duration_format($row->duration)}}
+
         </div>
         <div class="g-price">
             <div class="prefix">

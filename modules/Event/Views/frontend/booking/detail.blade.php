@@ -40,10 +40,10 @@
                     </li>
                     @if($booking->getMeta("booking_type") == "ticket")
                         <li>
-                            <div class="label">{{__('Duration:')}}</div>
+                            <div class="label">{{__('Date:')}}</div>
                             <div class="val">
                                 @php $duration = $booking->getMeta("duration") @endphp
-                                {{duration_format($duration)}}
+                                {{display_date($duration)}}
                             </div>
                         </li>
                     @endif

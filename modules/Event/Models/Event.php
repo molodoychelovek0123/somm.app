@@ -1039,7 +1039,7 @@ class Event extends Bookable
 
     public function dataForApi($forSingle = false){
         $data = parent::dataForApi($forSingle);
-        $data['duration'] = duration_format($this->duration,true);
+        $data['duration'] = display_date($this->duration);
         $data['start_time'] = $this->start_time;
         if($forSingle){
             $data['review_score'] = $this->getReviewDataAttribute();

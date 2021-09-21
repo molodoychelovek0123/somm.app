@@ -40,11 +40,11 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         @if( $row->getBookingType()== "ticket")
-                            <label class="control-label">{{__("Duration (hour)")}}</label>
+                            <label class="control-label">{{__("Event Date")}}</label>
                         @else
                             <label class="control-label">{{__("Duration")}}</label>
                         @endif
-                        <input type="number" name="duration" class="form-control" value="{{$row->duration}}" placeholder="{{__("Ex: 3")}}">
+                        <input type="date" name="duration" class="form-control" value="{{$row->duration}}">
                     </div>
                 </div>
                 <div class="col-lg-6">

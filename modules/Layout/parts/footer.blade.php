@@ -8,7 +8,7 @@
 							<div class="col-xs-12  col-md-7 col-lg-6">
 								<div class="media ">
 									<div class="media-left hidden-xs">
-										<i class="icofont-glass"></i>
+										<i class="icofont-mail"></i>
 									</div>
 									<div class="media-body">
 										<h4 class="media-heading">{{__("Get Updates & More")}}</h4>

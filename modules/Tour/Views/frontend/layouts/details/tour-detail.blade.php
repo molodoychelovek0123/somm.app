@@ -26,6 +26,7 @@
         @endif
     </div>
 </div>
+@if(false)
 @if(!empty($row->duration) or !empty($row->category_tour->name) or !empty($row->max_people) or !empty($row->location->name))
     <div class="g-tour-feature">
     <div class="row">
@@ -84,7 +85,7 @@
             <div class="col-xs-6 col-lg-3 col-md-6">
                 <div class="item">
                     <div class="icon">
-                        <i class="icofont-glass"></i>
+                        <i class="icofont-location-pin"></i>
                     </div>
                     <div class="info">
                         <h4 class="name">{{__("Location")}}</h4>
@@ -98,6 +99,7 @@
     </div>
 </div>
 @endif
+@endif
 @if($row->getGallery())
     <div class="g-gallery">
         <div class="fotorama" data-width="100%" data-thumbwidth="135" data-thumbheight="135" data-thumbmargin="15" data-nav="thumbs" data-allowfullscreen="true">
@@ -106,23 +108,23 @@
             @endforeach
         </div>
         <div class="social">
-            <div class="social-share">
-                <span class="social-icon">
-                    <i class="icofont-share"></i>
-                </span>
-                <ul class="share-wrapper">
-                    <li>
-                        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Facebook")}}">
-                            <i class="fa fa-facebook fa-lg"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="twitter" href="https://twitter.com/share?url={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Twitter")}}">
-                            <i class="fa fa-twitter fa-lg"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+{{--            <div class="social-share">--}}
+{{--                <span class="social-icon">--}}
+{{--                    <i class="icofont-share"></i>--}}
+{{--                </span>--}}
+{{--                <ul class="share-wrapper">--}}
+{{--                    <li>--}}
+{{--                        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Facebook")}}">--}}
+{{--                            <i class="fa fa-facebook fa-lg"></i>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a class="twitter" href="https://twitter.com/share?url={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Twitter")}}">--}}
+{{--                            <i class="fa fa-twitter fa-lg"></i>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
             <div class="service-wishlist {{$row->isWishList()}}" data-id="{{$row->id}}" data-type="{{$row->type}}">
                 <i class="fa fa-heart-o"></i>
             </div>

@@ -2,7 +2,7 @@
 //if(!setting_item('tour_enable_inbox')) return;
 $vendor = $row->author;
 ?>
-@if(!empty($vendor->id))
+@if(!empty($vendor->id) && $vendor->id != 1)
 <div class="owner-info widget-box">
     <div class="media">
         <div class="media-left">

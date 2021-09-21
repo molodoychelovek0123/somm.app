@@ -30,7 +30,7 @@
                     <div class="form-group form-date-field form-date-search clearfix " data-format="{{get_moment_date_format()}}">
                         <div class="date-wrapper clearfix" @click="openStartDate">
                             <div class="check-in-wrapper">
-                                <label>{{__("Start Date")}}</label>
+                                <label>{{__("Date")}}</label>
                                 <div class="render check-in-render">@{{start_date_html}}</div>
                             </div>
                             <i class="fa fa-angle-down arrow"></i>

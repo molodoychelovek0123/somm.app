@@ -38,15 +38,15 @@
 
                     </div>
                     <div class="tab-pane fade" id="nav-tour-pricing">
-                        <div class="panel">
+                        <div class="panel" style="display:none;">
                             <div class="panel-title"><strong>{{__('Default State')}}</strong></div>
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <select name="default_state" class="custom-select">
-                                                <option value="1" @if(old('default_state',$row->default_state ?? 0) == 1) selected @endif>{{__("Always available")}}</option>
-                                                <option value="0" @if(old('default_state',$row->default_state ?? 0) == 0) selected @endif>{{__("Only available on specific dates")}}</option>
+                                                <option value="1" >{{__("Always available")}}</option>
+                                                <option value="0" selected >{{__("Only available on specific dates")}}</option>
                                             </select>
                                         </div>
                                     </div>

@@ -70,12 +70,12 @@
                 <div class="col-xs-6 col-lg-3 col-md-6">
                     <div class="item">
                         <div class="icon">
-                            <i class="icofont-infinite"></i>
+                            <i class="icofont-calendar"></i>
                         </div>
                         <div class="info">
-                            <h4 class="name">{{__("Duration")}}</h4>
+                            <h4 class="name">{{__("Date")}}</h4>
                             <p class="value">
-                                {{duration_format($row->duration)}}
+                                {{display_date($row->duration)}}
                             </p>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                 <div class="col-xs-6 col-lg-3 col-md-6">
                     <div class="item">
                         <div class="icon">
-                            <i class="icofont-glass"></i>
+                            <i class="icofont-location-pin"></i>
                         </div>
                         <div class="info">
                             <h4 class="name">{{__("Location")}}</h4>

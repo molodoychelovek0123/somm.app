@@ -1,5 +1,5 @@
 <div class="form-group-item">
-    <label class="control-label">{{__('Itinerary')}}</label>
+    <label class="control-label">{{__('Slider')}}</label>
     <div class="g-items-header">
         <div class="row">
             <div class="col-md-2 text-left">{{__("Image")}}</div>

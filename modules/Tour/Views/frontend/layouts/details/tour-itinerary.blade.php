@@ -1,6 +1,6 @@
 @if($translation->itinerary)
     <div class="g-itinerary">
-        <h3> {{__("Itinerary")}} </h3>
+{{--        <h3> {{__("Itinerary")}} </h3>--}}
         <div class="list-item owl-carousel">
             @foreach($translation->itinerary as $item)
                 <div class="item" style="background-image: url('{{ !empty($item['image_id']) ? get_file_url($item['image_id'],"full") : "" }}')">
