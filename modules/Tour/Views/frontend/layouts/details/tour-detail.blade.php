@@ -84,7 +84,7 @@
             <div class="col-xs-6 col-lg-3 col-md-6">
                 <div class="item">
                     <div class="icon">
-                        <i class="icofont-island-alt"></i>
+                        <i class="icofont-glass"></i>
                     </div>
                     <div class="info">
                         <h4 class="name">{{__("Location")}}</h4>

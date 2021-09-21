@@ -642,7 +642,7 @@ class General extends Seeder
                     'group' => "general",
                 ], [
                     'name'  => 'email_from_name',
-                    'val'   => 'Booking Core',
+                    'val'   => 'Somm app',
                     'group' => "general",
                 ], [
                     'name'  => 'email_from_address',
@@ -672,12 +672,12 @@ class General extends Seeder
                 ],
                 [
                     'name'  => 'footer_text_left',
-                    'val'   => 'Copyright © 2019 by Booking Core',
+                    'val'   => 'Copyright © 2019 by Somm app',
                     'group' => "general",
                 ],
                 [
                     'name'  => 'footer_text_right',
-                    'val'   => 'Booking Core',
+                    'val'   => 'Somm app',
                     'group' => "general",
                 ],
                 [
@@ -702,7 +702,7 @@ class General extends Seeder
                 ],
                 [
                     'name' => 'page_contact_desc',
-                    'val' => "<!DOCTYPE html><html><head></head><body><h3>Booking Core</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
+                    'val' => "<!DOCTYPE html><html><head></head><body><h3>Somm app</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
                     'group' => "general",
                 ],
                 [
@@ -733,7 +733,7 @@ class General extends Seeder
         // Setting Home Page
         DB::table('core_templates')->insert([
             'title'       => 'Home Page',
-            'content'     => '[{"type":"form_search_all_service","name":"Form Search All Service","model":{"service_types":["hotel","space","tour","car","event","flight"],"title":"Hi There!","sub_title":"Where would you like to go?","bg_image":'.$banner_home_mix.',"style":"carousel","list_slider":[{"_active":true,"bg_image":'.$banner_home_mix_2.'},{"_active":true,"bg_image":'.$banner_home_mix.'}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"offer_block","name":"Offer Block","model":{"list_item":[{"_active":false,"title":"Special Offers","desc":"Find Your Perfect Hotels Get the best<br>\nprices on 20,000+ properties<br>\nthe best prices on","background_image":'.$image_home_mix_1.',"link_title":"See Deals","link_more":"#","featured_text":"HOLIDAY SALE"},{"_active":true,"title":"Newsletters","desc":"Join for free and get our <br>\ntailored newsletters full of <br>\nhot travel deals.","background_image":'.$image_home_mix_2.',"link_title":"Sign Up","link_more":"/register","featured_icon":"icofont-email"},{"_active":true,"title":"Travel Tips","desc":"Tips from our travel experts to <br>\nmake your next trip even<br>\nbetter.","background_image":'.$image_home_mix_3.',"link_title":"Sign Up","link_more":"/register","featured_text":null,"featured_icon":"icofont-island-alt"}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_hotel","name":"Hotel: List Items","model":{"title":"Bestseller Listing","desc":"Hotel highly rated for thoughtful design","number":4,"style":"normal","location_id":"","order":"id","order_by":"asc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["space","hotel","tour"],"title":"Top Destinations","desc":"It is a long established fact that a reader","number":6,"layout":"style_4","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_tours","name":"Tour: List Items","model":{"title":"Our best promotion tours","number":6,"style":"box_shadow","category_id":"","location_id":"","order":"id","order_by":"asc","is_featured":"","desc":"Most popular destinations"},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_space","name":"Space: List Items","model":{"title":"Rental Listing","desc":"Homes highly rated for thoughtful design","number":4,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Car Trending","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true},{"type":"list_event","name":"Event: List Items","model":{"title":"Classical Music Event ","desc":"Lorem Ipsum is simply dummy text of the printing and typesetting industry","number":4,"style":"normal","location_id":"","order":"","order_by":"","is_featured":""},"component":"RegularBlock","open":true},{"type": "list_news", "name": "News: List Items", "model": {"title": "Read the latest from blog", "desc": "Contrary to popular belief", "number": 6, "category_id": null, "order": "id", "order_by": "asc"}, "component": "RegularBlock", "open": true, "is_container": false},{"type":"call_to_action","name":"Call To Action","model":{"title":"Know your city?","sub_title":"Join 2000+ locals & 1200+ contributors from 3000 cities","link_title":"Become Local Expert","link_more":"#"},"component":"RegularBlock","open":true,"is_container":false},{"type":"testimonial","name":"List Testimonial","model":{"title":"Our happy clients","list_item":[{"_active":false,"name":"Eva Hicks","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. ","number_star":5,"avatar":' . $avatar . '},{"_active":false,"name":"Donald Wolf","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. ","number_star":6,"avatar":' . $avatar_2 . '},{"_active":false,"name":"Charlie Harrington","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.","number_star":5,"avatar":' . $avatar_3 . '}]},"component":"RegularBlock","open":true,"is_container":false}]',
+            'content'     => '[{"type":"form_search_all_service","name":"Form Search All Service","model":{"service_types":["hotel","space","tour","car","event","flight"],"title":"Hi There!","sub_title":"Where would you like to go?","bg_image":'.$banner_home_mix.',"style":"carousel","list_slider":[{"_active":true,"bg_image":'.$banner_home_mix_2.'},{"_active":true,"bg_image":'.$banner_home_mix.'}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"offer_block","name":"Offer Block","model":{"list_item":[{"_active":false,"title":"Special Offers","desc":"Find Your Perfect Hotels Get the best<br>\nprices on 20,000+ properties<br>\nthe best prices on","background_image":'.$image_home_mix_1.',"link_title":"See Deals","link_more":"#","featured_text":"HOLIDAY SALE"},{"_active":true,"title":"Newsletters","desc":"Join for free and get our <br>\ntailored newsletters full of <br>\nhot travel deals.","background_image":'.$image_home_mix_2.',"link_title":"Sign Up","link_more":"/register","featured_icon":"icofont-email"},{"_active":true,"title":"Travel Tips","desc":"Tips from our travel experts to <br>\nmake your next trip even<br>\nbetter.","background_image":'.$image_home_mix_3.',"link_title":"Sign Up","link_more":"/register","featured_text":null,"featured_icon":"icofont-glass"}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_hotel","name":"Hotel: List Items","model":{"title":"Bestseller Listing","desc":"Hotel highly rated for thoughtful design","number":4,"style":"normal","location_id":"","order":"id","order_by":"asc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["space","hotel","tour"],"title":"Top Destinations","desc":"It is a long established fact that a reader","number":6,"layout":"style_4","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_tours","name":"Tour: List Items","model":{"title":"Our best promotion tours","number":6,"style":"box_shadow","category_id":"","location_id":"","order":"id","order_by":"asc","is_featured":"","desc":"Most popular destinations"},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_space","name":"Space: List Items","model":{"title":"Rental Listing","desc":"Homes highly rated for thoughtful design","number":4,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Car Trending","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true},{"type":"list_event","name":"Event: List Items","model":{"title":"Classical Music Event ","desc":"Lorem Ipsum is simply dummy text of the printing and typesetting industry","number":4,"style":"normal","location_id":"","order":"","order_by":"","is_featured":""},"component":"RegularBlock","open":true},{"type": "list_news", "name": "News: List Items", "model": {"title": "Read the latest from blog", "desc": "Contrary to popular belief", "number": 6, "category_id": null, "order": "id", "order_by": "asc"}, "component": "RegularBlock", "open": true, "is_container": false},{"type":"call_to_action","name":"Call To Action","model":{"title":"Know your city?","sub_title":"Join 2000+ locals & 1200+ contributors from 3000 cities","link_title":"Become Local Expert","link_more":"#"},"component":"RegularBlock","open":true,"is_container":false},{"type":"testimonial","name":"List Testimonial","model":{"title":"Our happy clients","list_item":[{"_active":false,"name":"Eva Hicks","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. ","number_star":5,"avatar":' . $avatar . '},{"_active":false,"name":"Donald Wolf","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. ","number_star":6,"avatar":' . $avatar_2 . '},{"_active":false,"name":"Charlie Harrington","desc":"Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.","number_star":5,"avatar":' . $avatar_3 . '}]},"component":"RegularBlock","open":true,"is_container":false}]',
             'create_user' => '1',
             'created_at'  => date("Y-m-d H:i:s")
         ]);
@@ -741,7 +741,7 @@ class General extends Seeder
             'origin_id'   => '1',
             'locale'      => 'ja',
             'title'       => 'Home Page',
-            'content'     => '[{"type":"form_search_all_service","name":"Form Search All Service","model":{"service_types":["hotel","space","tour","car"],"title":"こんにちは！","sub_title":"どこに行きたい？","bg_image":'.$banner_home_mix.'},"component":"RegularBlock","open":true,"is_container":false},{"type":"offer_block","name":"Offer Block","model":{"list_item":[{"_active":true,"title":"特別オファー","desc":"最適なホテルを探す<br>\n20,000以上の物件の価格<br>\n上の最高の価格","background_image":'.$image_home_mix_1.',"link_title":"取引","link_more":"#","featured_text":"ホリデーセール"},{"_active":true,"title":"ニュースレター","desc":"無料で参加して取得 <br>\nに合わせたニュースレター<br>\nホット旅行情報。","background_image":'.$image_home_mix_2.',"link_title":"サインアップ","link_more":"/register","featured_icon":"icofont-email"},{"_active":true,"title":"旅行のヒント","desc":"旅行の専門家からのヒント <br>\nあなたの次の<br>\nより良い。","background_image":'.$image_home_mix_3.',"link_title":"サインアップ","link_more":"/register","featured_text":null,"featured_icon":"icofont-island-alt"}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_hotel","name":"Hotel: List Items","model":{"title":"ベストセラーリスト","desc":"思慮深いデザインで高い評価を得ているホテル","number":4,"style":"normal","location_id":"","order":"id","order_by":"asc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["space","hotel","tour"],"title":"人気の目的地","desc":"読者が","number":6,"layout":"style_4","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_tours","name":"Tour: List Items","model":{"title":"最高のプロモーションツアー","number":6,"style":"box_shadow","category_id":"","location_id":"","order":"id","order_by":"asc","is_featured":"","desc":"最も人気のある目的地"},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_space","name":"Space: List Items","model":{"title":"賃貸物件","desc":"思慮深いデザインで高い評価を受けている家","number":4,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Car Trending","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true},{"type": "list_news", "name": "News: List Items", "model": {"title": "Read the latest from blog", "desc": "Contrary to popular belief", "number": 6, "category_id": null, "order": "id", "order_by": "asc"}, "component": "RegularBlock", "open": true, "is_container": false},{"type":"call_to_action","name":"Call To Action","model":{"title":"あなたの街を知？","sub_title":"3000以上の都市から2000人以上の地元民と","link_title":"ローカルエ","link_more":"#"},"component":"RegularBlock","open":true,"is_container":false},{"type":"testimonial","name":"List Testimonial","model":{"title":"私たちの幸せなクライアント","list_item":[{"_active":false,"name":"Eva Hicks","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":5,"avatar":' . $avatar . '},{"_active":false,"name":"Donald Wolf","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":6,"avatar":' . $avatar_2 . '},{"_active":true,"name":"Charlie Harrington","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":5,"avatar":' . $avatar_3 . '}]},"component":"RegularBlock","open":true,"is_container":false}]',
+            'content'     => '[{"type":"form_search_all_service","name":"Form Search All Service","model":{"service_types":["hotel","space","tour","car"],"title":"こんにちは！","sub_title":"どこに行きたい？","bg_image":'.$banner_home_mix.'},"component":"RegularBlock","open":true,"is_container":false},{"type":"offer_block","name":"Offer Block","model":{"list_item":[{"_active":true,"title":"特別オファー","desc":"最適なホテルを探す<br>\n20,000以上の物件の価格<br>\n上の最高の価格","background_image":'.$image_home_mix_1.',"link_title":"取引","link_more":"#","featured_text":"ホリデーセール"},{"_active":true,"title":"ニュースレター","desc":"無料で参加して取得 <br>\nに合わせたニュースレター<br>\nホット旅行情報。","background_image":'.$image_home_mix_2.',"link_title":"サインアップ","link_more":"/register","featured_icon":"icofont-email"},{"_active":true,"title":"旅行のヒント","desc":"旅行の専門家からのヒント <br>\nあなたの次の<br>\nより良い。","background_image":'.$image_home_mix_3.',"link_title":"サインアップ","link_more":"/register","featured_text":null,"featured_icon":"icofont-glass"}]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_hotel","name":"Hotel: List Items","model":{"title":"ベストセラーリスト","desc":"思慮深いデザインで高い評価を得ているホテル","number":4,"style":"normal","location_id":"","order":"id","order_by":"asc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["space","hotel","tour"],"title":"人気の目的地","desc":"読者が","number":6,"layout":"style_4","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_tours","name":"Tour: List Items","model":{"title":"最高のプロモーションツアー","number":6,"style":"box_shadow","category_id":"","location_id":"","order":"id","order_by":"asc","is_featured":"","desc":"最も人気のある目的地"},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_space","name":"Space: List Items","model":{"title":"賃貸物件","desc":"思慮深いデザインで高い評価を受けている家","number":4,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Car Trending","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true},{"type": "list_news", "name": "News: List Items", "model": {"title": "Read the latest from blog", "desc": "Contrary to popular belief", "number": 6, "category_id": null, "order": "id", "order_by": "asc"}, "component": "RegularBlock", "open": true, "is_container": false},{"type":"call_to_action","name":"Call To Action","model":{"title":"あなたの街を知？","sub_title":"3000以上の都市から2000人以上の地元民と","link_title":"ローカルエ","link_more":"#"},"component":"RegularBlock","open":true,"is_container":false},{"type":"testimonial","name":"List Testimonial","model":{"title":"私たちの幸せなクライアント","list_item":[{"_active":false,"name":"Eva Hicks","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":5,"avatar":' . $avatar . '},{"_active":false,"name":"Donald Wolf","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":6,"avatar":' . $avatar_2 . '},{"_active":true,"name":"Charlie Harrington","desc":"右ずへやん間申ゃ投法けゃイ仙一もと政情ルた食的て代下ずせに丈律ルラモト聞探チト棋90績ム的社ず置攻景リフノケ内兼唱堅ゃフぼ。場ルアハ美","number_star":5,"avatar":' . $avatar_3 . '}]},"component":"RegularBlock","open":true,"is_container":false}]',
             'create_user' => '1',
             'created_at'  => date("Y-m-d H:i:s")
         ]);
@@ -995,7 +995,7 @@ class General extends Seeder
                 ],
                 [
                     'name'  => 'page_contact_desc',
-                    'val'   => "<!DOCTYPE html><html><head></head><body><h3>Booking Core</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
+                    'val'   => "<!DOCTYPE html><html><head></head><body><h3>Somm app</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
                     'group' => "general",
                 ],
                 [
@@ -1072,7 +1072,7 @@ class General extends Seeder
                 ],
                 [
                     'name'  => "site_title",
-                    'val'   => "Booking Core",
+                    'val'   => "Somm app",
                     'group' => "general",
                 ],
             ]);
@@ -1085,17 +1085,17 @@ class General extends Seeder
                 ],
                 [
                     'name'  => "site_title",
-                    'val'   => "Booking Core",
+                    'val'   => "Somm app",
                     'group' => "general",
                 ],
                 [
                     'name'  => "email_header",
-                    'val'   => '<h1 class="site-title" style="text-align: center">Booking Core</h1>',
+                    'val'   => '<h1 class="site-title" style="text-align: center">Somm app</h1>',
                     'group' => "general",
                 ],
                 [
                     'name'  => "email_footer",
-                    'val'   => '<p class="" style="text-align: center">&copy; 2019 Booking Core. All rights reserved</p>',
+                    'val'   => '<p class="" style="text-align: center">&copy; 2019 Somm app. All rights reserved</p>',
                     'group' => "general",
                 ],
                 [
@@ -1107,9 +1107,9 @@ class General extends Seeder
                     'name'  => "user_content_email_registered",
                     'val'   => '<h1 style="text-align: center">Welcome!</h1>
                     <h3>Hello [first_name] [last_name]</h3>
-                    <p>Thank you for signing up with Booking Core! We hope you enjoy your time with us.</p>
+                    <p>Thank you for signing up with Somm app! We hope you enjoy your time with us.</p>
                     <p>Regards,</p>
-                    <p>Booking Core</p>',
+                    <p>Somm app</p>',
                     'group' => "user",
                 ],
                 [
@@ -1124,7 +1124,7 @@ class General extends Seeder
                     <p>Full name: [first_name] [last_name]</p>
                     <p>Email: [email]</p>
                     <p>Regards,</p>
-                    <p>Booking Core</p>',
+                    <p>Somm app</p>',
                     'group' => "user",
                 ],
                 [
@@ -1136,7 +1136,7 @@ class General extends Seeder
                     <p>If you did not request a password reset, no further action is required.
                     </p>
                     <p>Regards,</p>
-                    <p>Booking Core</p>',
+                    <p>Somm app</p>',
                     'group' => "user",
                 ]
             ]);
@@ -1260,7 +1260,7 @@ class General extends Seeder
                             <p>Content:[note]</p>
                             <p>Service:[service_link]</p>
                             <p>Regards,</p>
-                            <p>Booking Core</p>
+                            <p>Somm app</p>
                             </div>",
                 'group' => "enquiry",
             ],
@@ -1280,7 +1280,7 @@ class General extends Seeder
                             <p>Service:[service_link]</p>
                             <p>Vendor:[vendor_link]</p>
                             <p>Regards,</p>
-                            <p>Booking Core</p>",
+                            <p>Somm app</p>",
                 'group' => "enquiry",
             ],
         ]);
@@ -1321,9 +1321,9 @@ class General extends Seeder
                 'name'  => 'vendor_content_email_registered',
                 'val'   => '<h1 style="text-align: center;">Welcome!</h1>
                             <h3>Hello [first_name] [last_name]</h3>
-                            <p>Thank you for signing up with Booking Core! We hope you enjoy your time with us.</p>
+                            <p>Thank you for signing up with Somm app! We hope you enjoy your time with us.</p>
                             <p>Regards,</p>
-                            <p>Booking Core</p>',
+                            <p>Somm app</p>',
                 'group' => 'vendor'
             ]);
         DB::table('core_settings')->insert([
@@ -1340,7 +1340,7 @@ class General extends Seeder
                             <p>Registration date: [created_at]</p>
                             <p>You can approved the request here: [link_approved]</p>
                             <p>Regards,</p>
-                            <p>Booking Core</p>',
+                            <p>Somm app</p>',
                 'group' => 'vendor'
             ]);
         //            Cookie agreement
@@ -1370,7 +1370,7 @@ class General extends Seeder
                 ],
                 [
                     'name'  => "invoice_company_info",
-                    'val'   => "<p><span style=\"font-size: 14pt;\"><strong>Booking Core Company</strong></span></p>
+                    'val'   => "<p><span style=\"font-size: 14pt;\"><strong>Somm app Company</strong></span></p>
                                 <p>Ha Noi, Viet Nam</p>
                                 <p>www.bookingcore.org</p>",
                     'group' => "booking",

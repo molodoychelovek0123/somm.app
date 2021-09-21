@@ -42,7 +42,7 @@ class ModuleProvider extends ModuleServiceProvider
                 "position"=>40,
                 'url'        => 'admin/module/class',
                 'title'      => __("Class"),
-                'icon'       => 'icon ion-md-umbrella',
+                'icon'       => 'icon ion-md-wine',
                 'permission' => 'tour_view',
                 'children'   => [
                     'tour_view'=>[

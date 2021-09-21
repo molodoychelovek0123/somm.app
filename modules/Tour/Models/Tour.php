@@ -936,7 +936,7 @@ class Tour extends Bookable
 
     public static function getServiceIconFeatured()
     {
-        return "icofont-island-alt";
+        return "icofont-glass";
     }
 
     public static function isEnable()

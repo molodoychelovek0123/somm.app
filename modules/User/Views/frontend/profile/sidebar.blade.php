@@ -9,7 +9,7 @@
     </div>
     <div class="text-center mb-1"><span class="role-name  badge badge-primary">{{$user->role_name}}</span></div>
     <h3 class="display-name">{{$user->getDisplayName()}}
-        @if($user->is_verified)
+        @if($user->is_verified && setting_item('user_disable_verification_feature'))
             <img data-toggle="tooltip" data-placement="top" src="{{asset('icon/ico-vefified-1.svg')}}" title="{{__("Verified")}}" alt="ico-vefified-1">
         @else
             <img data-toggle="tooltip" data-placement="top" src="{{asset('icon/ico-not-vefified-1.svg')}}" title="{{__("Not verified")}}" alt="ico-vefified-1">
