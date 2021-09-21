@@ -16,7 +16,7 @@ class SettingClass extends BaseSettingsClass
         return [
             [
                 'id'   => 'tour',
-                'title' => __("Tour Settings"),
+                'title' => __("Class Settings"),
                 'position'=>20,
                 'view'=>"Tour::admin.settings.tour",
                 "keys"=>[

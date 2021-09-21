@@ -60,7 +60,7 @@ class ManageTourController extends FrontendController
             'rows'        => $list_tour->paginate(5),
             'breadcrumbs' => [
                 [
-                    'name' => __('Manage Tours'),
+                    'name' => __('Manage Classes'),
                     'url'  => route('tour.vendor.index'),
                 ],
                 [
@@ -68,7 +68,7 @@ class ManageTourController extends FrontendController
                     'class' => 'active'
                 ],
             ],
-            'page_title'  => __("Manage Tours"),
+            'page_title'  => __("Manage Classes"),
         ];
         return view('Tour::frontend.manageTour.index', $data);
     }
@@ -83,7 +83,7 @@ class ManageTourController extends FrontendController
             'recovery'           => 1,
             'breadcrumbs' => [
                 [
-                    'name' => __('Manage Tours'),
+                    'name' => __('Manage Classes'),
                     'url'  => route('tour.vendor.index'),
                 ],
                 [
@@ -91,7 +91,7 @@ class ManageTourController extends FrontendController
                     'class' => 'active'
                 ],
             ],
-            'page_title'  => __("Recovery Tours"),
+            'page_title'  => __("Recovery Classes"),
         ];
         return view('Tour::frontend.manageTour.index', $data);
     }
@@ -104,7 +104,7 @@ class ManageTourController extends FrontendController
         if(!empty($query)){
             $query->restore();
         }
-        return redirect(route('tour.vendor.recovery'))->with('success', __('Restore tour success!'));
+        return redirect(route('tour.vendor.recovery'))->with('success', __('Restore class success!'));
     }
 
     public function createTour(Request $request)
@@ -121,7 +121,7 @@ class ManageTourController extends FrontendController
 
             'breadcrumbs'   => [
                 [
-                    'name' => __('Manage Tours'),
+                    'name' => __('Manage Classes'),
                     'url'  => route('tour.vendor.index'),
                 ],
                 [
@@ -129,7 +129,7 @@ class ManageTourController extends FrontendController
                     'class' => 'active'
                 ],
             ],
-            'page_title'    => __("Create Tours"),
+            'page_title'    => __("Create Classes"),
         ];
         return view('Tour::frontend.manageTour.detail', $data);
     }
@@ -141,7 +141,7 @@ class ManageTourController extends FrontendController
         $row = $this->tourClass::where("create_user", $user_id);
         $row = $row->find($id);
         if (empty($row)) {
-            return redirect(route('tour.vendor.index'))->with('warning', __('Tour not found!'));
+            return redirect(route('tour.vendor.index'))->with('warning', __('Class not found!'));
         }
         $translation = $row->translateOrOrigin($request->query('lang'));
         $data = [
@@ -154,7 +154,7 @@ class ManageTourController extends FrontendController
             "selected_terms" => $row->tour_term->pluck('term_id'),
             'breadcrumbs'    => [
                 [
-                    'name' => __('Manage Tours'),
+                    'name' => __('Manage Classes'),
                     'url'  => route('tour.vendor.index'),
                 ],
                 [
@@ -162,7 +162,7 @@ class ManageTourController extends FrontendController
                     'class' => 'active'
                 ],
             ],
-            'page_title'     => __("Edit Tours"),
+            'page_title'     => __("Edit Classes"),
         ];
         return view('Tour::frontend.manageTour.detail', $data);
     }
@@ -224,10 +224,10 @@ class ManageTourController extends FrontendController
                 $row->saveMeta($request);
             }
             if ($id > 0) {
-                return back()->with('success', __('Tour updated'));
+                return back()->with('success', __('Class updated'));
             } else {
                 event(new CreatedServicesEvent($row));
-                return redirect(route('tour.vendor.edit', ['id' => $row->id]))->with('success', __('Tour created'));
+                return redirect(route('tour.vendor.edit', ['id' => $row->id]))->with('success', __('Class created'));
             }
         }
     }
@@ -263,7 +263,7 @@ class ManageTourController extends FrontendController
                 $query->delete();
             }
         }
-        return redirect(route('tour.vendor.index'))->with('success', __('Delete tour success!'));
+        return redirect(route('tour.vendor.index'))->with('success', __('Delete Class success!'));
     }
 
     public function bulkEditTour($id, Request $request)
@@ -321,7 +321,7 @@ class ManageTourController extends FrontendController
         $row = $this->tourClass::where("create_user", $user_id);
         $row = $row->find($id);
         if (empty($row)) {
-            return redirect(route('tour.vendor.index'))->with('warning', __('Tour not found!'));
+            return redirect(route('tour.vendor.index'))->with('warning', __('Classes not found!'));
         };
         try {
             $clone = $row->replicate();
@@ -350,7 +350,7 @@ class ManageTourController extends FrontendController
                     }
                 }
             }
-            return redirect()->back()->with('success', __('Tour clone was successful'));
+            return redirect()->back()->with('success', __('Class clone was successful'));
         } catch (\Exception $exception) {
             $clone->delete();
             return redirect()->back()->with('warning', __($exception->getMessage()));

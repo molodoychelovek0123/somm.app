@@ -2,7 +2,7 @@
 
 @section ('content')
     <h2 class="title-bar no-border-bottom">
-        {{ __("Availability Tours") }}
+        {{ __("Availability Classes") }}
     </h2>
     <div class="language-navigation">
         <div class="panel-body">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-right">
                     @if($rows->total() > 0)
-                        <span class="count-string">{{ __("Showing :from - :to of :total tours",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
+                        <span class="count-string">{{ __("Showing :from - :to of :total classes",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
                     @endif
                 </div>
             </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
     @else
-        <div class="alert alert-warning">{{__("No tours found")}}</div>
+        <div class="alert alert-warning">{{__("No clases found")}}</div>
     @endif
     <div class="d-flex justify-content-center">
         {{$rows->appends($request->query())->links()}}

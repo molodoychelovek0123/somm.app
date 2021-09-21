@@ -12,7 +12,7 @@ class CategoryController extends AdminController
     public function __construct()
     {
         parent::__construct();
-        $this->setActiveMenu('admin/module/tour');
+        $this->setActiveMenu('admin/module/class');
         $this->tourCategoryClass = TourCategory::class;
     }
 
@@ -30,8 +30,8 @@ class CategoryController extends AdminController
             'translation'    => new TourCategoryTranslation(),
             'breadcrumbs' => [
                 [
-                    'name' => __('Tour'),
-                    'url'  => 'admin/module/tour'
+                    'name' => __('Class'),
+                    'url'  => 'admin/module/class'
                 ],
                 [
                     'name'  => __('Category'),
@@ -57,8 +57,8 @@ class CategoryController extends AdminController
             'parents'     => $this->tourCategoryClass::get()->toTree(),
             'breadcrumbs' => [
                 [
-                    'name' => __('Tour'),
-                    'url'  => 'admin/module/tour'
+                    'name' => __('Class'),
+                    'url'  => 'admin/module/class'
                 ],
                 [
                     'name'  => __('Category'),

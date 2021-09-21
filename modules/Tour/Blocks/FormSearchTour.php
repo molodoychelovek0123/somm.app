@@ -73,13 +73,13 @@ class FormSearchTour extends BaseBlock
                     ]
                 ]
             ],
-            'category'=>__("Service Tour")
+            'category'=>__("Service Class")
         ]);
     }
 
     public function getName()
     {
-        return __('Tour: Form Search');
+        return __('Class: Form Search');
     }
 
     public function content($model = [])

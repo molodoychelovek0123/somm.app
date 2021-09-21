@@ -1,9 +1,9 @@
 <div class="panel">
-    <div class="panel-title"><strong>{{__("Tour Content")}}</strong></div>
+    <div class="panel-title"><strong>{{__("Classes Content")}}</strong></div>
     <div class="panel-body">
         <div class="form-group">
             <label>{{__("Title")}}</label>
-            <input type="text" value="{!! clean($translation->title) !!}" placeholder="{{__("Tour title")}}" name="title" class="form-control">
+            <input type="text" value="{!! clean($translation->title) !!}" placeholder="{{__("Class title")}}" name="title" class="form-control">
         </div>
         <div class="form-group">
             <label class="control-label">{{__("Content")}}</label>
@@ -70,14 +70,14 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="control-label">{{__("Tour Min People")}}</label>
-                        <input type="text" name="min_people" class="form-control" value="{{$row->min_people}}" placeholder="{{__("Tour Min People")}}">
+                        <label class="control-label">{{__("Min People")}}</label>
+                        <input type="text" name="min_people" class="form-control" value="{{$row->min_people}}" placeholder="{{__("Min People")}}">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="control-label">{{__("Tour Max People")}}</label>
-                        <input type="text" name="max_people" class="form-control" value="{{$row->max_people}}" placeholder="{{__("Tour Max People")}}">
+                        <label class="control-label">{{__("Max People")}}</label>
+                        <input type="text" name="max_people" class="form-control" value="{{$row->max_people}}" placeholder="{{__("Max People")}}">
                     </div>
                 </div>
             </div>

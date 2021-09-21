@@ -52,7 +52,7 @@
                         <i class="icofont-beach"></i>
                     </div>
                     <div class="info">
-                        <h4 class="name">{{__("Tour Type")}}</h4>
+                        <h4 class="name">{{__("Class Type")}}</h4>
                         <p class="value">
                             {{$cat->name ?? ''}}
                         </p>
@@ -146,7 +146,7 @@
 @if($row->map_lat && $row->map_lng)
 <div class="g-location">
     <div class="location-title">
-        <h3>{{__("Tour Location")}}</h3>
+        <h3>{{__("Class Location")}}</h3>
         @if($translation->address)
             <div class="address">
                 <i class="icofont-location-arrow"></i>

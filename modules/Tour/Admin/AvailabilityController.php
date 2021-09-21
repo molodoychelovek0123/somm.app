@@ -19,7 +19,7 @@ class AvailabilityController extends \Modules\Tour\Controllers\AvailabilityContr
     public function __construct()
     {
         parent::__construct();
-        $this->setActiveMenu('admin/module/tour');
+        $this->setActiveMenu('admin/module/class');
         $this->middleware('dashboard');
     }
 

@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb20">
-            <h1 class="title-bar">{{__("Tour Categories")}}</h1>
+            <h1 class="title-bar">{{__("Class Categories")}}</h1>
         </div>
         @include('admin.message')
         <div class="row">
@@ -24,7 +24,7 @@
                 <div class="filter-div d-flex justify-content-between ">
                     <div class="col-left">
                         @if(!empty($rows))
-                            <form method="post" action="{{url('admin/module/tour/category/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
+                            <form method="post" action="{{url('admin/module/class/category/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
                                 {{csrf_field()}}
                                 <select name="action" class="form-control">
                                     <option value="">{{__(" Bulk Action ")}}</option>
@@ -37,7 +37,7 @@
                         @endif
                     </div>
                     <div class="col-left">
-                        <form method="get" action="{{url('/admin/module/tour/category')}} " class="filter-form filter-form-right d-flex justify-content-end" role="search">
+                        <form method="get" action="{{url('/admin/module/class/category')}} " class="filter-form filter-form-right d-flex justify-content-end" role="search">
                             <input type="text" name="s" value="{{ Request()->s }}" class="form-control" placeholder="{{__("Search by name")}}">
                             <button class="btn-info btn btn-icon btn_search" id="search-submit" type="submit">{{__('Search')}}</button>
                         </form>
@@ -65,7 +65,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         <td class="title">
-                                            <a href="{{url('admin/module/tour/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
+                                            <a href="{{url('admin/module/class/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
                                         </td>
                                         <td class="d-none d-md-block">{{$row->slug}}</td>
                                         <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>

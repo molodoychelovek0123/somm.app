@@ -59,14 +59,14 @@ class ListTours extends BaseBlock
                     'label'   => __('Filter by Category'),
                     'select2' => [
                         'ajax'  => [
-                            'url'      => url('/admin/module/tour/category/getForSelect2'),
+                            'url'      => url('/admin/module/class/category/getForSelect2'),
                             'dataType' => 'json'
                         ],
                         'width' => '100%',
                         'allowClear' => 'true',
                         'placeholder' => __('-- Select --')
                     ],
-                    'pre_selected'=>url('/admin/module/tour/category/getForSelect2?pre_selected=1')
+                    'pre_selected'=>url('/admin/module/class/category/getForSelect2?pre_selected=1')
                 ],
                 [
                     'id'      => 'location_id',
@@ -120,13 +120,13 @@ class ListTours extends BaseBlock
                     'default'=>true
                 ]
             ],
-            'category'=>__("Service Tour")
+            'category'=>__("Service Class")
         ]);
     }
 
     public function getName()
     {
-        return __('Tour: List Items');
+        return __('Class: List Items');
     }
 
     public function content($model = [])

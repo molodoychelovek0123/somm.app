@@ -72,7 +72,7 @@ class Tour extends Bookable
     ];
     protected $slugField                          = 'slug';
     protected $slugFromField                      = 'title';
-    protected $seo_type                           = 'tour';
+    protected $seo_type                           = 'class';
     /**
      * The attributes that should be casted to native types.
      *
@@ -90,7 +90,7 @@ class Tour extends Bookable
 
     public static function getModelName()
     {
-        return __("Tour");
+        return __("Class");
     }
 
     protected $bookingClass;
@@ -130,7 +130,7 @@ class Tour extends Bookable
      */
     static public function getSeoMetaForPageList()
     {
-        $meta['seo_title'] = __("Search for Tours");
+        $meta['seo_title'] = __("Search for Classes");
         if (!empty($title = setting_item_with_lang("tour_page_list_seo_title", false))) {
             $meta['seo_title'] = $title;
         } else if (!empty($title = setting_item_with_lang("tour_page_search_title"))) {
@@ -218,7 +218,7 @@ class Tour extends Bookable
 
     public function getEditUrl()
     {
-        return url('admin/module/tour/edit/' . $this->id);
+        return url('admin/module/class/edit/' . $this->id);
     }
 
     public function getDiscountPercentAttribute()
@@ -537,10 +537,10 @@ class Tour extends Bookable
         if (strtotime($start_date) < strtotime(date('Y-m-d 00:00:00'))) {
             return $this->sendError(__("Your selected dates are not valid"));
         }
-        
+
         // Validate Date and Booking
         if(!$this->isAvailableInRanges($start_date)){
-            return $this->sendError(__("This tour is not available at selected dates"));
+            return $this->sendError(__("This class is not available at selected dates"));
         }
 
         if ($meta) {
@@ -549,7 +549,7 @@ class Tour extends Bookable
                 $open_hours = $meta->open_hours;
                 $nDate = date('N', strtotime($start_date));
                 if (!isset($open_hours[$nDate]) or empty($open_hours[$nDate]['enable'])) {
-                    return $this->sendError(__("This tour is not open on your selected day"));
+                    return $this->sendError(__("This class is not open on your selected day"));
                 }
             }
         }
@@ -841,9 +841,9 @@ class Tour extends Bookable
         if (empty($number))
             return false;
         if ($number > 1) {
-            return __(":number Tours", ['number' => $number]);
+            return __(":number Classes", ['number' => $number]);
         }
-        return __(":number Tour", ['number' => $number]);
+        return __(":number Class", ['number' => $number]);
     }
 
     public function getReviewList(){
@@ -1181,7 +1181,7 @@ class Tour extends Bookable
                 "max" => "5",
             ],
             [
-                "title"    => __("Tour Type"),
+                "title"    => __("Class Type"),
                 "field"    => "cat_id",
                 "position" => "3",
                 "data" => $category->map(function($category){

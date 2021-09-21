@@ -37,14 +37,14 @@ class BoxCategoryTour extends BaseBlock
                             'label'   => __('Select Category'),
                             'select2' => [
                                 'ajax'  => [
-                                    'url'      => url('/admin/module/tour/category/getForSelect2'),
+                                    'url'      => url('/admin/module/class/category/getForSelect2'),
                                     'dataType' => 'json'
                                 ],
                                 'width' => '100%',
                                 'allowClear' => 'true',
                                 'placeholder' => __('-- Select --')
                             ],
-                            'pre_selected'=>url('/admin/module/tour/category/getForSelect2?pre_selected=1')
+                            'pre_selected'=>url('/admin/module/class/category/getForSelect2?pre_selected=1')
                         ],
                         [
                             'id'    => 'image_id',
@@ -54,13 +54,13 @@ class BoxCategoryTour extends BaseBlock
                     ]
                 ],
             ],
-            'category'=>__("Service Tour")
+            'category'=>__("Service Class")
         ]);
     }
 
     public function getName()
     {
-        return __('Tour: Box Category');
+        return __('Class: Box Category');
     }
 
     public function content($model = [])

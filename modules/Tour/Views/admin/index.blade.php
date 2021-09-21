@@ -2,10 +2,10 @@
 @section('content')
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb20">
-            <h1 class="title-bar">{{!empty($recovery) ? __('Recovery') : __("All Tour")}}</h1>
+            <h1 class="title-bar">{{!empty($recovery) ? __('Recovery') : __("All Class")}}</h1>
             <div class="title-actions">
                 @if(empty($recovery))
-                <a href="{{route('tour.admin.create')}}" class="btn btn-primary">{{__("Add new tour")}}</a>
+                <a href="{{route('tour.admin.create')}}" class="btn btn-primary">{{__("Add new class")}}</a>
                 @endif
             </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="filter-div d-flex justify-content-between ">
             <div class="col-left">
                 @if(!empty($rows))
-                    <form method="post" action="{{url('admin/module/tour/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
+                    <form method="post" action="{{url('admin/module/class/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
                         {{csrf_field()}}
                         <select name="action" class="form-control">
                             <option value="">{{__(" Bulk Actions ")}}</option>
@@ -94,7 +94,7 @@
                                         <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}">
                                         </td>
                                         <td class="title">
-                                            <a href="{{url('admin/module/tour/edit/'.$row->id)}}">{{$row->title}}</a>
+                                            <a href="{{url('admin/module/class/edit/'.$row->id)}}">{{$row->title}}</a>
                                         </td>
                                         <td>{{$row->location->name ?? ''}}</td>
                                         <td>

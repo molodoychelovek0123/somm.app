@@ -40,43 +40,43 @@ class ModuleProvider extends ModuleServiceProvider
         if(Tour::isEnable()){
             $res['tour'] = [
                 "position"=>40,
-                'url'        => 'admin/module/tour',
-                'title'      => __("Tour"),
+                'url'        => 'admin/module/class',
+                'title'      => __("Class"),
                 'icon'       => 'icon ion-md-umbrella',
                 'permission' => 'tour_view',
                 'children'   => [
                     'tour_view'=>[
-                        'url'        => 'admin/module/tour',
-                        'title'      => __('All Tours'),
+                        'url'        => 'admin/module/class',
+                        'title'      => __('All Classes'),
                         'permission' => 'tour_view',
                     ],
                     'tour_create'=>[
-                        'url'        => 'admin/module/tour/create',
-                        'title'      => __("Add Tour"),
+                        'url'        => 'admin/module/class/create',
+                        'title'      => __("Add Class"),
                         'permission' => 'tour_create',
                     ],
                     'tour_category'=>[
-                        'url'        => 'admin/module/tour/category',
+                        'url'        => 'admin/module/class/category',
                         'title'      => __('Categories'),
                         'permission' => 'tour_manage_others',
                     ],
                     'tour_attribute'=>[
-                        'url'        => 'admin/module/tour/attribute',
+                        'url'        => 'admin/module/class/attribute',
                         'title'      => __('Attributes'),
                         'permission' => 'tour_manage_attributes',
                     ],
                     'tour_availability'=>[
-                        'url'        => 'admin/module/tour/availability',
+                        'url'        => 'admin/module/class/availability',
                         'title'      => __('Availability'),
                         'permission' => 'tour_create',
                     ],
                     'tour_booking'=>[
-                        'url'        => 'admin/module/tour/booking',
+                        'url'        => 'admin/module/class/booking',
                         'title'      => __('Booking Calendar'),
                         'permission' => 'tour_create',
                     ],
                     'recovery'=>[
-                        'url'        => 'admin/module/tour/recovery',
+                        'url'        => 'admin/module/class/recovery',
                         'title'      => __('Recovery'),
                         'permission' => 'tour_view',
                     ],
@@ -93,18 +93,18 @@ class ModuleProvider extends ModuleServiceProvider
         if(Tour::isEnable()){
             $res['tour'] = [
                 'url'   => route('tour.vendor.index'),
-                'title'      => __("Manage Tour"),
+                'title'      => __("Manage Class"),
                 'icon'       => Tour::getServiceIconFeatured(),
                 'permission' => 'tour_view',
                 'position'   => 31,
                 'children'   => [
                     [
                         'url'   => route('tour.vendor.index'),
-                        'title' => __("All Tours"),
+                        'title' => __("All Classes"),
                     ],
                     [
                         'url'        => route('tour.vendor.create'),
-                        'title'      => __("Add Tour"),
+                        'title'      => __("Add Class"),
                         'permission' => 'tour_create',
                     ],
                     [
@@ -130,13 +130,13 @@ class ModuleProvider extends ModuleServiceProvider
         return [
             [
                 'class' => \Modules\Tour\Models\Tour::class,
-                'name'  => __("Tour"),
+                'name'  => __("Class"),
                 'items' => \Modules\Tour\Models\Tour::searchForMenu(),
                 'position'=>20
             ],
             [
                 'class' => \Modules\Tour\Models\TourCategory::class,
-                'name'  => __("Tour Category"),
+                'name'  => __("Class Category"),
                 'items' => \Modules\Tour\Models\TourCategory::searchForMenu(),
                 'position'=>30
             ],
