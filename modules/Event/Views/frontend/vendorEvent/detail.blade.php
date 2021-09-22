@@ -45,8 +45,8 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <select name="default_state" class="custom-select">
-                                                <option value="1" >{{__("Always available")}}</option>
-                                                <option value="0" selected >{{__("Only available on specific dates")}}</option>
+                                                <option value="1" selected >{{__("Always available")}}</option>
+                                                <option value="0"  >{{__("Only available on specific dates")}}</option>
                                             </select>
                                         </div>
                                     </div>
