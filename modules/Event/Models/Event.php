@@ -1101,18 +1101,20 @@ class Event extends Bookable
 
     public function getBookingTimeSlot()
     {
-        $this->start_time = $this->start_time ?? "00:00";
-        $this->end_time = $this->end_time ?? "23:00";
-        $this->duration = $this->duration ?? "1";
-        $this->duration_unit = $this->duration_unit ?? "hour";
-        $type_time = MINUTE_IN_SECONDS;
-        if ($this->duration_unit == "hour") {
-            $type_time = HOUR_IN_SECONDS;
-        }
+        // $this->start_time = $this->start_time ?? "00:00";
+        // $this->end_time = $this->end_time ?? "23:00";
+        // $this->duration = $this->duration ?? "1";
+        // $this->duration_unit = $this->duration_unit ?? "hour";
+        // $type_time = MINUTE_IN_SECONDS;
+        // if ($this->duration_unit == "hour") {
+        //     $type_time = HOUR_IN_SECONDS;
+        // }
+        // $time_slots = [];
+        // for ($i = strtotime($this->start_time); $i < strtotime($this->end_time); $i += ($type_time * $this->duration)) {
+        //     $time_slots[] = date('H:i', $i);
+        // }
         $time_slots = [];
-        for ($i = strtotime($this->start_time); $i < strtotime($this->end_time); $i += ($type_time * $this->duration)) {
-            $time_slots[] = date('H:i', $i);
-        }
+        $time_slots[0] = date('H:i', 0);
         return $time_slots;
     }
 }

@@ -27,7 +27,7 @@
             </div>
             <div class="form-book" :class="{'d-none':enquiry_type!='book'}">
                 <div class="form-content">
-                    <div class="form-group form-date-field form-date-search clearfix " data-format="{{get_moment_date_format()}}">
+                    <div class="form-group form-date-field form-date-search clearfix " @if($row->duration && $row->duration != "0000-00-00") style="display: none" @endif data-format="{{get_moment_date_format()}}">
                         <div class="date-wrapper clearfix" @click="openStartDate">
                             <div class="check-in-wrapper">
                                 <label>{{__("Start Date")}}</label>
@@ -35,7 +35,7 @@
                             </div>
                             <i class="fa fa-angle-down arrow"></i>
                         </div>
-                        <input type="text" class="start_date" ref="start_date" style="height: 1px; visibility: hidden">
+                        <input type="text" class="start_date" ref="start_date" value="@if($row->duration && $row->duration != "0000-00-00") {{display_date($row->duration)}} @endif" style="height: 1px; visibility: hidden">
                     </div>
                     <div class="" v-if="ticket_types">
                         <div class="form-group form-guest-search" v-for="(type,index) in ticket_types">

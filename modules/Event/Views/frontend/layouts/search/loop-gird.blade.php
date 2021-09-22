@@ -56,7 +56,7 @@
             </span>
         </div>
     @endif
-    @if(!empty($date = $row->duration))
+    @if($row->duration && $row->duration != "0000-00-00")
         <div class="start-time">
             {{ __("Event date: :date",['date'=>$date]) }}
         </div>

@@ -66,7 +66,7 @@
                     </div>
                 </div>
             @endif
-            @if($row->duration)
+            @if($row->duration && $row->duration != "0000-00-00")
                 <div class="col-xs-6 col-lg-3 col-md-6">
                     <div class="item">
                         <div class="icon">
