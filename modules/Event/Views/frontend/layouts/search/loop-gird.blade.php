@@ -58,7 +58,7 @@
     @endif
     @if($row->duration && $row->duration != "0000-00-00")
         <div class="start-time">
-            {{ __("Event date: :date",['date'=>$date]) }}
+            {{ __("Event date: :date",['date'=>$row->duration]) }}
         </div>
     @endif
     @if(!empty($time = $row->start_time))
