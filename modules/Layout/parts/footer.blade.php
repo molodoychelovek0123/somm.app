@@ -137,12 +137,3 @@
 @yield('footer')
 
 @php \App\Helpers\ReCaptchaEngine::scripts() @endphp
-
-
-
-
-<ul>
-    <li><a href="/user/profile">Account</a></li>
-    <li><a href="https://sommtable.com/pages/about-us">Contact</a></li>
-    <li><a href="/page/privacy-policy">Privacy Policy</a></li>
-</ul>
