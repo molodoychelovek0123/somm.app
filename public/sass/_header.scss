@@ -1,6 +1,6 @@
 .bravo_wrap {
     .bravo_topbar {
-        background: #1A2B48;
+        background: #5a6451;
         padding: 15px 0;
         @media(max-width: 768px){
             display: none;
@@ -108,7 +108,7 @@
 
             .dropdown-menu {
                 min-width: auto;
-                background: #1A2B48;
+                background: #5a6451;
             }
 
             .dropdown-menu li {
@@ -178,7 +178,7 @@
                                 font-size: 14px;
                                 font-weight: 600;
                                 text-transform: uppercase;
-                                color: #1A2B48;
+                                color: #5a6451;
                                 transition: all 0.3s;
                                 @media(max-width: 1366px){
                                     padding: 35px 15px;
@@ -285,7 +285,7 @@
                     -o-transition: all 0.3s;
                     transition: all 0.3s;
                     &.active{
-                        background: #1a2b48;
+                        background: #5a6451;
                         color: #fff;
                         border-radius: 5px;
                     }
@@ -325,7 +325,7 @@
                             }
                             .avatar-text{
                                 align-items: center;
-                                background: #1A2B48;
+                                background: #5a6451;
                                 justify-content: center;
                                 font-size: 20px;
                                 color: #fff;
@@ -349,7 +349,7 @@
                     top: 52px !important;
                     border-radius: 0;
                     transform: none !important;
-                    background: #1A2B48;
+                    background: #5a6451;
                     li {
                         padding-left: 0;
                         padding-right: 0;
@@ -387,7 +387,7 @@
             -o-transition: all 0.3s;
             transition: all 0.3s;
             z-index: 20;
-            border-right: solid 1px #1a2b48;
+            border-right: solid 1px #5a6451;
             @media(max-width: 1023px){
                 display: block !important;
             }
@@ -407,7 +407,7 @@
                     line-height: 40px;
                 }
                 .avatar{
-                    background: #1a2b48;
+                    background: #5a6451;
                     color: #fff;
                     text-align: center;
                     padding: 20px 0;
@@ -429,7 +429,7 @@
                     li{
                         margin-bottom: 10px;
                         a{
-                            color: #1a2b48;
+                            color: #5a6451;
                             text-decoration: none;
                             i{
                                 min-width: 15px;
@@ -502,7 +502,7 @@
                     list-style: none;
                     > li{
                         a{
-                            color: #1a2b48;
+                            color: #5a6451;
                             border-bottom: solid 1px #e6e6e6;
                             display: block;
                             -webkit-transition: all 0.3s;
@@ -522,7 +522,7 @@
                                 }
                             }
                             &:hover{
-                                border-bottom: solid 1px #1a2b48;
+                                border-bottom: solid 1px #5a6451;
                             }
                         }
                         > .children-menu{
@@ -545,7 +545,7 @@
                         }
                         &.active{
                             > a{
-                                border-bottom: dashed 1px #1a2b48;
+                                border-bottom: dashed 1px #5a6451;
                                 > .caret{
                                     &:before{
                                         content: "\f107";
@@ -594,7 +594,7 @@
                                     background: #fff;
                                     li{
                                         a{
-                                            color: #1A2B48;
+                                            color: #5a6451;
                                             font-weight: bold;
                                             &:hover {
                                                 background: #dcdcdc;
@@ -647,9 +647,9 @@
         &.header-transparent{
             .bravo_wrap{
                 .bravo_header {
-                    background: #1a2b48;
+                    background: #5a6451;
                     .content{
-                        background: #1a2b48;
+                        background: #5a6451;
                         .header-right .bravo-more-menu {
                             color: #fff;
                         }

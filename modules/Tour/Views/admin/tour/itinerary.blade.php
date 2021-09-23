@@ -18,7 +18,7 @@
                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('itinerary['.$key.'][image_id]',$itinerary['image_id'] ?? '') !!}
                         </div>
                         <div class="col-md-4">
-                            <input type="text" name="itinerary[{{$key}}][title]" class="form-control" value="{{$itinerary['title'] ?? ""}}" placeholder="{{__('Title: Day 1')}}">
+                            <input type="text" name="itinerary[{{$key}}][title]" class="form-control" value="{{$itinerary['title'] ?? ""}}" placeholder="{{__('Title: Winery')}}">
                             <input type="text" name="itinerary[{{$key}}][desc]" class="form-control" value="{{$itinerary['desc'] ?? ""}}" placeholder="{{__('Desc: TP. HCM City')}}">
                         </div>
                         <div class="col-md-5">

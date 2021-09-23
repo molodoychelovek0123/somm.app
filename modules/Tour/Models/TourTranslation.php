@@ -16,6 +16,8 @@ class TourTranslation extends BaseModel
         'exclude',
         'itinerary',
         'surrounding',
+        'host_name',
+        'host_description',
     ];
     protected $slugField     = false;
     protected $seo_type = 'tour_translation';

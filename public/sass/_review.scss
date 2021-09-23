@@ -2,7 +2,7 @@
     .title-review{
         margin-bottom: 20px;
         font-size: 24px;
-        color: #1A2B48;
+        color: #5a6451;
         font-weight: 500;
         @media(max-width: 990px){
             font-size: 1.5rem;
@@ -16,7 +16,7 @@
         padding: 30px;
         border: 1px solid #EAEEF3;
         border-radius: 5px;
-        color: #1A2B48;
+        color: #5a6451;
         font-weight: 500;
         @media(max-width: 766px){
             padding: 10px;
@@ -44,7 +44,7 @@
             .review-score-text {
                 font-weight: 400;
                 font-size: 24px;
-                color: #1A2B48;
+                color: #5a6451;
             }
             .review-score-base {
                 margin-top: 10px;
@@ -75,7 +75,7 @@
                     position: relative;
                     display: block;
                     padding-left: 0;
-                    color: #1A2B48;
+                    color: #5a6451;
                     font-size: 14px;
                     font-weight: 400;
                     @media(max-width: 766px){
@@ -147,7 +147,7 @@
                             height: 50px;
                         }
                         .avatar-text{
-                            background: #1a2b47;
+                            background: #5a6451;
                             color: #fff;
                             border-radius: 50%;
                             width: 50px;
@@ -163,7 +163,7 @@
                     .media-body{
                         .media-heading {
                             font-size: 14px;
-                            color: #1A2B48;
+                            color: #5a6451;
                             font-weight: 600;
                             margin-bottom: 5px;
                             margin-top: 5px;
@@ -247,17 +247,17 @@
                         border-radius: 3px;
                         cursor: pointer;
                         &.current {
-                            border: 1px solid #1a2b47 !important;
+                            border: 1px solid #5a6451 !important;
                             border-radius: 3px;
                             background: transparent !important;
-                            color: #1a2b47 !important;
+                            color: #5a6451 !important;
                         }
                     }
                     &.active {
                         a, span {
-                            border: 1px solid #1a2b47 !important;
+                            border: 1px solid #5a6451 !important;
                             background: transparent !important;
-                            color: #1a2b47 !important;
+                            color: #5a6451 !important;
                         }
                     }
                 }
@@ -273,7 +273,7 @@
     .review-form{
         margin: 15px 0;
         .title-form{
-            color: #1A2B48 !important;
+            color: #5a6451 !important;
             font-size: 16px;
             font-weight: 500;
         }

@@ -30,8 +30,21 @@
 @if(!empty($row->duration) or !empty($row->category_tour->name) or !empty($row->max_people) or !empty($row->location->name))
     <div class="g-tour-feature">
     <div class="row">
+                    <div class="col-xs-6 col-lg-4 col-md-6">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="icofont-heart-beat"></i>
+                            </div>
+                            <div class="info">
+                                <h4 class="name">{{__("Wishlist")}}</h4>
+                                <p class="value">
+                                    {{ __("People interest: :number",['number'=>$row->getNumberWishlistInService()]) }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
         @if($row->duration)
-            <div class="col-xs-6 col-lg-3 col-md-6">
+            <div class="col-xs-6 col-lg-4 col-md-6">
                 <div class="item">
                     <div class="icon">
                         <i class="icofont-wall-clock"></i>
@@ -45,44 +58,10 @@
                 </div>
             </div>
         @endif
-        @if(!empty($row->category_tour->name))
-            @php $cat =  $row->category_tour->translateOrOrigin(app()->getLocale()) @endphp
-            <div class="col-xs-6 col-lg-3 col-md-6">
-                <div class="item">
-                    <div class="icon">
-                        <i class="icofont-beach"></i>
-                    </div>
-                    <div class="info">
-                        <h4 class="name">{{__("Class Type")}}</h4>
-                        <p class="value">
-                            {{$cat->name ?? ''}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        @endif
-        @if($row->max_people)
-            <div class="col-xs-6 col-lg-3 col-md-6">
-                <div class="item">
-                    <div class="icon">
-                        <i class="icofont-travelling"></i>
-                    </div>
-                    <div class="info">
-                        <h4 class="name">{{__("Group Size")}}</h4>
-                        <p class="value">
-                            @if($row->max_people > 1)
-                                {{ __(":number persons",array('number'=>$row->max_people)) }}
-                            @else
-                                {{ __(":number person",array('number'=>$row->max_people)) }}
-                            @endif
-                        </p>
-                    </div>
-                </div>
-            </div>
-        @endif
+
         @if(!empty($row->location->name))
                 @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
-            <div class="col-xs-6 col-lg-3 col-md-6">
+            <div class="col-xs-6 col-lg-4 col-md-6">
                 <div class="item">
                     <div class="icon">
                         <i class="icofont-location-pin"></i>

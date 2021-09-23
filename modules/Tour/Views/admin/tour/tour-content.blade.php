@@ -43,7 +43,6 @@
                 <input type="text" name="video" class="form-control" value="{{$row->video}}" placeholder="{{__("Youtube link video")}}">
             </div>
 
-
             @if(is_default_lang())
                 <div class="row">
                     <div class="col-lg-6">
@@ -132,7 +131,7 @@
             </div>
         </div>
         @include('Tour::admin/tour/include-exclude')
-        @include('Tour::admin/tour/itinerary')
+        @include('Tour::admin/tour/itinerary')  {{-- slider --}}
         @if(is_default_lang())
             <div class="form-group">
                 <label class="control-label">{{__("Banner Image")}}</label>
