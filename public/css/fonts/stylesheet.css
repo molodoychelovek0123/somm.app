@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Orpheus Pro';
+    src: url('OrpheusPro-Italic.eot');
+    src: url('OrpheusPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('OrpheusPro-Italic.woff2') format('woff2'),
+        url('OrpheusPro-Italic.woff') format('woff'),
+        url('OrpheusPro-Italic.ttf') format('truetype'),
+        url('OrpheusPro-Italic.svg#OrpheusPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orpheus Pro';
+    src: url('OrpheusPro.eot');
+    src: url('OrpheusPro.eot?#iefix') format('embedded-opentype'),
+        url('OrpheusPro.woff2') format('woff2'),
+        url('OrpheusPro.woff') format('woff'),
+        url('OrpheusPro.ttf') format('truetype'),
+        url('OrpheusPro.svg#OrpheusPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
