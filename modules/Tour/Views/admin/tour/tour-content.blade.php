@@ -131,7 +131,7 @@
             </div>
         </div>
         @include('Tour::admin/tour/include-exclude')
-        @include('Tour::admin/tour/itinerary')  {{-- slider --}}
+        @include('Tour::admin/tour/itinerary')  {{-- slider  --}}
         @if(is_default_lang())
             <div class="form-group">
                 <label class="control-label">{{__("Banner Image")}}</label>
