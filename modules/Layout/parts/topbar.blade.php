@@ -27,7 +27,7 @@ $countUnread = $checkNotify->where('read_at', null)->count();
                     @include('Language::frontend.switcher')
                 @if(!Auth::id())
                         <li class="login-item">
-                            <a href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Login')}}</a>
+                            <a href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Sign in')}}</a>
                         </li>
                         <li class="signup-item">
                             <a href="#register" data-toggle="modal" data-target="#register" class="signup">{{__('Sign Up')}}</a>

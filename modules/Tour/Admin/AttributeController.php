@@ -14,7 +14,7 @@ class AttributeController extends AdminController
     protected $termsClass;
     public function __construct()
     {
-        $this->setActiveMenu('admin/module/class');
+        $this->setActiveMenu('admin/module/experience');
         parent::__construct();
         $this->attributesClass = Attributes::class;
         $this->termsClass = Terms::class;
@@ -34,8 +34,8 @@ class AttributeController extends AdminController
             'translation'    => new AttributesTranslation(),
             'breadcrumbs' => [
                 [
-                    'name' => __('Class'),
-                    'url'  => 'admin/module/class'
+                    'name' => __('Experience'),
+                    'url'  => 'admin/module/experience'
                 ],
                 [
                     'name'  => __('Attributes'),
@@ -61,12 +61,12 @@ class AttributeController extends AdminController
             'row'         => $row,
             'breadcrumbs' => [
                 [
-                    'name' => __('Class'),
-                    'url'  => 'admin/module/class'
+                    'name' => __('Experience'),
+                    'url'  => 'admin/module/experience'
                 ],
                 [
                     'name' => __('Attributes'),
-                    'url'  => 'admin/module/class/attribute'
+                    'url'  => 'admin/module/experience/attribute'
                 ],
                 [
                     'name'  => __('Attributes: :name', ['name' => $row->name]),
@@ -142,12 +142,12 @@ class AttributeController extends AdminController
             'translation'    => new TermsTranslation(),
             'breadcrumbs' => [
                 [
-                    'name' => __('Class'),
-                    'url'  => 'admin/module/class'
+                    'name' => __('Experience'),
+                    'url'  => 'admin/module/experience'
                 ],
                 [
                     'name' => __('Attributes'),
-                    'url'  => 'admin/module/class/attribute'
+                    'url'  => 'admin/module/experience/attribute'
                 ],
                 [
                     'name'  => __('Attribute: :name', ['name' => $row->name]),
@@ -173,16 +173,16 @@ class AttributeController extends AdminController
             'enable_multi_lang'=>true,
             'breadcrumbs' => [
                 [
-                    'name' => __('Class'),
-                    'url'  => 'admin/module/class'
+                    'name' => __('Experience'),
+                    'url'  => 'admin/module/experience'
                 ],
                 [
                     'name' => __('Attributes'),
-                    'url'  => 'admin/module/class/attribute'
+                    'url'  => 'admin/module/experience/attribute'
                 ],
                 [
                     'name' => $attr->name,
-                    'url'  => 'admin/module/class/attribute/terms/' . $row->attr_id
+                    'url'  => 'admin/module/experience/attribute/terms/' . $row->attr_id
                 ],
                 [
                     'name'  => __('Term: :name', ['name' => $row->name]),

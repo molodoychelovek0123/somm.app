@@ -270,8 +270,8 @@ return [
         ],
     ],
 
-    'version'=>"2.1.0",
+    'version'=>"2.1.1",
 
-    'updater_url'=>"http://check.bookingcore.org/updater.php"
+//    'updater_url'=>"http://check.somm.app/updater.php"
 
 ];

@@ -152,7 +152,7 @@ return [
         'vendor' => 'bookingcore',
         'author' => [
             'name' => 'BookingCore',
-            'email' => 'bookingcore.org@gmail.com',
+            'email' => 'somm.app@gmail.com',
         ],
     ],
     /*

@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <h2 class="title-bar">
-        {{!empty($recovery) ?__('Recovery Classes') : __("Manage Classes")}}
+        {{!empty($recovery) ?__('Recovery Experiences') : __("Manage Experiences")}}
         @if(Auth::user()->hasPermissionTo('tour_create') && empty($recovery))
             <a href="{{ route("tour.vendor.create") }}" class="btn-change-password">{{__("Add Class")}}</a>
         @endif
@@ -13,7 +13,7 @@
     @if($rows->total() > 0)
         <div class="bravo-list-item">
             <div class="bravo-pagination">
-                <span class="count-string">{{ __("Showing :from - :to of :total Classes",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
+                <span class="count-string">{{ __("Showing :from - :to of :total Experiences",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
                 {{$rows->appends(request()->query())->links()}}
             </div>
             <div class="list-item">
@@ -26,12 +26,12 @@
                 </div>
             </div>
             <div class="bravo-pagination">
-                <span class="count-string">{{ __("Showing :from - :to of :total Classes",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
+                <span class="count-string">{{ __("Showing :from - :to of :total Experiences",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
                 {{$rows->appends(request()->query())->links()}}
             </div>
         </div>
     @else
-        {{__("No Classes")}}
+        {{__("No Experiences")}}
     @endif
 @endsection
 @section('footer')

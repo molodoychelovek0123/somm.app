@@ -11,8 +11,8 @@
 										<i class="icofont-mail"></i>
 									</div>
 									<div class="media-body">
-										<h4 class="media-heading">{{__("Get Updates & More")}}</h4>
-										<p>{{__("Thoughtful thoughts to your inbox")}}</p>
+										<h4 class="media-heading">{{__("Be the first to know")}}</h4>
+										<p>{{__("we don't span or sell your info ever!")}}</p>
 									</div>
 								</div>
 							</div>
@@ -137,3 +137,12 @@
 @yield('footer')
 
 @php \App\Helpers\ReCaptchaEngine::scripts() @endphp
+
+
+
+
+<ul>
+    <li><a href="/user/profile">Account</a></li>
+    <li><a href="https://sommtable.com/pages/about-us">Contact</a></li>
+    <li><a href="/page/privacy-policy">Privacy Policy</a></li>
+</ul>

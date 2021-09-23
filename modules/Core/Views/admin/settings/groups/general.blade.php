@@ -336,4 +336,13 @@
             });
         })(jQuery)
     </script>
+
+    <script>
+        (function ($) {
+            $('a:contains(Hotel Settings)').css({'display':'none'});
+            $('a:contains(Space Settings)').css({'display':'none'});
+            $('a:contains(Flight Settings)').css({'display':'none'});
+            $('a:contains(Car Settings)').css({'opacity':'0', 'pointer-events':'none'});
+        })(jQuery)
+    </script>
 @endsection

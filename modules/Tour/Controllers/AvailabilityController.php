@@ -61,7 +61,7 @@ class AvailabilityController extends FrontendController
         }
         $breadcrumbs = [
             [
-                'name' => __('Classes'),
+                'name' => __('Experiences'),
                 'url'  => route('tour.vendor.index')
             ],
             [
@@ -69,7 +69,7 @@ class AvailabilityController extends FrontendController
                 'class' => 'active'
             ],
         ];
-        $page_title = __('Classes Availability');
+        $page_title = __('Experience Availability');
         return view($this->indexView, compact('rows', 'breadcrumbs', 'current_month', 'page_title', 'request'));
     }
 
@@ -86,7 +86,7 @@ class AvailabilityController extends FrontendController
         }
         $tour = $this->tourClass::find($request->query('id'));
         if (empty($tour)) {
-            return $this->sendError(__('Class not found'));
+            return $this->sendError(__('Experience not found'));
         }
         $lang = app()->getLocale();
         $is_single = $request->query('for_single');
@@ -287,7 +287,7 @@ class AvailabilityController extends FrontendController
         $tour = $this->tourClass::find($request->input('target_id'));
         $target_id = $request->input('target_id');
         if (empty($tour)) {
-            return $this->sendError(__('Class not found'));
+            return $this->sendError(__('Experience not found'));
         }
         if (!$this->hasPermission('tour_manage_others')) {
             if ($tour->create_user != Auth::id()) {

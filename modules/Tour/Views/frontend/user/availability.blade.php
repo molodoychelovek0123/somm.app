@@ -2,7 +2,7 @@
 
 @section ('content')
     <h2 class="title-bar no-border-bottom">
-        {{ __("Availability Classes") }}
+        {{ __("Availability Experiences") }}
     </h2>
     <div class="language-navigation">
         <div class="panel-body">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-right">
                     @if($rows->total() > 0)
-                        <span class="count-string">{{ __("Showing :from - :to of :total classes",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
+                        <span class="count-string">{{ __("Showing :from - :to of :total Experiences",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
                     @endif
                 </div>
             </div>

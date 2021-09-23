@@ -43,7 +43,7 @@
                 <table class="vec-view-container" width="100%" cellpadding="0" cellspacing="0">
                     <thead class="vec-head">
                     <tr>
-                        <th width="300px" class="vec-event-header">{{__('Classes')}}</th>
+                        <th width="300px" class="vec-event-header">{{__('Experiences')}}</th>
                         <th class="vec-divider"></th>
                         <th class="vc-time-area">
                             <div class="vec-scroll-flip">
@@ -142,7 +142,7 @@
 <script>
 	new VerticalEventCalendar({
         el:'#booking-calendar',
-		eventHeaderName:'{{__('Classes')}}'
+		eventHeaderName:'{{__('Experiences')}}'
     });
     var baseColumnWidth = ($('.vec-header-toolbar').width() - $('.vec-event-header').width() - 5 ) / {{date('t',$current_month)}};
 

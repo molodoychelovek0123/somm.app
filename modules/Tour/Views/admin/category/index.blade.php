@@ -24,7 +24,7 @@
                 <div class="filter-div d-flex justify-content-between ">
                     <div class="col-left">
                         @if(!empty($rows))
-                            <form method="post" action="{{url('admin/module/class/category/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
+                            <form method="post" action="{{url('admin/module/experience/category/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
                                 {{csrf_field()}}
                                 <select name="action" class="form-control">
                                     <option value="">{{__(" Bulk Action ")}}</option>
@@ -37,7 +37,7 @@
                         @endif
                     </div>
                     <div class="col-left">
-                        <form method="get" action="{{url('/admin/module/class/category')}} " class="filter-form filter-form-right d-flex justify-content-end" role="search">
+                        <form method="get" action="{{url('/admin/module/experience/category')}} " class="filter-form filter-form-right d-flex justify-content-end" role="search">
                             <input type="text" name="s" value="{{ Request()->s }}" class="form-control" placeholder="{{__("Search by name")}}">
                             <button class="btn-info btn btn-icon btn_search" id="search-submit" type="submit">{{__('Search')}}</button>
                         </form>
@@ -65,7 +65,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         <td class="title">
-                                            <a href="{{url('admin/module/class/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
+                                            <a href="{{url('admin/module/experience/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
                                         </td>
                                         <td class="d-none d-md-block">{{$row->slug}}</td>
                                         <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>

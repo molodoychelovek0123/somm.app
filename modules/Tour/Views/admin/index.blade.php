@@ -13,7 +13,7 @@
         <div class="filter-div d-flex justify-content-between ">
             <div class="col-left">
                 @if(!empty($rows))
-                    <form method="post" action="{{url('admin/module/class/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
+                    <form method="post" action="{{url('admin/module/experience/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
                         {{csrf_field()}}
                         <select name="action" class="form-control">
                             <option value="">{{__(" Bulk Actions ")}}</option>
@@ -94,7 +94,7 @@
                                         <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}">
                                         </td>
                                         <td class="title">
-                                            <a href="{{url('admin/module/class/edit/'.$row->id)}}">{{$row->title}}</a>
+                                            <a href="{{url('admin/module/experience/edit/'.$row->id)}}">{{$row->title}}</a>
                                         </td>
                                         <td>{{$row->location->name ?? ''}}</td>
                                         <td>

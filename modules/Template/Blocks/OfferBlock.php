@@ -56,7 +56,7 @@ class OfferBlock extends BaseBlock
                             'id'        => 'featured_icon',
                             'type'      => 'input',
                             'inputType' => 'text',
-                            'label'     => __('Featured icon (find icon class in : https://icofont.com/icons)')
+                            'label'     => __('Featured icon (find icon in : https://icofont.com/icons)')
                         ],
                     ]
                 ],

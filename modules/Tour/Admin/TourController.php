@@ -31,7 +31,7 @@
         public function __construct()
         {
             parent::__construct();
-            $this->setActiveMenu('admin/module/class');
+            $this->setActiveMenu('admin/module/experience');
             $this->tourClass = Tour::class;
             $this->tourTranslationClass = TourTranslation::class;
             $this->tourCategoryClass = TourCategory::class;
@@ -64,11 +64,11 @@
                 'rows'               => $query->with(['getAuthor', 'category_tour'])->paginate(20),
                 'tour_categories'    => $this->tourCategoryClass::where('status', 'publish')->get()->toTree(),
                 'tour_manage_others' => $this->hasPermission('tour_manage_others'),
-                'page_title'         => __("Class Management"),
+                'page_title'         => __("Experience Management"),
                 'breadcrumbs'        => [
                     [
-                        'name' => __('Classes'),
-                        'url'  => 'admin/module/class'
+                        'name' => __('Experiences'),
+                        'url'  => 'admin/module/experience'
                     ],
                     [
                         'name'  => __('All'),
@@ -102,12 +102,12 @@
                 'rows'               => $query->with(['getAuthor', 'category_tour'])->paginate(20),
                 'tour_categories'    => $this->tourCategoryClass::where('status', 'publish')->get()->toTree(),
                 'tour_manage_others' => $this->hasPermission('tour_manage_others'),
-                'page_title'         => __("Recovery Class Management"),
+                'page_title'         => __("Recovery Experience Management"),
                 'recovery'           => 1,
                 'breadcrumbs'        => [
                     [
-                        'name' => __('Classes'),
-                        'url'  => 'admin/module/class'
+                        'name' => __('Experiences'),
+                        'url'  => 'admin/module/experience'
                     ],
                     [
                         'name'  => __('Recovery'),
@@ -134,11 +134,11 @@
                 'translation'       => new $this->tourTranslationClass(),
                 'breadcrumbs'       => [
                     [
-                        'name' => __('Classes'),
-                        'url'  => 'admin/module/class'
+                        'name' => __('Experience'),
+                        'url'  => 'admin/module/experience'
                     ],
                     [
-                        'name'  => __('Add Class'),
+                        'name'  => __('Add Experience'),
                         'class' => 'active'
                     ],
                 ]
@@ -151,12 +151,12 @@
             $this->checkPermission('tour_update');
             $row = $this->tourClass::find($id);
             if (empty($row)) {
-                return redirect('admin/module/class');
+                return redirect('admin/module/experience');
             }
             $translation = $row->translateOrOrigin($request->query('lang'));
             if (!$this->hasPermission('tour_manage_others')) {
                 if ($row->create_user != Auth::id()) {
-                    return redirect('admin/module/class');
+                    return redirect('admin/module/experience');
                 }
             }
             $data = [
@@ -170,11 +170,11 @@
                 'enable_multi_lang' => true,
                 'breadcrumbs'       => [
                     [
-                        'name' => __('Classes'),
-                        'url'  => 'admin/module/class'
+                        'name' => __('Experiences'),
+                        'url'  => 'admin/module/experience'
                     ],
                     [
-                        'name'  => __('Edit Class'),
+                        'name'  => __('Edit Experience'),
                         'class' => 'active'
                     ],
                 ]
@@ -218,11 +218,11 @@
                 if ($id > 0) {
                     event(new UpdatedServiceEvent($row));
 
-                    return back()->with('success', __('Class updated'));
+                    return back()->with('success', __('Experience updated'));
                 } else {
                     event(new CreatedServicesEvent($row));
 
-                    return redirect(route('tour.admin.edit', $row->id))->with('success', __('Class created'));
+                    return redirect(route('tour.admin.edit', $row->id))->with('success', __('Experience created'));
                 }
             }
         }

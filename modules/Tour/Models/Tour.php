@@ -133,7 +133,7 @@ class Tour extends Bookable
      */
     static public function getSeoMetaForPageList()
     {
-        $meta['seo_title'] = __("Search for Classes");
+        $meta['seo_title'] = __("Search for Experiences");
         if (!empty($title = setting_item_with_lang("tour_page_list_seo_title", false))) {
             $meta['seo_title'] = $title;
         } else if (!empty($title = setting_item_with_lang("tour_page_search_title"))) {
@@ -221,7 +221,7 @@ class Tour extends Bookable
 
     public function getEditUrl()
     {
-        return url('admin/module/class/edit/' . $this->id);
+        return url('admin/module/experience/edit/' . $this->id);
     }
 
     public function getDiscountPercentAttribute()
@@ -844,7 +844,7 @@ class Tour extends Bookable
         if (empty($number))
             return false;
         if ($number > 1) {
-            return __(":number Classes", ['number' => $number]);
+            return __(":number Experiences", ['number' => $number]);
         }
         return __(":number Class", ['number' => $number]);
     }

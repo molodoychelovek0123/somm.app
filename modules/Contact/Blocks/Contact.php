@@ -15,7 +15,7 @@ class Contact extends BaseBlock
                     'id'        => 'class',
                     'type'      => 'input',
                     'inputType' => 'text',
-                    'label'     => __('Class Block')
+                    'label'     => __('Experience Block')
                 ],
             ],
             'category'=>__("Other Block")

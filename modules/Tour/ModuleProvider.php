@@ -40,43 +40,43 @@ class ModuleProvider extends ModuleServiceProvider
         if(Tour::isEnable()){
             $res['tour'] = [
                 "position"=>40,
-                'url'        => 'admin/module/class',
+                'url'        => 'admin/module/experience',
                 'title'      => __("Class"),
                 'icon'       => 'icon ion-md-wine',
                 'permission' => 'tour_view',
                 'children'   => [
                     'tour_view'=>[
-                        'url'        => 'admin/module/class',
-                        'title'      => __('All Classes'),
+                        'url'        => 'admin/module/experience',
+                        'title'      => __('All Experiences'),
                         'permission' => 'tour_view',
                     ],
                     'tour_create'=>[
-                        'url'        => 'admin/module/class/create',
+                        'url'        => 'admin/module/experience/create',
                         'title'      => __("Add Class"),
                         'permission' => 'tour_create',
                     ],
                     'tour_category'=>[
-                        'url'        => 'admin/module/class/category',
+                        'url'        => 'admin/module/experience/category',
                         'title'      => __('Categories'),
                         'permission' => 'tour_manage_others',
                     ],
                     'tour_attribute'=>[
-                        'url'        => 'admin/module/class/attribute',
+                        'url'        => 'admin/module/experience/attribute',
                         'title'      => __('Attributes'),
                         'permission' => 'tour_manage_attributes',
                     ],
                     'tour_availability'=>[
-                        'url'        => 'admin/module/class/availability',
+                        'url'        => 'admin/module/experience/availability',
                         'title'      => __('Availability'),
                         'permission' => 'tour_create',
                     ],
                     'tour_booking'=>[
-                        'url'        => 'admin/module/class/booking',
+                        'url'        => 'admin/module/experience/booking',
                         'title'      => __('Booking Calendar'),
                         'permission' => 'tour_create',
                     ],
                     'recovery'=>[
-                        'url'        => 'admin/module/class/recovery',
+                        'url'        => 'admin/module/experience/recovery',
                         'title'      => __('Recovery'),
                         'permission' => 'tour_view',
                     ],
@@ -100,7 +100,7 @@ class ModuleProvider extends ModuleServiceProvider
                 'children'   => [
                     [
                         'url'   => route('tour.vendor.index'),
-                        'title' => __("All Classes"),
+                        'title' => __("All Experiences"),
                     ],
                     [
                         'url'        => route('tour.vendor.create'),

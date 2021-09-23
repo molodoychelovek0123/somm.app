@@ -145,13 +145,13 @@
 <div class="row">
     <div class="col-sm-4">
         <h3 class="form-group-title">{{__("Review Options")}}</h3>
-        <p class="form-group-desc">{{__('Config review for class')}}</p>
+        <p class="form-group-desc">{{__('Config review for experience')}}</p>
     </div>
     <div class="col-sm-8">
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="" >{{__("Enable review system for Class?")}}</label>
+                    <label class="" >{{__("Enable review system for experience?")}}</label>
                     <div class="form-controls">
                         <label><input type="checkbox" name="tour_enable_review" value="1" @if(!empty($settings['tour_enable_review'])) checked @endif /> {{__("Yes, please enable it")}} </label>
                         <br>
@@ -256,7 +256,7 @@
     <div class="row">
         <div class="col-sm-4">
             <h3 class="form-group-title">{{__("Booking Buyer Fees Options")}}</h3>
-            <p class="form-group-desc">{{__('Config buyer fees for class')}}</p>
+            <p class="form-group-desc">{{__('Config buyer fees for experience')}}</p>
         </div>
         <div class="col-sm-8">
             <div class="panel">
@@ -374,13 +374,13 @@
     <div class="row">
         <div class="col-sm-4">
             <h3 class="form-group-title">{{__("Vendor Options")}}</h3>
-            <p class="form-group-desc">{{__('Vendor config for class')}}</p>
+            <p class="form-group-desc">{{__('Vendor config for experience')}}</p>
         </div>
         <div class="col-sm-8">
             <div class="panel">
                 <div class="panel-body">
                     <div class="form-group">
-                        <label class="" >{{__("Class create by vendor must be approved by admin?")}}</label>
+                        <label class="" >{{__("Experience create by vendor must be approved by admin?")}}</label>
                         <div class="form-controls">
                             <label><input type="checkbox" name="tour_vendor_create_service_must_approved_by_admin" value="1" @if(!empty($settings['tour_vendor_create_service_must_approved_by_admin'])) checked @endif /> {{__("Yes please")}} </label>
                             <br>

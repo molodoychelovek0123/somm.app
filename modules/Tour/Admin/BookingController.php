@@ -11,7 +11,7 @@ class BookingController extends AdminController
     protected $tourClass;
     public function __construct()
     {
-        $this->setActiveMenu('admin/module/class');
+        $this->setActiveMenu('admin/module/experience');
         parent::__construct();
         $this->tourClass = Tour::class;
     }
@@ -56,25 +56,25 @@ class BookingController extends AdminController
             }
         }
 
-        $prev_url = url('admin/module/class/booking/').'?'.http_build_query(array_merge($request->query(),[
+        $prev_url = url('admin/module/experience/booking/').'?'.http_build_query(array_merge($request->query(),[
            'month'=> date('m-Y',$current_month - MONTH_IN_SECONDS)
         ]));
-        $next_url = url('admin/module/class/booking/').'?'.http_build_query(array_merge($request->query(),[
+        $next_url = url('admin/module/experience/booking/').'?'.http_build_query(array_merge($request->query(),[
            'month'=> date('m-Y',$current_month + MONTH_IN_SECONDS)
         ]));
 
         $tour_categories = TourCategory::where('status', 'publish')->get()->toTree();
         $breadcrumbs = [
             [
-                'name' => __('Classes'),
-                'url'  => 'admin/module/class'
+                'name' => __('Experiences'),
+                'url'  => 'admin/module/experience'
             ],
             [
                 'name'  => __('Booking'),
                 'class' => 'active'
             ],
         ];
-        $page_title = __('Class Booking History');
+        $page_title = __('Experience Booking History');
         return view('Tour::admin.booking.index',compact('rows','tour_categories','breadcrumbs','current_month','page_title','request','prev_url','next_url'));
     }
     public function test(){

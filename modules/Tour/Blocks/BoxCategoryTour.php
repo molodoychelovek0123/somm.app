@@ -37,14 +37,14 @@ class BoxCategoryTour extends BaseBlock
                             'label'   => __('Select Category'),
                             'select2' => [
                                 'ajax'  => [
-                                    'url'      => url('/admin/module/class/category/getForSelect2'),
+                                    'url'      => url('/admin/module/experience/category/getForSelect2'),
                                     'dataType' => 'json'
                                 ],
                                 'width' => '100%',
                                 'allowClear' => 'true',
                                 'placeholder' => __('-- Select --')
                             ],
-                            'pre_selected'=>url('/admin/module/class/category/getForSelect2?pre_selected=1')
+                            'pre_selected'=>url('/admin/module/experience/category/getForSelect2?pre_selected=1')
                         ],
                         [
                             'id'    => 'image_id',

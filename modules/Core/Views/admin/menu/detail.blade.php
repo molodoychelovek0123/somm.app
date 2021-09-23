@@ -83,7 +83,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>{{__('Class')}}</label>
+                                                    <label>{{__('Experience')}}</label>
                                                     <input type="text" v-model="node.class"
                                                            class="form-control input-sm">
                                                 </div>
