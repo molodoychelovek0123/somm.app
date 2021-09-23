@@ -270,7 +270,7 @@ return [
         ],
     ],
 
-    'version'=>"2.1.3",
+    'version'=>"2.1.4",
 
 //    'updater_url'=>"http://check.somm.app/updater.php"
 
