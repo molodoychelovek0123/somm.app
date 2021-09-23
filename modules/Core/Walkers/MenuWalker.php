@@ -52,7 +52,7 @@ class MenuWalker {
                           <a class=\"sommProductsLink\" href=\"https://vinely.com\">
                             <div class=\"sommProductItem\">
                               <div class=\"product-image\">
-                                <img src=\"/images/logos/vinely.png\" class=\"img-responsive\" alt=\"vinely.com logo\">
+                                <img src=\"/images/logos/vinely.gif\" class=\"img-responsive\" alt=\"vinely.com logo\">
                               </div>
                               <h4>Vinely.com</h4>
                               <span>Our video magazine. Experience from one video.</span>
