@@ -321,24 +321,42 @@ class UserController extends FrontendController
         $this->validate($request, [
             'email' => 'required|email|max:255'
         ]);
-        $check = Subscriber::withTrashed()->where('email', $request->input('email'))->first();
-        if ($check) {
-            if ($check->trashed()) {
-                $check->restore();
-                return $this->sendSuccess([], __('Thank you for subscribing'));
-            }
-            return $this->sendError(__('You are already subscribed'));
-        } else {
-            $a = new Subscriber();
-            $a->email = $request->input('email');
-            $a->first_name = $request->input('first_name');
-            $a->last_name = $request->input('last_name');
-            $a->save();
 
-            event(new UserSubscriberSubmit($a));
+        $email = $request->input('email');
+        $url = "https://us15.api.mailchimp.com/3.0/lists/bb8e6e849f/members";
 
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $headers = array(
+            "Content-Type: application/x-www-form-urlencoded",
+            "Authorization: Basic YW55c3RyaW5nOjllMTI5MmUxNjRkOWIwMGY0YjY5ZmQ0MDUzYjQxNDRiLXVzMTU=",
+        );
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+        $data = '{"email_address":"'.$email.'","email_type":"html","status":"subscribed","merge_fields":{},"interests":{},"language":"","vip":false,"location":{"latitude":0,"longitude":0},"marketing_permissions":[],"ip_signup":"","timestamp_signup":"","ip_opt":"","timestamp_opt":"","tags":[]}';
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $resp = curl_exec($curl);
+        $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if($httpcode == 200){
             return $this->sendSuccess([], __('Thank you for subscribing'));
         }
+        else{
+            $resp = json_decode($resp);
+            return $this->sendError("Error: " . $resp->title);
+        }
+
+        return $this->sendSuccess([], __('Thank you for subscribing'));
+
     }
 
     public function upgradeVendor(Request $request){
@@ -349,7 +367,7 @@ class UserController extends FrontendController
         }
         // check vendor auto approved
         $vendorAutoApproved = setting_item('vendor_auto_approved');
-         $dataVendor['role_request'] = setting_item('vendor_role');
+        $dataVendor['role_request'] = setting_item('vendor_role');
         if ($vendorAutoApproved) {
             if ($dataVendor['role_request']) {
                 $user->assignRole($dataVendor['role_request']);
@@ -379,8 +397,8 @@ class UserController extends FrontendController
         $this->checkPermission('enquiry_view');
         $user_id = Auth::id();
         $rows = $this->enquiryClass::where("vendor_id",$user_id)
-            ->whereIn('object_model',array_keys(get_bookable_services()))
-            ->orderBy('id', 'desc');
+                                   ->whereIn('object_model',array_keys(get_bookable_services()))
+                                   ->orderBy('id', 'desc');
         $data = [
             'rows'        => $rows->paginate(5),
             'statues'     => $this->enquiryClass::$enquiryStatus,
