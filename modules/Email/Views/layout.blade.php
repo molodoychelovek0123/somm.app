@@ -16,7 +16,7 @@ $main_color =setting_item('style_main_color','#5291fa')
                 padding: 40px 0px;
                 color: #5a6451;
                 font-size: 14px;
-                font-family: 'Orpheus Pro', sans-serif !important;
+                font-family: 'Proxima Nova', sans-serif !important;
                 font-weight: normal;
                 line-height: 1.5;
                 overflow-x: hidden;
@@ -209,6 +209,15 @@ $main_color =setting_item('style_main_color','#5291fa')
                     float: right;
                 }
             @endif
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+                font-family: 'Orpheus Pro', serif;
+            }
         </style>
     </head>
     <body>
