@@ -50,7 +50,7 @@ class SpaceController extends Controller
                     "lng"     => (float)$row->map_lng,
                     "gallery" => $row->getGallery(true),
                     "infobox" => view('Space::frontend.layouts.search.loop-gird', ['row' => $row,'disable_lazyload'=>1,'wrap_class'=>'infobox-item'])->render(),
-                    'marker' => get_file_url(setting_item("space_icon_marker_map"),'full') ?? url('images/icons/png/pin.png'),
+                    'marker' => get_file_url(setting_item("space_icon_marker_map"),'full') ?? url('images/icons/svg/pin.svg'),
                 ];
             }
         }

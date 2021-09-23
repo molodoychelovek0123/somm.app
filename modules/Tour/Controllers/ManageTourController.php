@@ -214,6 +214,9 @@ class ManageTourController extends FrontendController
             'service_fee',
             'surrounding',
             'min_day_before_booking',
+            'host_image',
+            'host_name',
+            'host_description',
 
         ], $request->input());
         $row->ical_import_url = $request->ical_import_url;

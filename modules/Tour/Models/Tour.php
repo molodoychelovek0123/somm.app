@@ -69,6 +69,9 @@ class Tour extends Bookable
         'itinerary',
         'surrounding',
         'min_day_before_booking',
+        'host_image',
+        'host_name',
+        'host_description',
     ];
     protected $slugField                          = 'slug';
     protected $slugFromField                      = 'title';
@@ -848,12 +851,12 @@ class Tour extends Bookable
 
     public function getReviewList(){
         return $this->reviewClass::select(['id','title','content','rate_number','author_ip','status','created_at','vendor_id','create_user'])
-            ->where('object_id', $this->id)
-            ->where('object_model', 'tour')
-            ->where("status", "approved")
-            ->orderBy("id", "desc")
-            ->with('author')
-            ->paginate(setting_item('tour_review_number_per_page', 5));
+                                 ->where('object_id', $this->id)
+                                 ->where('object_model', 'tour')
+                                 ->where("status", "approved")
+                                 ->orderBy("id", "desc")
+                                 ->with('author')
+                                 ->paginate(setting_item('tour_review_number_per_page', 5));
     }
 
     /**
@@ -1033,8 +1036,8 @@ class Tour extends Bookable
                 }
                 $sql_where_join = " ( " . implode("OR", $where_left_right) . " )  ";
                 $model_Tour->join('bravo_tour_category', function ($join) use ($sql_where_join,$params) {
-                        $join->on('bravo_tour_category.id', '=', 'bravo_tours.category_id')->WhereRaw($sql_where_join,$params);
-                    });
+                    $join->on('bravo_tour_category.id', '=', 'bravo_tours.category_id')->WhereRaw($sql_where_join,$params);
+                });
             }
         }
         $terms = $request->query('terms');

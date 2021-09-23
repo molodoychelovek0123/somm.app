@@ -26,7 +26,7 @@
                                             <div class="col-md-3">
                                                 <input type="text" name="surrounding[{{$category->id}}][{{$key}}][name]"
                                                        class="form-control" value="{{@$item['name']}}"
-                                                       placeholder="{{__('Sunny Beach')}}">
+                                                       placeholder="{{__('Eiffel Tower')}}">
                                             </div>
                                             <div class="col-md-3">
                                                 <textarea name="surrounding[{{$category->id}}][{{$key}}][content]"
@@ -65,7 +65,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <input type="text" __name__="surrounding[{{$category->id}}][__number__][name]"
-                                               class="form-control" placeholder="{{__("Sunny Beach")}}">
+                                               class="form-control" placeholder="{{__("Eiffel Tower")}}">
                                     </div>
                                     <div class="col-md-3">
                                         <textarea __name__="surrounding[{{$category->id}}][__number__][content]"

@@ -143,6 +143,19 @@
 <script src="{{url('libs/daterange/moment.min.js')}}"></script>
 <script src="{{url('libs/daterange/daterangepicker.min.js?_ver='.config('app.version'))}}"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        jQuery('a:contains(Space Settings)').css({'display': 'none'});
+        jQuery('a:contains(Hotel Settings)').css({'display': 'none'});
+        jQuery('a:contains(Flight Settings)').css({'display': 'none'});
+        jQuery('a:contains(Car Settings)').css({
+            'opacity': '0',
+        'pointer-event':'none'
+        });
+
+    });
+</script>
+
 {!! \App\Helpers\Assets::js(true) !!}
 
 @yield('script.body')

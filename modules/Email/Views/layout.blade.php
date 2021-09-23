@@ -14,7 +14,7 @@ $main_color =setting_item('style_main_color','#5291fa')
             .b-email-wrap{
                 background: #ebeef2;
                 padding: 40px 0px;
-                color: #1A2B48;
+                color: #5a6451;
                 font-size: 14px;
                 font-family: 'Poppins', sans-serif !important;
                 font-weight: normal;

@@ -3,7 +3,7 @@
   .bravo-news .bravo_content {
     padding: 30px 0; }
   .bravo-news .bravo_banner {
-    background-color: #1a2b48;
+    background-color: #5a6451;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@
       line-height: 1.3;
       font-weight: 500;
       margin-top: 15px;
-      color: #1A2B48;
+      color: #5a6451;
       font-size: 28px; }
     .bravo-news .article .post-header {
       max-height: 350px;
@@ -51,7 +51,7 @@
     display: -webkit-box;
     margin: 30px 0; }
     .bravo-news .space-between .tags .tag-item {
-      color: #1A2B48;
+      color: #5a6451;
       font-size: 11px;
       padding: 8px 20px;
       background: #F7F6F6;
@@ -62,7 +62,7 @@
       text-decoration: none; }
     .bravo-news .space-between .share {
       font-size: 14px;
-      color: #1A2B48; }
+      color: #5a6451; }
       .bravo-news .space-between .share .share-item {
         margin-left: 8px;
         margin-right: 8px;
@@ -107,10 +107,10 @@
       color: #5E6D77;
       font-style: italic;
       border-radius: 3px 0 0 3px;
-      border: 1px solid #1a2b48; }
+      border: 1px solid #5a6451; }
     .bravo-news .widget_search form button {
       height: 40px;
-      background: #1a2b48;
+      background: #5a6451;
       border-radius: 0 3px 3px 0;
       border: none;
       width: 40px;
@@ -127,7 +127,7 @@
       position: relative; }
       .bravo-news .sidebar-widget .sidebar-title h4 {
         font-size: 16px;
-        color: #1A2B48;
+        color: #5a6451;
         font-weight: 500;
         background-color: #fff;
         position: relative;
@@ -147,7 +147,7 @@
         margin-top: 0px; }
   .bravo-news .widget_category .title h4 {
     font-size: 16px;
-    color: #1A2B48;
+    color: #5a6451;
     font-weight: 500;
     display: inline-block;
     z-index: 9;
@@ -172,7 +172,7 @@
       .bravo-news .widget_category ul li a {
         font-weight: 500;
         font-size: 14px;
-        color: #1A2B48; }
+        color: #5a6451; }
   .bravo-news .widget_bloglist ul {
     padding: 0;
     margin: 0; }
@@ -194,12 +194,12 @@
       .bravo-news .widget_bloglist ul li .content .thumb-list-item-title {
         font-weight: 500; }
         .bravo-news .widget_bloglist ul li .content .thumb-list-item-title a {
-          color: #1A2B48;
+          color: #5a6451;
           line-height: 24px;
           font-size: 15px; }
   .bravo-news .widget_tag_cloud .tagcloud a {
     font-size: 11px !important;
-    color: #1A2B48 !important;
+    color: #5a6451 !important;
     font-weight: 500;
     background: #F7F6F6 !important;
     border-radius: 3px;
@@ -228,7 +228,7 @@
         .bravo-news .blog-breadcrumb ul li a {
           display: block;
           font-weight: 500;
-          color: #1A2B48;
+          color: #5a6451;
           text-decoration: none;
           line-height: 21px; }
         .bravo-news .blog-breadcrumb ul li.active {
@@ -246,7 +246,7 @@
         background: #EAEEF3;
         z-index: 1; }
   .bravo-news .text-darken {
-    color: #1A2B48; }
+    color: #5a6451; }
   .bravo-news .post_item {
     margin-bottom: 40px; }
   .bravo-news .post-info {
@@ -276,7 +276,7 @@
         margin-right: 10px; }
         .bravo-news .post-info ul li a {
           text-decoration: none;
-          color: #1A2B48; }
+          color: #5a6451; }
         .bravo-news .post-info ul li span {
           margin-right: 5px; }
         .bravo-news .post-info ul li img {
@@ -285,7 +285,7 @@
           height: 30px;
           margin-right: 12px; }
         .bravo-news .post-info ul li .avatar-text {
-          background: #1A2B48;
+          background: #5a6451;
           border-radius: 50%;
           width: 30px;
           height: 30px;

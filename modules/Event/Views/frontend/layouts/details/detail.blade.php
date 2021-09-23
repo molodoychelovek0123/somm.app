@@ -38,21 +38,21 @@
 @if(!empty($row->duration)  or !empty($row->location->name))
     <div class="g-event-feature">
         <div class="row">
-            <div class="col-xs-6 col-lg-3 col-md-6">
-                <div class="item">
-                    <div class="icon">
-                        <i class="icofont-heart-beat"></i>
-                    </div>
-                    <div class="info">
-                        <h4 class="name">{{__("Wishlist")}}</h4>
-                        <p class="value">
-                            {{ __("People interest: :number",['number'=>$row->getNumberWishlistInService()]) }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-xs-6 col-lg-3 col-md-6">--}}
+{{--                <div class="item">--}}
+{{--                    <div class="icon">--}}
+{{--                        <i class="icofont-heart-beat"></i>--}}
+{{--                    </div>--}}
+{{--                    <div class="info">--}}
+{{--                        <h4 class="name">{{__("Wishlist")}}</h4>--}}
+{{--                        <p class="value">--}}
+{{--                            {{ __("People interest: :number",['number'=>$row->getNumberWishlistInService()]) }}--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             @if($row->start_time)
-                <div class="col-xs-6 col-lg-3 col-md-6">
+                <div class="col-xs-6 col-lg-4 col-md-6">
                     <div class="item">
                         <div class="icon">
                             <i class="icofont-wall-clock"></i>
@@ -67,7 +67,7 @@
                 </div>
             @endif
             @if($row->duration && $row->duration != "0000-00-00")
-                <div class="col-xs-6 col-lg-3 col-md-6">
+                <div class="col-xs-6 col-lg-4 col-md-6">
                     <div class="item">
                         <div class="icon">
                             <i class="icofont-calendar"></i>
@@ -83,7 +83,7 @@
             @endif
             @if(!empty($row->location->name))
                 @php $location =  $row->location->translateOrOrigin(app()->getLocale()) @endphp
-                <div class="col-xs-6 col-lg-3 col-md-6">
+                <div class="col-xs-6 col-lg-4 col-md-6">
                     <div class="item">
                         <div class="icon">
                             <i class="icofont-location-pin"></i>
@@ -109,23 +109,23 @@
             @endforeach
         </div>
         <div class="social">
-            <div class="social-share">
-                <span class="social-icon">
-                    <i class="icofont-share"></i>
-                </span>
-                <ul class="share-wrapper">
-                    <li>
-                        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Facebook")}}">
-                            <i class="fa fa-facebook fa-lg"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="twitter" href="https://twitter.com/share?url={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Twitter")}}">
-                            <i class="fa fa-twitter fa-lg"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+{{--            <div class="social-share">--}}
+{{--                <span class="social-icon">--}}
+{{--                    <i class="icofont-share"></i>--}}
+{{--                </span>--}}
+{{--                <ul class="share-wrapper">--}}
+{{--                    <li>--}}
+{{--                        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Facebook")}}">--}}
+{{--                            <i class="fa fa-facebook fa-lg"></i>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a class="twitter" href="https://twitter.com/share?url={{$row->getDetailUrl()}}&amp;title={{$translation->title}}" target="_blank" rel="noopener" original-title="{{__("Twitter")}}">--}}
+{{--                            <i class="fa fa-twitter fa-lg"></i>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
             <div class="service-wishlist {{$row->isWishList()}}" data-id="{{$row->id}}" data-type="{{$row->type}}">
                 <i class="fa fa-heart-o"></i>
             </div>

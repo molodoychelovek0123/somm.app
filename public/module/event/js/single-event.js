@@ -76,6 +76,12 @@
         computed:{
             total_price:function(){
                 var me = this;
+                if (me.start_date === "") {
+                    let eventDate = new Date($('.start_date').val());
+                    me.start_date = eventDate.getFullYear() + '-' + ('0' + (eventDate.getMonth()+1)).slice(-2) + '-' + ('0' + eventDate.getDate()).slice(-2); //2021-09-21
+                    // console.log("date not selected");
+                }
+                console.log(me.start_date);
                 if (me.start_date !== "") {
                     var total = 0;
                     var total_tickets = 0;

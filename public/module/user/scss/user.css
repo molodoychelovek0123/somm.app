@@ -1,7 +1,7 @@
 .bravo_wrap .bravo_user_profile {
   background: #f5f7f9;
   padding: 0 100px;
-  color: #1A2B48; }
+  color: #5a6451; }
   @media (max-width: 1440px) {
     .bravo_wrap .bravo_user_profile {
       padding: 0; } }
@@ -26,7 +26,7 @@
       flex: 0 0 100%;
       max-width: 100%; } }
   .bravo_wrap .bravo_user_profile > .container-fluid > .row-eq-height > .col-md-3 {
-    background: #1a2b47;
+    background: #5a6451;
     color: #fff;
     min-height: 700px; }
     .bravo_wrap .bravo_user_profile > .container-fluid > .row-eq-height > .col-md-3:after {
@@ -34,7 +34,7 @@
       position: absolute;
       width: 200%;
       height: 100%;
-      background-color: #1A2B47;
+      background-color: #5a6451;
       top: 0;
       min-height: 100%;
       display: block;
@@ -55,7 +55,7 @@
     border-bottom: 1px solid #243553;
     padding-top: 25px;
     margin-bottom: 20px;
-    background: #1A2B47 !important;
+    background: #5a6451 !important;
     padding-bottom: 25px; }
     @media (max-width: 990px) {
       .bravo_wrap .bravo_user_profile .user-profile-avatar {
@@ -222,7 +222,7 @@
       .bravo_wrap .bravo_user_profile .user-form-settings {
         padding: 15px 0; } }
     .bravo_wrap .bravo_user_profile .user-form-settings .breadcrumb-page-bar {
-      background: #1a2b47;
+      background: #5a6451;
       display: table;
       position: relative;
       width: 100%;
@@ -253,7 +253,7 @@
       .bravo_wrap .bravo_user_profile .user-form-settings .title-bar .btn-change-password {
         font-size: 14px;
         padding: 7px 12px;
-        background: #1a2b47;
+        background: #5a6451;
         color: #fff;
         font-weight: normal;
         position: relative;
@@ -309,7 +309,7 @@
     border-bottom: none !important;
     margin-bottom: 0 !important; }
   .bravo_wrap .bravo_user_profile .form-add-service .nav-tabs {
-    background: #1a2b47;
+    background: #5a6451;
     padding: 15px 10px; }
     .bravo_wrap .bravo_user_profile .form-add-service .nav-tabs a {
       margin: 0 15px;
@@ -397,7 +397,7 @@
         text-align: left; } }
   .bravo_wrap .bravo_user_profile .bravo-list-item .topbar-search .text {
     font-size: 24px;
-    color: #1A2B48;
+    color: #5a6451;
     font-weight: normal;
     margin: 0; }
   .bravo_wrap .bravo_user_profile .bravo-list-item .list-item {
@@ -504,7 +504,7 @@
               margin-top: 0; } }
           .bravo_wrap .bravo_user_profile .bravo-list-item .list-item .item-tour-list .g-price .price .text-price {
             font-size: 18px;
-            color: #1A2B48;
+            color: #5a6451;
             font-weight: 500; }
           .bravo_wrap .bravo_user_profile .bravo-list-item .list-item .item-tour-list .g-price .price .onsale {
             position: absolute;
@@ -562,7 +562,7 @@
           text-transform: uppercase;
           border: none;
           font-size: 14px;
-          color: #1A2B48;
+          color: #5a6451;
           font-weight: 600;
           text-decoration: none;
           padding: 10px 5px;
@@ -594,7 +594,7 @@
       .bravo_wrap .bravo_user_profile .booking-history-manager .booking-review .booking-review-content .review-section .service-info {
         display: none !important; }
     .bravo_wrap .bravo_user_profile .booking-history-manager .booking-review .booking-review-content .service-info .service-name a {
-      color: #1A2B48;
+      color: #5a6451;
       font-size: 16px;
       line-height: 25px;
       font-weight: 500; }
@@ -684,14 +684,14 @@
     .bravo_wrap .bravo_user_profile .bravo-user-dashboard .dashboard-price-info .dashboard-item .wrap-box {
       text-align: center; }
       .bravo_wrap .bravo_user_profile .bravo-user-dashboard .dashboard-price-info .dashboard-item .wrap-box .title {
-        color: #1A2B48;
+        color: #5a6451;
         letter-spacing: 0;
         font-size: 14px;
         text-transform: uppercase;
         font-weight: 600;
         text-align: center; }
       .bravo_wrap .bravo_user_profile .bravo-user-dashboard .dashboard-price-info .dashboard-item .wrap-box .number {
-        color: #1A2B48;
+        color: #5a6451;
         letter-spacing: 0;
         font-size: 36px;
         text-align: center; }
@@ -772,7 +772,7 @@
     .bravo_wrap .bravo_user_profile .btn:hover {
       border-radius: 5px; }
   .bravo_wrap .bravo_user_profile .btn-primary {
-    background: #1a2b47;
+    background: #5a6451;
     color: #fff; }
   .bravo_wrap .bravo_user_profile .dungdt-upload-box {
     max-width: 350px; }

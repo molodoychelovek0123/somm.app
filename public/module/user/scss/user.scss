@@ -3,7 +3,7 @@
     .bravo_user_profile{
         background: #f5f7f9;
         padding: 0 100px;
-        color: #1A2B48;
+        color: #5a6451;
         @media (max-width: 1440px) {
             padding: 0;
         }
@@ -12,7 +12,7 @@
             right: 0px;
             z-index: 1;
             padding: 7px 8px 3px;
-            color: #1a2b47;
+            color: #5a6451;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             display: none;
@@ -34,7 +34,7 @@
             }
 
             > .col-md-3{
-                background: #1a2b47;
+                background: #5a6451;
                 color: #fff;
                 min-height: 700px;
                 &:after {
@@ -42,7 +42,7 @@
                     position: absolute;
                     width: 200%;
                     height: 100%;
-                    background-color: #1A2B47;
+                    background-color: #5a6451;
                     top: 0;
                     min-height: 100%;
                     display: block;
@@ -67,7 +67,7 @@
         }
         .user-profile-avatar{
             margin-bottom: 10px;
-            background: #1a2b47 !important;
+            background: #5a6451 !important;
             @media (max-width: 990px) {
                 padding-top: 35px;
             }
@@ -118,7 +118,7 @@
         .user-profile-plan{
             border-bottom: 1px solid #243553;
             margin-bottom: 25px;
-            background: #1a2b47 !important;
+            background: #5a6451 !important;
             padding-bottom: 20px;
             text-align: center;
             a{
@@ -316,7 +316,7 @@
                 display: table;
                 position: relative;
                 width: 100%;
-                color:#1a2b47;
+                color:#5a6451;
                 border: 1px solid #e8e8e8;
                 .page-breadcrumb {
                     display: inline-block;
@@ -327,7 +327,7 @@
                     >li {
                         display: inline-block;
                         a{
-                            color: #1a2b47;
+                            color: #5a6451;
                         }
                     }
                 }
@@ -348,7 +348,7 @@
                 .btn-change-password{
                     font-size: 14px;
                     padding: 7px 12px;
-                    background: #1a2b47;
+                    background: #5a6451;
                     color: #fff;
                     font-weight: normal;
                     position: relative;
@@ -645,7 +645,7 @@
             .topbar-search {
                 .text {
                     font-size: 24px;
-                    color: #1A2B48;
+                    color: #5a6451;
                     font-weight: normal;
                     margin: 0;
                 }
@@ -696,7 +696,7 @@
                         color: #FFFFFF;
                         font-weight: 500;
                         z-index: 8;
-                        background: #1a2b47;
+                        background: #5a6451;
                         border-radius: 3px;
                         padding: 6px 10px;
                     }
@@ -902,7 +902,7 @@
                             text-transform: uppercase;
                             border: none;
                             font-size: 14px;
-                            color: #1A2B48;
+                            color: #5a6451;
                             font-weight: 600;
                             text-decoration: none;
                             padding: 10px 5px;
@@ -986,7 +986,7 @@
                     .service-info{
                         .service-name{
                             a{
-                                color: #1A2B48;
+                                color: #5a6451;
                                 font-size: 16px;
                                 line-height: 25px;
                                 font-weight: 500;
@@ -1133,7 +1133,7 @@
                         text-align: center;
 
                         .title {
-                            color: #1A2B48;
+                            color: #5a6451;
                             letter-spacing: 0;
                             font-size: 14px;
                             text-transform: uppercase;
@@ -1141,7 +1141,7 @@
                             text-align: center;
                         }
                         .number {
-                            color: #1A2B48;
+                            color: #5a6451;
                             letter-spacing: 0;
                             font-size: 36px;
                             text-align: center;
@@ -1325,7 +1325,7 @@
 
         }
         .btn-primary{
-            //background: #1a2b47;
+            //background: #5a6451;
             //color: #fff;
         }
         .dungdt-upload-box{
@@ -1510,7 +1510,7 @@
             }
         }
         .btn.btn-primary {
-            background: #1a2b47;
+            background: #5a6451;
         }
         .main-menu .badge{
             min-width: 0px;

@@ -44,7 +44,7 @@
                 ready: function (engineMap) {
                     engineMap.addMarker([{{$row->map_lat}}, {{$row->map_lng}}], {
                         icon_options: {
-                            iconUrl:"{{get_file_url(setting_item("event_icon_marker_map"),'full') ?? url('images/icons/png/pin.png') }}"
+                            iconUrl:"{{get_file_url(setting_item("event_icon_marker_map"),'full') ?? url('images/icons/svg/pin.svg') }}"
                         }
                     });
                 }
@@ -55,7 +55,7 @@
     <script>
         var bravo_booking_data = {!! json_encode($booking_data) !!}
         var bravo_booking_i18n = {
-			no_date_select:'{{__('Please select Start and End date')}}',
+			no_date_select:'{{__('Please select date')}}',
             no_guest_select:'{{__('Please select at least one number')}}',
             load_dates_url:'{{route('event.vendor.availability.loadDates')}}'
         };

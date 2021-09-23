@@ -8,6 +8,7 @@
     <div class="bravo_detail_tour">
         @include('Tour::frontend.layouts.details.tour-banner')
         <div class="bravo_content">
+            {{ $row->host_name }}
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-9">
@@ -41,37 +42,37 @@
                         </div>
                     </div>
                     @if(setting_item('tour_enable_review'))
-                    <?php
-                    $reviewData = $row->getScoreReview();
-                    $score_total = $reviewData['score_total'];
-                    ?>
-                    <div class="service-review tour-review-{{$score_total}}">
-                        <div class="list-star">
-                            <ul class="booking-item-rating-stars">
-                                <li><i class="fa fa-star-o"></i></li>
-                                <li><i class="fa fa-star-o"></i></li>
-                                <li><i class="fa fa-star-o"></i></li>
-                                <li><i class="fa fa-star-o"></i></li>
-                                <li><i class="fa fa-star-o"></i></li>
-                            </ul>
-                            <div class="booking-item-rating-stars-active" style="width: {{  $score_total * 2 * 10 ?? 0  }}%">
+                        <?php
+                        $reviewData = $row->getScoreReview();
+                        $score_total = $reviewData['score_total'];
+                        ?>
+                        <div class="service-review tour-review-{{$score_total}}">
+                            <div class="list-star">
                                 <ul class="booking-item-rating-stars">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
                                 </ul>
+                                <div class="booking-item-rating-stars-active" style="width: {{  $score_total * 2 * 10 ?? 0  }}%">
+                                    <ul class="booking-item-rating-stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <span class="review">
+                            <span class="review">
                         @if($reviewData['total_review'] > 1)
-                                {{ __(":number Reviews",["number"=>$reviewData['total_review'] ]) }}
-                            @else
-                                {{ __(":number Review",["number"=>$reviewData['total_review'] ]) }}
-                            @endif
+                                    {{ __(":number Reviews",["number"=>$reviewData['total_review'] ]) }}
+                                @else
+                                    {{ __(":number Review",["number"=>$reviewData['total_review'] ]) }}
+                                @endif
                     </span>
-                    </div>
+                        </div>
                     @endif
                 </div>
                 <div class="right">
@@ -79,7 +80,7 @@
                         <a class="btn btn-primary bravo-button-book-mobile">{{__("Book Now")}}</a>
                     @else
                         <a class="btn btn-primary" data-toggle="modal" data-target="#enquiry_form_modal">{{__("Contact Now")}}</a>
-                   @endif
+                    @endif
                 </div>
             </div>
         </div>
@@ -99,7 +100,7 @@
                 ready: function (engineMap) {
                     engineMap.addMarker([{{$row->map_lat}}, {{$row->map_lng}}], {
                         icon_options: {
-                            iconUrl:"{{get_file_url(setting_item("tour_icon_marker_map"),'full') ?? url('images/icons/png/pin.png') }}"
+                            iconUrl:"{{get_file_url(setting_item("tour_icon_marker_map"),'full') ?? url('images/icons/svg/pin.svg') }}"
                         }
                     });
                 }
@@ -110,12 +111,12 @@
     <script>
         var bravo_booking_data = {!! json_encode($booking_data) !!}
         var bravo_booking_i18n = {
-                no_date_select:'{{__('Please select Start date')}}',
-                no_guest_select:'{{__('Please select at least one guest')}}',
-                load_dates_url:'{{route('tour.vendor.availability.loadDates')}}',
-                name_required:'{{ __("Name is Required") }}',
-                email_required:'{{ __("Email is Required") }}',
-            };
+            no_date_select:'{{__('Please select Start date')}}',
+            no_guest_select:'{{__('Please select at least one guest')}}',
+            load_dates_url:'{{route('tour.vendor.availability.loadDates')}}',
+            name_required:'{{ __("Name is Required") }}',
+            email_required:'{{ __("Email is Required") }}',
+        };
     </script>
     <script type="text/javascript" src="{{ asset("libs/ion_rangeslider/js/ion.rangeSlider.min.js") }}"></script>
     <script type="text/javascript" src="{{ asset("libs/fotorama/fotorama.js") }}"></script>

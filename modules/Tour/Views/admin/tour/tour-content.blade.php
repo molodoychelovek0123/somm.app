@@ -43,7 +43,6 @@
                 <input type="text" name="video" class="form-control" value="{{$row->video}}" placeholder="{{__("Youtube link video")}}">
             </div>
 
-
             @if(is_default_lang())
                 <div class="row">
                     <div class="col-lg-6">

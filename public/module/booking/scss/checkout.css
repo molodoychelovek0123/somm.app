@@ -1,6 +1,6 @@
 .bravo-booking-page .form-title {
     margin: 0;
-    color: #1A2B48;
+    color: #5a6451;
     font-size: 24px;
     font-weight: 500;
     border-bottom: 2px solid #DAE1E7;
@@ -27,7 +27,7 @@
 }
 
 .booking-review .booking-review-title {
-    color: #1A2B48;
+    color: #5a6451;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
@@ -51,7 +51,7 @@
 }
 
 .booking-review .booking-review-content .service-info .service-name a {
-    color: #1A2B48;
+    color: #5a6451;
     font-size: 16px;
     line-height: 25px;
     font-weight: 500;
@@ -175,7 +175,7 @@
 }
 
 .booking-success-notice .notice-success .line1 span {
-    color: #1A2B48;
+    color: #5a6451;
     font-weight: 600;
 }
 

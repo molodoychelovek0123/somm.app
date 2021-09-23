@@ -13,3 +13,26 @@
         </div>
     </div>
 @endforeach
+
+<div class="panel">
+    <div class="panel-title"><strong>Additional block</strong></div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label">{{__("Title")}}</label>
+            <input type="text" name="host_name" class="form-control" value="{{$translation->host_name}}" placeholder="{{__("Meet your host, Mónica Marín")}}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">{{__("Description")}}</label>
+            <div class="">
+                <textarea name="host_description" class="d-none has-ckeditor" cols="30" rows="10">{{$translation->host_description}}</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">{{__("Image ")}}</label>
+            <div class="form-group-image">
+                {!! \Modules\Media\Helpers\FileHelper::fieldUpload('host_image',$row->host_image) !!}
+            </div>
+        </div>
+
+    </div>
+</div>
