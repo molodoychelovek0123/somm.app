@@ -1097,7 +1097,7 @@ jQuery(function($){
         channelPrivate.bind('App\\Events\\PusherNotificationPrivateEvent', callback);
     }
 
-    $('.bravo-menu .products-item').click((event)=>{
+    $('.bravo-menu .products-item').click(function (event){
         event.preventDefault();
         $(this).toggleClass('active');
     });
