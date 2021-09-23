@@ -5,7 +5,8 @@
             <div class="terms-scrollable">
                 @foreach($attribute->terms as $term)
                     <label class="term-item">
-                        <input @if(!empty($selected_terms) and $selected_terms->contains($term->id)) checked @endif type="checkbox" name="terms[]" value="{{$term->id}}">
+                        <input @if(!empty($selected_terms) and $selected_terms->contains($term->id)) checked
+                               @endif type="checkbox" name="terms[]" value="{{$term->id}}">
                         <span class="term-name">{{$term->name}}</span>
                     </label>
                 @endforeach
@@ -19,12 +20,16 @@
     <div class="panel-body">
         <div class="form-group">
             <label class="control-label">{{__("Title")}}</label>
-            <input type="text" name="host_name" class="form-control" value="{{$translation->host_name}}" placeholder="{{__("Meet your host, Mónica Marín")}}">
+            <input type="text" name="host_name" class="form-control" value="{{$translation->host_name}}"
+                   placeholder="{{__("Meet your host, Mónica Marín")}}">
+            <em>To avoid showing this block, leave the title empty</em>
         </div>
         <div class="form-group">
             <label class="control-label">{{__("Description")}}</label>
             <div class="">
-                <textarea name="host_description" class="d-none has-ckeditor" cols="30" rows="10">{{$translation->host_description}}</textarea>
+                <textarea name="host_description" class="d-none has-ckeditor" cols="30" rows="10">
+@if(!empty($translation->host_description)) {{$translation->host_description}} @else Description @endif
+</textarea>
             </div>
         </div>
         <div class="form-group">

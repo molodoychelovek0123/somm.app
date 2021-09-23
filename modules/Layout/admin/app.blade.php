@@ -110,7 +110,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 copy-right" >
-                        {{date('Y')}} &copy; {{__('Somm app by')}} <a href="{{__('https://www.bookingcore.org')}}" target="_blank">{{__('BookingCore Team')}}</a>
+                        {{date('Y')}} &copy; {{__('Somm app by')}} <a href="{{__('https://Sommtable.com')}}" target="_blank">{{__('Sommtable.com')}}</a>
                     </div>
                     <div class="col-md-6">
                         <div class="text-md-right footer-links d-none d-sm-block">
@@ -149,7 +149,7 @@
         jQuery('a:contains(Hotel Settings)').css({'display': 'none'});
         jQuery('a:contains(Flight Settings)').css({'display': 'none'});
         jQuery('a:contains(Car Settings)').css({
-            'opacity': '0',
+            'opacity': '0',h
         'pointer-events':'none'
         });
 

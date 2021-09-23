@@ -8,7 +8,6 @@
     <div class="bravo_detail_tour">
         @include('Tour::frontend.layouts.details.tour-banner')
         <div class="bravo_content">
-            {{ $row->host_name }}
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-9">
