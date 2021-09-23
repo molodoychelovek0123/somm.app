@@ -150,7 +150,7 @@
         jQuery('a:contains(Flight Settings)').css({'display': 'none'});
         jQuery('a:contains(Car Settings)').css({
             'opacity': '0',
-        'pointer-event':'none'
+        'pointer-events':'none'
         });
 
     });
