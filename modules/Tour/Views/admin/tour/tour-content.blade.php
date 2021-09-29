@@ -49,7 +49,7 @@
                     <input type="text" name="adult" class="form-control" value="{{$row->adult}}" style="height: 1px;" hidden>
                     <script>
                         $('input.adultCheckbox').change(function () {
-                            if ($(this).prop("checked")) {
+                            if ($(this).prop("checked")) { //checked
                                 $('input[name=adult]').val(1);
 
                             }
