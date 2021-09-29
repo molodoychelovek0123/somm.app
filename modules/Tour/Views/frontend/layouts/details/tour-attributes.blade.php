@@ -4,7 +4,6 @@
     $terms_ids = $row->tour_term->pluck('term_id');
     $attributes = \Modules\Core\Models\Terms::getTermsById($terms_ids);
 @endphp
-{{ $row->adult }}
 @if(!empty($translation->host_name) and !empty($host_image))
 <div class="g-overview">
     <h3>{{ $translation->host_name }}</h3>

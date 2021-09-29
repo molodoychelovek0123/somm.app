@@ -5,7 +5,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset("libs/fotorama/fotorama.css") }}"/>
 @endsection
 @section('content')
-    <div class="bravo_detail_tour">
+
+    <div class="bravo_detail_tour @if($row->adult) adult_detail @endif" @if($row->adult) data-adult="true" @endif>
         @include('Tour::frontend.layouts.details.tour-banner')
         <div class="bravo_content">
             <div class="container">

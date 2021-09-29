@@ -44,8 +44,8 @@
             </div>
             @if(is_default_lang())
                 <div class="form-group">
-                    <label class="control-label">{{__("21+ content?  ")}}</label>
                     <input type="checkbox" class="form-control adultCheckbox" @if($row->adult) checked @endif style="height: 18px;">
+                    <label class="control-label">{{__("21+ content?  ")}}</label>
                     <input type="text" name="adult" class="form-control" value="{{$row->adult}}" style="height: 1px;" hidden>
                     <script>
                         document.addEventListener("DOMContentLoaded", (event) => {
