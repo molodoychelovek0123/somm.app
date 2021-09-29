@@ -48,6 +48,7 @@
                     <input type="checkbox" class="form-control adultCheckbox" @if($row->adult) checked @endif style="height: 18px;">
                     <input type="text" name="adult" class="form-control" value="{{$row->adult}}" style="height: 1px;" hidden>
                     <script>
+                        document.addEventListener("DOMContentLoaded", (event) => {
                         $('input.adultCheckbox').change(function () {
                             if ($(this).prop("checked")) { //checked
                                 $('input[name=adult]').val(1);
@@ -56,6 +57,7 @@
                             else{
                                 $('input[name=adult]').val(0);
                             }
+                        });
                         });
                     </script>
                 </div>
