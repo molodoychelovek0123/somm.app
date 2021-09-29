@@ -72,6 +72,7 @@ class Tour extends Bookable
         'host_image',
         'host_name',
         'host_description',
+        'adult',
     ];
     protected $slugField                          = 'slug';
     protected $slugFromField                      = 'title';

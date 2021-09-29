@@ -217,6 +217,7 @@ class ManageTourController extends FrontendController
             'host_image',
             'host_name',
             'host_description',
+            'adult'
 
         ], $request->input());
         $row->ical_import_url = $request->ical_import_url;
