@@ -44,8 +44,8 @@
             </div>
             @if(is_default_lang())
                 <div class="form-group">
-                    <label class="control-label">{{__("21+ content?")}}</label>
-                    <input type="checkbox" name="adult" class="form-control" value="{{$row->adult}}">
+                    <label class="control-label">{{__("21+ content?  ")}}</label>
+                    <input type="checkbox" name="adult" class="form-control" value="{{$row->adult}}" style="height: 18px;">
                 </div>
             @endif
             @if(is_default_lang())

@@ -4,6 +4,7 @@
     $terms_ids = $row->tour_term->pluck('term_id');
     $attributes = \Modules\Core\Models\Terms::getTermsById($terms_ids);
 @endphp
+{{ $row->adult }}
 @if(!empty($translation->host_name) and !empty($host_image))
 <div class="g-overview">
     <h3>{{ $translation->host_name }}</h3>
@@ -12,7 +13,7 @@
         <div class="row ">
             <div class="col-8">
                 <?php echo $translation->host_description; ?>
-                {{ $row->adult }}
+
                     @if(!empty($terms_ids) and !empty($attributes))
                         @foreach($attributes as $attribute )
                             @php $translate_attribute = $attribute['parent']->translateOrOrigin(app()->getLocale()) @endphp
