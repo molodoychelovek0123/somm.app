@@ -42,7 +42,12 @@
                 <label class="control-label">{{__("Youtube Video")}}</label>
                 <input type="text" name="video" class="form-control" value="{{$row->video}}" placeholder="{{__("Youtube link video")}}">
             </div>
-
+            @if(is_default_lang())
+                <div class="form-group">
+                    <label class="control-label">{{__("21+ content?")}}</label>
+                    <input type="checkbox" name="adult" class="form-control" value="{{$row->adult}}">
+                </div>
+            @endif
             @if(is_default_lang())
                 <div class="row">
                     <div class="col-lg-6">

@@ -12,7 +12,7 @@
         <div class="row ">
             <div class="col-8">
                 <?php echo $translation->host_description; ?>
-
+                {{ $row->adult }}
                     @if(!empty($terms_ids) and !empty($attributes))
                         @foreach($attributes as $attribute )
                             @php $translate_attribute = $attribute['parent']->translateOrOrigin(app()->getLocale()) @endphp

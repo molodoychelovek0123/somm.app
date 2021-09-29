@@ -1097,9 +1097,17 @@ jQuery(function($){
         channelPrivate.bind('App\\Events\\PusherNotificationPrivateEvent', callback);
     }
 
-    $('.bravo-menu .products-item').click(function (event){
+    $('.bravo-menu .products-item .sommProductsBtn').click(function (event){
         event.preventDefault();
-        $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
+    });
+    $(document).mouseup(function (event){
+        let div = $(".bravo-menu .products-item");
+        if (!div.is(event.target)
+            && div.has(event.target).length === 0
+            && div.hasClass('active')) {
+            div.removeClass('active');
+        }
     });
 });
 
