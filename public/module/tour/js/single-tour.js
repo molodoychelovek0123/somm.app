@@ -22,7 +22,7 @@
             start_date_obj:'',
             duration:0,
             allEvents:[],
-			buyer_fees:[],
+            buyer_fees:[],
 
             is_form_enquiry_and_book:false,
             enquiry_type:'book',
@@ -359,6 +359,8 @@
                         {
                             me.message.content = res.message;
                             me.message.type = res.status;
+
+                            if(me.message.content == "CSRF token mismatch") window.open(window.location);
                         }
 
                         if(res.step){
