@@ -11,9 +11,13 @@
             isFramed = true;
         }
         if (isFramed) {
-            document.querySelector('#checkoutContainer').style.display = 'none';
-            document.querySelector('.checkout-shop-center').style.display = 'block';
-            document.querySelector('.checkout-shop-center a').href = window.location.href;
+            document.addEventListener("DOMContentLoaded", (event) => {
+                document.querySelector('#checkoutContainer').style.display = 'none';
+                document.querySelector('.bravo_header').style.display = 'none';
+                document.querySelector('.bravo_footer').style.display = 'none';
+                document.querySelector('.checkout-shop-center').style.display = 'block';
+                document.querySelector('.checkout-shop-center a').href = window.location.href;
+            });
         }
 
     </script>
@@ -23,10 +27,10 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="form-title">{{__('Booking Submission')}}</h3>
-                         <div class="booking-form">
-                             @include ($service->checkout_form_file ?? 'Booking::frontend/booking/checkout-form')
+                        <div class="booking-form">
+                            @include ($service->checkout_form_file ?? 'Booking::frontend/booking/checkout-form')
 
-                         </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="booking-detail booking-form">
@@ -36,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <p class="checkout-shop-center" style="display:none; position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: -1;">
+        <p class="checkout-shop-center" style="display:none; display: block;position: absolute;top: 50%;transform: translateY(-50%);padding: 20px;z-index: 10;font-size: 20px;">
             The checkout tab should have opened, if it didn't, click <a href="/" target="_blank"> here </a>
         </p>
     </div>
