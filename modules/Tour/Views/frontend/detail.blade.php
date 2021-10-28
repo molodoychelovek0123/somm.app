@@ -30,7 +30,7 @@
                         <div class="g-header framed_header" >
                             <div class="left">
                                 <h1>Wine Tasting | Mónica Marín - view on Somm.app </h1>
-                                <a href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app </a>
+                                <a href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app  </a>
                             </div>
 
                         </div>
