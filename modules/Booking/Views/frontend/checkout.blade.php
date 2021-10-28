@@ -3,6 +3,18 @@
     <link href="{{ asset('module/booking/css/checkout.css?_ver='.config('app.version')) }}" rel="stylesheet">
 @endsection
 @section('content')
+    <script>
+        let isFramed = false;
+        try {
+            isFramed = window != window.top || document != top.document || self.location != top.location;
+        } catch (e) {
+            isFramed = true;
+        }
+        if (isFramed) {
+            window.open(window.location);
+        }
+
+    </script>
     <div class="bravo-booking-page padding-content" >
         <div class="container">
             <div id="bravo-checkout-page" >
@@ -66,4 +78,5 @@
             $('.convert_deposit_amount').html(bravo_format_money(convert_to_money));
         }
     </script>
+
 @endsection
