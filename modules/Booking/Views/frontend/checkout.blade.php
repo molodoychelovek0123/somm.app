@@ -11,13 +11,14 @@
             isFramed = true;
         }
         if (isFramed) {
-            window.open(window.location);
-            document.querySelector('body').style.display = 'none';
+            document.querySelector('#checkoutContainer').style.display = 'none';
+            document.querySelector('.checkout-shop-center').style.display = 'block';
+            document.querySelector('.checkout-shop-center a').href = window.location.href;
         }
 
     </script>
     <div class="bravo-booking-page padding-content" >
-        <div class="container">
+        <div class="container" id="checkoutContainer">
             <div id="bravo-checkout-page" >
                 <div class="row">
                     <div class="col-md-8">
@@ -35,6 +36,9 @@
                 </div>
             </div>
         </div>
+        <p class="checkout-shop-center" style="display:none; position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: -1;">
+            The checkout tab should have opened, if it didn't, click <a href="/" target="_blank"> here </a>
+        </p>
     </div>
 @endsection
 @section('footer')
