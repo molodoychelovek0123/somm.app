@@ -15,8 +15,7 @@
         if (isFramed) {
             document.querySelector('body').classList.add('bravo_framed');
         }
-        let currentLocation = window.location;
-        document.querySelector('.framed_header a').href=currentLocation;
+
     </script>
     <div class="bravo_detail_tour @if($row->adult) adult_detail @endif" @if($row->adult) data-adult="true" @endif>
         @include('Tour::frontend.layouts.details.tour-banner')
@@ -126,6 +125,10 @@
             });
             @endif
         })
+    </script>
+    <script>
+        let currentLocation = window.location;
+        document.querySelector('.framed_header a').href=currentLocation;
     </script>
     <script>
         var bravo_booking_data = {!! json_encode($booking_data) !!}
