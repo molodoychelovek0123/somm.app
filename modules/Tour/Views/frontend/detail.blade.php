@@ -5,18 +5,35 @@
     <link rel="stylesheet" type="text/css" href="{{ asset("libs/fotorama/fotorama.css") }}"/>
 @endsection
 @section('content')
-
+    <script>
+        let isFramed = false;
+        try {
+            isFramed = window != window.top || document != top.document || self.location != top.location;
+        } catch (e) {
+            isFramed = true;
+        }
+        if (isFramed) {
+            document.querySelector('body').classList.add('bravo_framed');
+        }
+    </script>
     <div class="bravo_detail_tour @if($row->adult) adult_detail @endif" @if($row->adult) data-adult="true" @endif>
         @include('Tour::frontend.layouts.details.tour-banner')
         <div class="bravo_content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-lg-9">
+                    <div class="col-md-12 col-lg-9 push-right-sm">
                         @php $review_score = $row->review_data @endphp
                         @include('Tour::frontend.layouts.details.tour-detail')
                         @include('Tour::frontend.layouts.details.tour-review')
                     </div>
-                    <div class="col-md-12 col-lg-3">
+                    <div class="col-md-12 col-lg-3 pull-left-sm">
+                        <div class="g-header framed_header" >
+                            <div class="left">
+                                <h1>Wine Tasting | Mónica Marín - view on Somm.app </h1>
+                                <a href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app </a>
+                            </div>
+
+                        </div>
                         @include('Tour::frontend.layouts.details.vendor')
                         @include('Tour::frontend.layouts.details.tour-form-book')
                         @include('Tour::frontend.layouts.details.open-hours')
