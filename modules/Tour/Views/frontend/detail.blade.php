@@ -14,9 +14,9 @@
         }
         if (isFramed) {
             document.querySelector('body').classList.add('bravo_framed');
-            let currentLocation = window.location;
-            document.querySelector('.framed_header a').href=currentLocation;
         }
+        let currentLocation = window.location;
+        document.querySelector('.framed_header a').href=currentLocation;
     </script>
     <div class="bravo_detail_tour @if($row->adult) adult_detail @endif" @if($row->adult) data-adult="true" @endif>
         @include('Tour::frontend.layouts.details.tour-banner')
@@ -31,7 +31,7 @@
                     <div class="col-md-12 col-lg-3 pull-left-sm">
                         <div class="g-header framed_header" >
                             <div class="left">
-                                <h1>Wine Tasting | Mónica Marín - view on Somm.app </h1>
+                                <h1>{!! clean($translation->title) !!}</h1>
                                 <a href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app  </a>
                             </div>
 
