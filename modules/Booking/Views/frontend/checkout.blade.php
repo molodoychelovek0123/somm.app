@@ -12,6 +12,7 @@
         }
         if (isFramed) {
             window.open(window.location);
+            document.querySelector('body').style.display = 'none';
         }
 
     </script>
