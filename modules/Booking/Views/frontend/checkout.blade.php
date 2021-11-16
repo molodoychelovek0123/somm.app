@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <p class="checkout-shop-center" style="display:none; display: block;position: absolute;top: 50%;transform: translateY(-50%);padding: 20px;z-index: 10;font-size: 20px;">
+        <p class="checkout-shop-center" style="display:none;position: absolute;top: 50%;transform: translateY(-50%);padding: 20px;z-index: 10;font-size: 20px;">
             The checkout tab should have opened, if it didn't, click <a href="/" target="_blank"> here </a>
         </p>
     </div>
