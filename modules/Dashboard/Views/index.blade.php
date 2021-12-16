@@ -46,7 +46,7 @@
                 <div class="panel">
                     <div class="panel-title d-flex justify-content-between">
                         <strong>{{__('Recent Bookings')}}</strong>
-                        <a target="_self" href="{{url('admin/module/report/booking')}}" class="btn-link">{{__("More")}}
+                        <a href="{{url('admin/module/report/booking')}}" class="btn-link">{{__("More")}}
                             <i class="icon ion-ios-arrow-forward"></i></a>
                     </div>
                     <div class="panel-body">
@@ -69,7 +69,7 @@
                                             <td>#{{$booking->id}}</td>
                                             <td>
                                                 @if(get_bookable_service_by_id($booking->object_model) and $service = $booking->service)
-                                                    <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title}}</a>
+                                                    <a href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title}}</a>
                                                 @else
                                                     {{__("[Deleted]")}}
                                                 @endif

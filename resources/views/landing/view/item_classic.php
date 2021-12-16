@@ -19,7 +19,7 @@ if(isset($vv['layout']))
 ?>
 <div class="col-lg-4 col-md-6 col-sm-6">
     <div class="item <?php echo $status; ?>">
-        <a target="_self" href="<?php echo esc_url($vv['url']); ?>">
+        <a href="<?php echo esc_url($vv['url']); ?>">
             <?php if($status != 'soon'){ ?>
                 <!--<span class="view-more">View More</span>-->
             <?php } ?>

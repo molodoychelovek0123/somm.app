@@ -49,7 +49,7 @@
                                 <tr>
                                     <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item"></td>
                                     <td class="title">
-                                        <a target="_self" href="{{url('admin/module/user/edit/'.$row->user->id)}}">{{@$row->user->getDisplayName()}}</a>
+                                        <a href="{{url('admin/module/user/edit/'.$row->user->id)}}">{{@$row->user->getDisplayName()}}</a>
                                     </td>
                                     <td>{{$row->user->email}}</td>
                                     <td>

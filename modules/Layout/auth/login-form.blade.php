@@ -16,7 +16,7 @@
             <label for="remember-me" class="mb0">
                 <input type="checkbox" name="remember" id="remember-me" value="1"> {{__('Remember me')}} <span class="checkmark fcheckbox"></span>
             </label>
-            <a target="_self" href="{{ route("password.request") }}">{{__('Forgot Password?')}}</a>
+            <a href="{{ route("password.request") }}">{{__('Forgot Password?')}}</a>
         </div>
     </div>
     @if(setting_item("user_enable_login_recaptcha"))
@@ -37,7 +37,7 @@
             <div class="row">
                 @if(setting_item('facebook_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('/social-login/facebook')}}"class="btn btn_login_fb_link" data-channel="facebook">
+                        <a href="{{url('/social-login/facebook')}}"class="btn btn_login_fb_link" data-channel="facebook">
                             <i class="input-icon fa fa-facebook"></i>
                             {{__('Facebook')}}
                         </a>
@@ -45,7 +45,7 @@
                 @endif
                 @if(setting_item('google_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('social-login/google')}}" class="btn btn_login_gg_link" data-channel="google">
+                        <a href="{{url('social-login/google')}}" class="btn btn_login_gg_link" data-channel="google">
                             <i class="input-icon fa fa-google"></i>
                             {{__('Google')}}
                         </a>
@@ -53,7 +53,7 @@
                 @endif
                 @if(setting_item('twitter_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('social-login/twitter')}}" class="btn btn_login_tw_link" data-channel="twitter">
+                        <a href="{{url('social-login/twitter')}}" class="btn btn_login_tw_link" data-channel="twitter">
                             <i class="input-icon fa fa-twitter"></i>
                             {{__('Twitter')}}
                         </a>
@@ -62,6 +62,6 @@
             </div>
         </div>
     @endif
-    <div class="c-grey font-medium f14 text-center"> {{__('Do not have an account?')}} <a target="_self" href="" data-target="#register" data-toggle="modal">{{__('Sign Up')}}</a>
+    <div class="c-grey font-medium f14 text-center"> {{__('Do not have an account?')}} <a href="" data-target="#register" data-toggle="modal">{{__('Sign Up')}}</a>
     </div>
 </form>

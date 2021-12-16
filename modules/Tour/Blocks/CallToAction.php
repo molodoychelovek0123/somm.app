@@ -58,7 +58,7 @@ class CallToAction extends BaseBlock
                     'id'        => 'bg_color',
                     'type'      => 'input',
                     'inputType' => 'text',
-                    'label'     => __('- Layout Normal: Background Color - get code in <a target="_self" href="https://html-color-codes.info" target="_blank">https://html-color-codes.info</a>'),
+                    'label'     => __('- Layout Normal: Background Color - get code in <a href="https://html-color-codes.info" target="_blank">https://html-color-codes.info</a>'),
                     'placeholder'=> "#f6b756",
                 ],
                 [

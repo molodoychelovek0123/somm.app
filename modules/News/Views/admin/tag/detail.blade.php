@@ -7,7 +7,7 @@
                 <div class="">
                     <h1 class="title-bar">{{$row->id ? 'Edit: '.$row->name : 'Add new tag'}}</h1>
                     @if($row->slug)
-                        <p class="item-url-demo"> {{ __('Permalink:')}} {{url('news/tag')}}/<a target="_self" href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a>
+                        <p class="item-url-demo"> {{ __('Permalink:')}} {{url('news/tag')}}/<a href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a>
                         </p>
                     @endif
                 </div>

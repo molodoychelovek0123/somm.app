@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{ __('All Plans')}}</h1>
             <div class="title-actions">
-                <a target="_self" href="{{url('admin/module/vendor/plan/create')}}" class="btn btn-primary">{{ __('Add new plan')}}</a>
+                <a href="{{url('admin/module/vendor/plan/create')}}" class="btn btn-primary">{{ __('Add new plan')}}</a>
             </div>
         </div>
         @include('admin.message')
@@ -50,7 +50,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}"></td>
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/vendor/plan/edit/'.$row->id)}}"> {{$row->name}}  </a>
+                                            <a href="{{url('admin/module/vendor/plan/edit/'.$row->id)}}"> {{$row->name}}  </a>
                                         </td>
                                         <td class="author">{{$row->getAuthor->getDisplayName() ?? ''}} </td>
                                         <td class="date">{{ display_date($row->updated_at)}}</td>

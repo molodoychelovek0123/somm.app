@@ -60,7 +60,7 @@
                                         <tr>
                                             <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
                                             <td class="title">
-                                                <a target="_self" href="{{route('flight.admin.airline.edit',['id'=>$row->id])}}">{{$row->name}}</a>
+                                                <a href="{{route('flight.admin.airline.edit',['id'=>$row->id])}}">{{$row->name}}</a>
                                             </td>
                                             <td>{{ display_date($row->updated_at)}}</td>
                                             <td><a class="btn btn-primary btn-sm" href="{{route('flight.admin.airline.edit',['id'=>$row->id])}}"><i class="fa fa-edit"></i> {{__('Edit')}}</a></td>

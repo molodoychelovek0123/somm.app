@@ -65,7 +65,7 @@
                                         <tr>
                                             <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                             <td class="title">
-                                                <a target="_self" href="{{route('location.admin.category.edit',$row)}}">{{$prefix.' '.$row->name}}</a>
+                                                <a href="{{route('location.admin.category.edit',$row)}}">{{$prefix.' '.$row->name}}</a>
                                             </td>
                                             <td class="d-none">{{$row->slug}}</td>
                                             <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>

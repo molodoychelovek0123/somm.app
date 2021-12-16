@@ -6,6 +6,6 @@
     	{{ trans('installer_messages.updater.welcome.message') }}
     </p>
     <div class="buttons">
-        <a target="_self" href="{{ route('LaravelUpdater::overview') }}" class="button">{{ trans('installer_messages.next') }}</a>
+        <a href="{{ route('LaravelUpdater::overview') }}" class="button">{{ trans('installer_messages.next') }}</a>
     </div>
 @stop

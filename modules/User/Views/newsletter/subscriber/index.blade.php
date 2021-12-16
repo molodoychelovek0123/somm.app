@@ -61,7 +61,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/user/subscriber/edit/'.$row->id)}}">{{$row->email}}</a>
+                                            <a href="{{url('admin/module/user/subscriber/edit/'.$row->id)}}">{{$row->email}}</a>
                                         </td>
                                         <td>{{$row->first_name}}</td>
                                         <td>{{$row->last_name}}</td>

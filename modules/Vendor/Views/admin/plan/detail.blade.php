@@ -8,7 +8,7 @@
                 <div class="">
                     <h1 class="title-bar">{{$row->id ? __('Edit: ') .$row->title :  __('Add new plan') }}</h1>
                     @if($row->slug)
-                        <p class="item-url-demo">{{ __('Permalink: ')}} {{ url( config('page.page_route_prefix') )}}/<a target="_self" href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a>
+                        <p class="item-url-demo">{{ __('Permalink: ')}} {{ url( config('page.page_route_prefix') )}}/<a href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a>
                         </p>
                     @endif
                 </div>

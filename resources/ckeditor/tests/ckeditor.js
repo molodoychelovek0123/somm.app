@@ -160,7 +160,7 @@ describe( 'ClassicEditor build', () => {
 		} );
 
 		it( 'link works', () => {
-			const data = '<p><a target="_self" href="//ckeditor.com">CKEditor.com</a></p>';
+			const data = '<p><a href="//ckeditor.com">CKEditor.com</a></p>';
 
 			editor.setData( data );
 			expect( editor.getData() ).to.equal( data );

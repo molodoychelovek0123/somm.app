@@ -13,12 +13,12 @@
             <ul class="nav nav-tabs ht-nav-tabs">
                 <?php $status_type = Request::query('status'); ?>
                 <li class="@if(empty($status_type)) active @endif">
-                    <a target="_self" href="{{route("vendor.bookingReport")}}">{{__("All Booking")}}</a>
+                    <a href="{{route("vendor.bookingReport")}}">{{__("All Booking")}}</a>
                 </li>
                 @if(!empty($statues))
                     @foreach($statues as $status)
                         <li class="@if(!empty($status_type) && $status_type == $status) active @endif">
-                            <a target="_self" href="{{route("vendor.bookingReport",['status'=>$status])}}">{{booking_status_to_text($status)}}</a>
+                            <a href="{{route("vendor.bookingReport",['status'=>$status])}}">{{booking_status_to_text($status)}}</a>
                         </li>
                     @endforeach
                 @endif

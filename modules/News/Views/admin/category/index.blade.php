@@ -65,7 +65,7 @@
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         </td>
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/news/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
+                                            <a href="{{url('admin/module/news/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
                                         </td>
                                         <td>{{$row->slug}}</td>
 

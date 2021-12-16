@@ -1,5 +1,5 @@
 <div class="item">
-    <a target="_self" href="{{ route("space.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
+    <a href="{{ route("space.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
 </div>
 <div class="item">
     @php

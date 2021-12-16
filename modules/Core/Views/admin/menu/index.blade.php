@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{__('Menu Management')}}</h1>
             <div class="title-actions">
-                <a target="_self" href="{{url('admin/module/core/menu/create')}}" class="btn btn-primary">{{__("Add new")}}</a>
+                <a href="{{url('admin/module/core/menu/create')}}" class="btn btn-primary">{{__("Add new")}}</a>
             </div>
         </div>
         @include('admin.message')
@@ -44,7 +44,7 @@
                                 <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}">
                                 </td>
                                 <td>
-                                    <a target="_self" href="{{url('admin/module/core/menu/edit/'.$row->id)}}">{{$row->name}}</a>
+                                    <a href="{{url('admin/module/core/menu/edit/'.$row->id)}}">{{$row->name}}</a>
                                 </td>
                                 <td>
                                     @foreach($menu_locations as $l=>$menu_id)

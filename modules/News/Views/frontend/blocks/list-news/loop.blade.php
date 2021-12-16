@@ -3,7 +3,7 @@
 @endphp
 <div class="item-news">
     <div class="thumb-image">
-        <a target="_self" href="{{$row->getDetailUrl()}}">
+        <a href="{{$row->getDetailUrl()}}">
             @if($row->image_id)
                 @if(!empty($disable_lazyload))
                     <img src="{{get_file_url($row->image_id,'medium')}}" class="img-responsive" alt="{{$translation->name ?? ''}}">
@@ -20,7 +20,7 @@
                 @if(!empty($category))
                     @php $t = $category->translateOrOrigin(app()->getLocale()); @endphp
                     <li>
-                        <a target="_self" href="{{$category->getDetailUrl(app()->getLocale())}}">
+                        <a href="{{$category->getDetailUrl(app()->getLocale())}}">
                             {{$t->name ?? ''}}
                         </a>
                     </li>
@@ -28,7 +28,7 @@
                 <li class="dot"> {{ display_date($row->updated_at)}}  </li>
             </ul>
         </div>
-        <h3 class="item-title"><a target="_self" href="{{$row->getDetailUrl()}}"> {!! clean($translation->title) !!} </a></h3>
+        <h3 class="item-title"><a href="{{$row->getDetailUrl()}}"> {!! clean($translation->title) !!} </a></h3>
         <div class="item-desc">
             {!! get_exceprt($translation->content,70,"...") !!}
         </div>

@@ -5,7 +5,7 @@
             <h1 class="title-bar">{{!empty($recovery) ? __('Recovery') : __("All Class")}}</h1>
             <div class="title-actions">
                 @if(empty($recovery))
-                <a target="_self" href="{{route('tour.admin.create')}}" class="btn btn-primary">{{__("Add new class")}}</a>
+                <a href="{{route('tour.admin.create')}}" class="btn btn-primary">{{__("Add new class")}}</a>
                 @endif
             </div>
         </div>
@@ -94,7 +94,7 @@
                                         <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}">
                                         </td>
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/experience/edit/'.$row->id)}}">{{$row->title}}</a>
+                                            <a href="{{url('admin/module/experience/edit/'.$row->id)}}">{{$row->title}}</a>
                                         </td>
                                         <td>{{$row->location->name ?? ''}}</td>
                                         <td>
@@ -112,7 +112,7 @@
                                         </td>
                                         <td>{{ display_date($row->updated_at)}}</td>
                                         <td>
-                                            <a target="_self" href="{{route('tour.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
+                                            <a href="{{route('tour.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
                                             </a>
                                         </td>
                                     </tr>

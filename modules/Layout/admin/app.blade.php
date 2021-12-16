@@ -110,12 +110,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 copy-right" >
-                        {{date('Y')}} &copy; {{__('Somm app by')}} <a target="_self" href="{{__('https://Sommtable.com')}}" target="_blank">{{__('Sommtable.com')}}</a>
+                        {{date('Y')}} &copy; {{__('Somm app by')}} <a href="{{__('https://Sommtable.com')}}" target="_blank">{{__('Sommtable.com')}}</a>
                     </div>
                     <div class="col-md-6">
                         <div class="text-md-right footer-links d-none d-sm-block">
-                            <a target="_self" href="{{__('https://www.somm.app')}}" target="_blank">{{__('About Us')}}</a>
-                            <a target="_self" href="{{__('https://sommtable.com')}}" target="_blank">{{__('Contact Us')}}</a>
+                            <a href="{{__('https://www.somm.app')}}" target="_blank">{{__('About Us')}}</a>
+                            <a href="{{__('https://sommtable.com')}}" target="_blank">{{__('Contact Us')}}</a>
                         </div>
                     </div>
                 </div>

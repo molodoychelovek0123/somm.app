@@ -34,7 +34,7 @@
     <div class="form-group">
         <label for="term">
             <input id="term" type="checkbox" name="term" class="mr5">
-            {!! __("I have read and accept the <a target="_self" href=':link' target='_blank'>Terms and Privacy Policy</a>",['link'=>get_page_url(setting_item('booking_term_conditions'))]) !!}
+            {!! __("I have read and accept the <a href=':link' target='_blank'>Terms and Privacy Policy</a>",['link'=>get_page_url(setting_item('booking_term_conditions'))]) !!}
             <span class="checkmark fcheckbox"></span>
         </label>
         <div><span class="invalid-feedback error error-term"></span></div>
@@ -58,7 +58,7 @@
             <div class="row">
                 @if(setting_item('facebook_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('/social-login/facebook')}}" class="btn btn_login_fb_link"
+                        <a href="{{url('/social-login/facebook')}}" class="btn btn_login_fb_link"
                            data-channel="facebook">
                             <i class="input-icon fa fa-facebook"></i>
                             {{__('Facebook')}}
@@ -67,7 +67,7 @@
                 @endif
                 @if(setting_item('google_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('social-login/google')}}" class="btn btn_login_gg_link" data-channel="google">
+                        <a href="{{url('social-login/google')}}" class="btn btn_login_gg_link" data-channel="google">
                             <i class="input-icon fa fa-google"></i>
                             {{__('Google')}}
                         </a>
@@ -75,7 +75,7 @@
                 @endif
                 @if(setting_item('twitter_enable'))
                     <div class="col-xs-12 col-sm-4">
-                        <a target="_self" href="{{url('social-login/twitter')}}" class="btn btn_login_tw_link" data-channel="twitter">
+                        <a href="{{url('social-login/twitter')}}" class="btn btn_login_tw_link" data-channel="twitter">
                             <i class="input-icon fa fa-twitter"></i>
                             {{__('Twitter')}}
                         </a>
@@ -86,6 +86,6 @@
     @endif
     <div class="c-grey f14 text-center">
        {{__(" Already have an account?")}}
-        <a target="_self" href="#" data-target="#login" data-toggle="modal">{{__("Sign In")}}</a>
+        <a href="#" data-target="#login" data-toggle="modal">{{__("Sign In")}}</a>
     </div>
 </form>

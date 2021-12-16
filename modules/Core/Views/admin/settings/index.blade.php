@@ -15,7 +15,7 @@
                     <div class="panel-body">
                         <ul class="panel-navs">
                             @foreach($groups as $k=>$row)
-                                <li class="@if($current_group == $k) active @endif"><a target="_self" href="{{url('admin/module/core/settings/index/'.$k)}}">
+                                <li class="@if($current_group == $k) active @endif"><a href="{{url('admin/module/core/settings/index/'.$k)}}">
                                     @if($row['icon'])
                                     <i class="{{$row['icon']}}"></i>
                                     @endif

@@ -61,15 +61,15 @@
                                             <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}">
                                             </td>
                                             <td class="title">
-                                                <a target="_self" href="{{route('flight.admin.attribute.edit',['id'=>$row->id])}}">{{$row->name}}</a>
+                                                <a href="{{route('flight.admin.attribute.edit',['id'=>$row->id])}}">{{$row->name}}</a>
                                             </td>
                                             <td>
                                                 {{$row->position ?? 0}}
                                             </td>
                                             <td>
-                                                <a target="_self" href="{{route('flight.admin.attribute.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
+                                                <a href="{{route('flight.admin.attribute.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
                                                 </a>
-                                                <a target="_self" href="{{route('flight.admin.attribute.term.index',['id'=>$row->id])}}" class="btn btn-sm btn-success"><i class="fa fa"></i> {{__("Manage Terms")}}
+                                                <a href="{{route('flight.admin.attribute.term.index',['id'=>$row->id])}}" class="btn btn-sm btn-success"><i class="fa fa"></i> {{__("Manage Terms")}}
                                                 </a>
 
                                             </td>

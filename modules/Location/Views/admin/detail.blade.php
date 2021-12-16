@@ -8,7 +8,7 @@
                 <div class="">
                     <h1 class="title-bar">{{$row->id ? 'Edit: '.$row->name : __("Add new location")}}</h1>
                     @if($row->slug)
-                        <p class="item-url-demo">{{__("Permalink")}}: {{ url( (request()->query('lang') ? request()->query('lang').'/' : '').config('location.location_route_prefix'))  }}/<a target="_self" href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a></p>
+                        <p class="item-url-demo">{{__("Permalink")}}: {{ url( (request()->query('lang') ? request()->query('lang').'/' : '').config('location.location_route_prefix'))  }}/<a href="#" class="open-edit-input" data-name="slug">{{$row->slug}}</a></p>
                     @endif
                 </div>
                 <div class="">

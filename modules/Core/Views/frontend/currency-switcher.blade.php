@@ -7,7 +7,7 @@
     <li class="dropdown">
         @foreach($actives as $currency)
             @if($current == $currency['currency_main'])
-                <a target="_self" href="#" data-toggle="dropdown" class="is_login">
+                <a href="#" data-toggle="dropdown" class="is_login">
                     {{strtoupper($currency['currency_main'])}}
                     <i class="fa fa-angle-down"></i>
                 </a>
@@ -17,7 +17,7 @@
             @foreach($actives as $currency)
                 @if($current != $currency['currency_main'])
                     <li>
-                        <a target="_self" href="{{get_currency_switcher_url($currency['currency_main'])}}" class="is_login">
+                        <a href="{{get_currency_switcher_url($currency['currency_main'])}}" class="is_login">
                             {{strtoupper($currency['currency_main'])}}
                         </a>
                     </li>

@@ -60,7 +60,7 @@
             <img v-show="value" :src="bookingCore.url+'/media/preview/'+value" class="image-responsive">
         </div>
         <div class="upload-actions justify-content-between" v-show="value">
-            <a target="_self" href="#" @click="value = ''">Remove</a>
+            <a href="#" @click="value = ''">Remove</a>
         </div>
     </div>
 </template>

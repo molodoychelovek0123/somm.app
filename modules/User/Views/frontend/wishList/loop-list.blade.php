@@ -14,7 +14,7 @@ $service = $row->service;
                     </div>
                 @endif
                 <div class="thumb-image">
-                    <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank">
+                    <a href="{{$service->getDetailUrl()}}" target="_blank">
                         @if($service->image_url)
                             <img src="{{$service->image_url}}" class="img-responsive" alt="">
                         @endif
@@ -23,7 +23,7 @@ $service = $row->service;
             </div>
             <div class="col-md-9">
                 <div class="item-title">
-                    <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank">
+                    <a href="{{$service->getDetailUrl()}}" target="_blank">
                         {{$service->title}}
                     </a>
                 </div>
@@ -79,8 +79,8 @@ $service = $row->service;
                     </div>
                 @endif
                 <div class="control-action">
-                    <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank" class="btn btn-info">{{__("View")}}</a>
-                    <a target="_self" href="{{ route('user.wishList.remove',['id'=>$service->id , 'type' => $service->type]) }}" class="btn btn-warning">{{__("Remove")}}</a>
+                    <a href="{{$service->getDetailUrl()}}" target="_blank" class="btn btn-info">{{__("View")}}</a>
+                    <a href="{{ route('user.wishList.remove',['id'=>$service->id , 'type' => $service->type]) }}" class="btn btn-warning">{{__("Remove")}}</a>
                 </div>
             </div>
         </div>

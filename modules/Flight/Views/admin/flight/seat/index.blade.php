@@ -61,7 +61,7 @@
                                     @foreach ($rows as $row)
                                         <tr>
                                             <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
-                                            <td><a target="_self" href="{{route('flight.admin.edit',$row->flight)}}">{{$row->flight->title}} {{$row->flight->code}} #{{$row->flight->id}}</a></td>
+                                            <td><a href="{{route('flight.admin.edit',$row->flight)}}">{{$row->flight->title}} {{$row->flight->code}} #{{$row->flight->id}}</a></td>
                                             <td>{{$row->seatType->name}}</td>
                                             <td>{{format_money($row->price)}}</td>
                                             <td>{{$row->max_passengers}}</td>

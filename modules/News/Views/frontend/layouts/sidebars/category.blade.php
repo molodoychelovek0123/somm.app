@@ -14,7 +14,7 @@
                 ?>
                     <li>
                         <span></span>
-                        <a target="_self" href="{{ $category->getDetailUrl() }}">{{$prefix}} {{$translation->name}}</a>
+                        <a href="{{ $category->getDetailUrl() }}">{{$prefix}} {{$translation->name}}</a>
                     </li>
                 <?php
                 $traverse($category->children, $prefix . '-');

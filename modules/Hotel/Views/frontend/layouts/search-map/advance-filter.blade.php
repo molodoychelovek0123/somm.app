@@ -33,6 +33,6 @@
         @endforeach
     </div>
     <div class="ad-filter-f text-right">
-        <a target="_self" href="#" onclick="return false" class="btn btn-primary btn-apply-advances">{{__("Apply Filters")}}</a>
+        <a href="#" onclick="return false" class="btn btn-primary btn-apply-advances">{{__("Apply Filters")}}</a>
     </div>
 </div>

@@ -22,12 +22,12 @@
     </div>
     <ul class="list-group list-group-borderless list-group-horizontal custom-social-share">
         <li class="list-group-item px-1">
-            <a target="_self" href="#" class="height-45 width-45 border rounded border-width-2 flex-content-center">
+            <a href="#" class="height-45 width-45 border rounded border-width-2 flex-content-center">
                 <i class="flaticon-like font-size-18 text-dark"></i>
             </a>
         </li>
         <li class="list-group-item px-1">
-            <a target="_self" href="#" class="height-45 width-45 border rounded border-width-2 flex-content-center">
+            <a href="#" class="height-45 width-45 border rounded border-width-2 flex-content-center">
                 <i class="flaticon-share font-size-18 text-dark"></i>
             </a>
         </li>

@@ -59,7 +59,7 @@
                                         <tr>
                                             <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
                                             <td class="title">
-                                                <a target="_self" href="{{route('tour.admin.attribute.term.edit', ['id' => $row->id])}}">{{$row->name}}</a>
+                                                <a href="{{route('tour.admin.attribute.term.edit', ['id' => $row->id])}}">{{$row->name}}</a>
                                             </td>
                                             <td>{{ display_date($row->updated_at)}}</td>
                                         </tr>

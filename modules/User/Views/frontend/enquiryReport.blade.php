@@ -35,7 +35,7 @@
                                         </td>
                                         <td>
                                             @if($service = $row->service)
-                                                <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title ?? ''}}</a>
+                                                <a href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title ?? ''}}</a>
                                             @else
                                                 {{__("[Deleted]")}}
                                             @endif
@@ -59,7 +59,7 @@
                                                 <div class="dropdown-menu">
                                                     @if(!empty($statues))
                                                         @foreach($statues as $status)
-                                                            <a target="_self" href="{{ route("vendor.enquiry_report.bulk_edit" , ['id'=>$row->id , 'status'=>$status]) }}">
+                                                            <a href="{{ route("vendor.enquiry_report.bulk_edit" , ['id'=>$row->id , 'status'=>$status]) }}">
                                                                 <i class="icofont-long-arrow-right"></i> {{__('Mark as: :name',['name'=>booking_status_to_text($status)])}}
                                                             </a>
                                                         @endforeach

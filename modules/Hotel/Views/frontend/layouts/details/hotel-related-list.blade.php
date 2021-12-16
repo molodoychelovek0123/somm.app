@@ -9,7 +9,7 @@
                 <div class="item">
                     <div class="media">
                         <div class="media-left">
-                            <a target="_self" href="{{$item->getDetailUrl(false)}}">
+                            <a href="{{$item->getDetailUrl(false)}}">
                                 @if($item->image_url)
                                     @if(!empty($disable_lazyload))
                                         <img src="{{$item->image_url}}" class="img-responsive" alt="{{$translation_item->title}}">
@@ -28,7 +28,7 @@
                                 </div>
                             @endif
                             <h4 class="media-heading">
-                                <a target="_self" href="{{$item->getDetailUrl(false)}}">
+                                <a href="{{$item->getDetailUrl(false)}}">
                                     {{$translation_item->title}}
                                 </a>
                             </h4>

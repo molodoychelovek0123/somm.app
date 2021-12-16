@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{__('Import Template')}}</h1>
             <div class="title-actions">
-                <a target="_self" href="{{url('admin/module/template')}}" class="btn btn-primary">{{__('All Templates')}}</a>
+                <a href="{{url('admin/module/template')}}" class="btn btn-primary">{{__('All Templates')}}</a>
             </div>
         </div>
         @include('admin.message')

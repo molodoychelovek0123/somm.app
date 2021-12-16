@@ -44,7 +44,7 @@
                                     <a class="page-link" href="#">@{{p}}</a></li>
                                 <li class="page-item" :class="{disabled:filter.page >= totalPage}">
                                     <a v-if="filter.page >= totalPage" class="page-link">{{__("Next")}}</a>
-                                    <a target="_self" href="#" class="page-link" v-if="filter.page < totalPage" v-on:click="changePage(filter.page+1,$event)">{{__("Next")}}</a>
+                                    <a href="#" class="page-link" v-if="filter.page < totalPage" v-on:click="changePage(filter.page+1,$event)">{{__("Next")}}</a>
                                 </li>
                             </ul>
                         </nav>

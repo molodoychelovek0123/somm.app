@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="thumb-image">
-                <a target="_self" href="{{$row->getDetailUrl()}}" target="_blank">
+                <a href="{{$row->getDetailUrl()}}" target="_blank">
                     @if($row->image_url)
                         <img src="{{$row->image_url}}" class="img-responsive" alt="">
                     @endif
@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-9">
             <div class="item-title">
-                <a target="_self" href="{{$row->getDetailUrl()}}" target="_blank">
+                <a href="{{$row->getDetailUrl()}}" target="_blank">
                     {{$row->title}}
                 </a>
             </div>
@@ -33,16 +33,16 @@
             </div>
             <div class="control-action">
                 @if(Auth::user()->hasPermissionTo('hotel_update'))
-                    <a target="_self" href="{{route('hotel.vendor.room.edit',['hotel_id'=>$hotel->id,'id'=>$row->id])}}" class="btn btn-warning">{{__("Edit")}}</a>
+                    <a href="{{route('hotel.vendor.room.edit',['hotel_id'=>$hotel->id,'id'=>$row->id])}}" class="btn btn-warning">{{__("Edit")}}</a>
                 @endif
                 @if(Auth::user()->hasPermissionTo('hotel_update'))
-                    <a target="_self" href="{{route('hotel.vendor.room.delete',['hotel_id'=>$hotel->id,'id'=>$row->id])}}" class="btn btn-danger" data-confirm="<?php echo e(__("Do you want to delete?")); ?>">{{__("Del")}}</a>
+                    <a href="{{route('hotel.vendor.room.delete',['hotel_id'=>$hotel->id,'id'=>$row->id])}}" class="btn btn-danger" data-confirm="<?php echo e(__("Do you want to delete?")); ?>">{{__("Del")}}</a>
                 @endif
                 @if($row->status == 'publish')
-                    <a target="_self" href="{{route('hotel.vendor.room.bulk_edit',['hotel_id'=>$hotel->id,'id'=>$row->id,'action' => "make-hide"])}}" class="btn btn-secondary">{{__("Make hide")}}</a>
+                    <a href="{{route('hotel.vendor.room.bulk_edit',['hotel_id'=>$hotel->id,'id'=>$row->id,'action' => "make-hide"])}}" class="btn btn-secondary">{{__("Make hide")}}</a>
                 @endif
                 @if($row->status == 'draft')
-                    <a target="_self" href="{{route('hotel.vendor.room.bulk_edit',['hotel_id'=>$hotel->id,'id'=>$row->id,'action' => "make-publish"])}}" class="btn btn-success">{{__("Make publish")}}</a>
+                    <a href="{{route('hotel.vendor.room.bulk_edit',['hotel_id'=>$hotel->id,'id'=>$row->id,'action' => "make-publish"])}}" class="btn btn-success">{{__("Make publish")}}</a>
                 @endif
             </div>
         </div>

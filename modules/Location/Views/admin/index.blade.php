@@ -89,7 +89,7 @@
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         </td>
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/location/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
+                                            <a href="{{url('admin/module/location/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
                                         </td>
                                         <td class="d-none d-md-block">{{$row->slug}}</td>
                                         <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>

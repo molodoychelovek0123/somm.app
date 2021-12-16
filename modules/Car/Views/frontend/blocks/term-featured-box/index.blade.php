@@ -16,7 +16,7 @@
                     $page_search = Modules\Car\Models\Car::getLinkForPageSearch(false , [ 'terms[]' =>  $item->id] );
                     ?>
                     <div class="col-md-6 col-md-4 col-lg-3">
-                        <a target="_self" href="{{ $page_search }}">
+                        <a href="{{ $page_search }}">
                             <div class="featured-item">
                                 <div class="image">
                                     <img src="{{$image_url}}" class="img-responsive" alt="{{$item->name}}">

@@ -42,7 +42,7 @@
                     <label>{{__("Gmap API Key")}}</label>
                     <div class="form-controls">
                         <input type="text" name="map_gmap_key" value="{{$settings['map_gmap_key'] ?? ''}}" class="form-control">
-                        <p><i><a target="_self" href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="blank">{{__("Learn how to get an api key")}}</a></i></p>
+                        <p><i><a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="blank">{{__("Learn how to get an api key")}}</a></i></p>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                     <label>{{__("Api Key")}}</label>
                     <div class="form-controls">
                         <input type="text" name="recaptcha_api_key" value="{{$settings['recaptcha_api_key'] ?? ''}}" class="form-control">
-                        <p><i><a target="_self" href="http://www.google.com/recaptcha/admin" target="blank">{{__("Learn how to get an api key")}}</a></i></p>
+                        <p><i><a href="http://www.google.com/recaptcha/admin" target="blank">{{__("Learn how to get an api key")}}</a></i></p>
                     </div>
                 </div>
                 <div class="form-group" data-condition="recaptcha_enable:is(1)">

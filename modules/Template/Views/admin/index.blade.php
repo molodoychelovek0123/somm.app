@@ -4,8 +4,8 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{__('Template Management')}}</h1>
             <div class="title-actions">
-                <a target="_self" href="{{url('admin/module/template/importTemplate')}}" class="btn btn-info">{{__('Import new Template')}}</a>
-                <a target="_self" href="{{url('admin/module/template/create')}}" class="btn btn-primary">{{__('Add new Template')}}</a>
+                <a href="{{url('admin/module/template/importTemplate')}}" class="btn btn-info">{{__('Import new Template')}}</a>
+                <a href="{{url('admin/module/template/create')}}" class="btn btn-primary">{{__('Add new Template')}}</a>
             </div>
         </div>
         @include('admin.message')
@@ -50,7 +50,7 @@
                                     <tr>
                                         <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
                                         <td class="title">
-                                            <a target="_self" href="{{url('admin/module/template/edit/'.$row->id)}}">{{$row->title}}</a>
+                                            <a href="{{url('admin/module/template/edit/'.$row->id)}}">{{$row->title}}</a>
                                         </td>
                                         <td>{{$row->updated_at}}</td>
                                         <td><a class="btn btn-sm btn-primary" href="{{route('template.admin.exportTemplate',[$row->id])}}"> <i class="fa fa-download" aria-hidden="true"></i> {{__('Export')}}</a></td>

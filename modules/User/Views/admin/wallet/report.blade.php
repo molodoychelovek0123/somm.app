@@ -75,7 +75,7 @@
                                     #{{$row->id}}</td>
                                 <td>
                                     @if($row->user)
-                                        <a target="_self" href="">{{$row->user->display_name}}</a>
+                                        <a href="">{{$row->user->display_name}}</a>
                                     @endif
                                 </td>
                                 <td>{{format_money_main($row->amount)}}</td>

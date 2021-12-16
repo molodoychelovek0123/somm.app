@@ -27,7 +27,7 @@
         <div class="not-found-box">
             <h3 class="n-title">{{__("We couldn't find any Experiences.")}}</h3>
             <p class="p-desc">{{__("Try changing your filter criteria")}}</p>
-            {{--<a target="_self" href="#" onclick="return false;" click="" class="btn btn-danger">{{__("Clear Filters")}}</a>--}}
+            {{--<a href="#" onclick="return false;" click="" class="btn btn-danger">{{__("Clear Filters")}}</a>--}}
         </div>
     @endif
 </div>

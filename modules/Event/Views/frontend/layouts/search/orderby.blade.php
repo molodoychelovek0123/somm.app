@@ -1,6 +1,6 @@
 
 <div class="item">
-    <a target="_self" href="{{ route("event.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
+    <a href="{{ route("event.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
 </div>
 <div class="item">
     @php

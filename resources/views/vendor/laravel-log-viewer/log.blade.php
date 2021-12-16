@@ -57,13 +57,13 @@
         <div class="list-group div-scroll">
                     @foreach($folders as $folder)
                         <div class="list-group-item">
-                            <a target="_self" href="?f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}">
+                            <a href="?f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}">
                                 <span class="fa fa-folder"></span> {{$folder}}
                             </a>
                             @if ($current_folder == $folder)
                                 <div class="list-group folder">
                                     @foreach($folder_files as $file)
-                                        <a target="_self" href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}&f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}"
+                                        <a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}&f={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}"
                                            class="list-group-item @if ($current_file == $file) llv-active @endif">
                                             {{$file}}
                                         </a>
@@ -73,7 +73,7 @@
                         </div>
                     @endforeach
                     @foreach($files as $file)
-                        <a target="_self" href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
+                        <a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
                            class="list-group-item @if ($current_file == $file) llv-active @endif">
                             {{$file}}
                         </a>
@@ -138,7 +138,7 @@
               @endif
               <div class="p-3">
                   @if($current_file)
-                      <a target="_self" href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($current_folder ? $current_folder . "/" . $current_file : $current_file) }}{{ ($current_folder) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($current_folder) : '' }}">
+                      <a href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($current_folder ? $current_folder . "/" . $current_file : $current_file) }}{{ ($current_folder) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($current_folder) : '' }}">
                           <span class="fa fa-download"></span> Download file
                       </a>
                       -

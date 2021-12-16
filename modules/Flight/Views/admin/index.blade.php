@@ -5,7 +5,7 @@
 			<h1 class="title-bar">{{!empty($recovery) ? __('Recovery') : __("All Flight")}}</h1>
 			<div class="title-actions">
 				@if(empty($recovery))
-					<a target="_self" href="{{route('flight.admin.create')}}" class="btn btn-primary">{{__("Add new flight")}}</a>
+					<a href="{{route('flight.admin.create')}}" class="btn btn-primary">{{__("Add new flight")}}</a>
 				@endif
 			</div>
 		</div>
@@ -109,8 +109,8 @@
 												<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th" aria-hidden="true"></i>
 												</button>
 												<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-													<a target="_self" href="{{route('flight.admin.edit',['id'=>$row->id])}}" class="dropdown-item btn btn-primary "><i class="fa fa-edit"></i> {{__('Edit')}}</a>
-													<a target="_self" href="{{route('flight.admin.flight.seat.index',['flight_id'=>$row->id])}}" class="dropdown-item btn btn-primary "><i class="fa fa-ticket"></i> {{__('Flight ticket')}}</a>
+													<a href="{{route('flight.admin.edit',['id'=>$row->id])}}" class="dropdown-item btn btn-primary "><i class="fa fa-edit"></i> {{__('Edit')}}</a>
+													<a href="{{route('flight.admin.flight.seat.index',['flight_id'=>$row->id])}}" class="dropdown-item btn btn-primary "><i class="fa fa-ticket"></i> {{__('Flight ticket')}}</a>
 
 
 												</div>

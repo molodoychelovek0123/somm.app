@@ -6,7 +6,7 @@
             <sub title="{{ $fullTime }}">{{ $time }}</sub>
             {{-- If attachment is a file --}}
             @if(@$attachment[2] == 'file')
-            <a target="_self" href="{{ route(config('chatify.attachments.route'),['fileName'=>$attachment[0]]) }}" style="color: #595959;" class="file-download">
+            <a href="{{ route(config('chatify.attachments.route'),['fileName'=>$attachment[0]]) }}" style="color: #595959;" class="file-download">
                 <span class="fas fa-file"></span> {{$attachment[1]}}</a>
             @endif
         </p>
@@ -31,7 +31,7 @@
                 <span class="fas fa-{{ $seen > 0 ? 'check-double' : 'check' }} seen"></span> {{ $time }}</sub>
                 {{-- If attachment is a file --}}
             @if(@$attachment[2] == 'file')
-            <a target="_self" href="{{ route(config('chatify.attachments.route'),['fileName'=>$attachment[0]]) }}" class="file-download">
+            <a href="{{ route(config('chatify.attachments.route'),['fileName'=>$attachment[0]]) }}" class="file-download">
                 <span class="fas fa-file"></span> {{$attachment[1]}}</a>
             @endif
         </p>

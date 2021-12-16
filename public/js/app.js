@@ -7557,7 +7557,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		});
 
 		assert(function( el ) {
-			el.innerHTML = "<a target="_self" href='' disabled='disabled'></a>" +
+			el.innerHTML = "<a href='' disabled='disabled'></a>" +
 				"<select disabled='disabled'><option/></select>";
 
 			// Support: Windows 8 Native Apps
@@ -8980,7 +8980,7 @@ support.sortDetached = assert(function( el ) {
 // Prevent attribute/property "interpolation"
 // https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !assert(function( el ) {
-	el.innerHTML = "<a target="_self" href='#'></a>";
+	el.innerHTML = "<a href='#'></a>";
 	return el.firstChild.getAttribute("href") === "#" ;
 }) ) {
 	addHandle( "type|href|height|width", function( elem, name, isXML ) {
@@ -48793,7 +48793,7 @@ var compileToFunctions = ref$1.compileToFunctions;
 var div;
 function getShouldDecode (href) {
   div = div || document.createElement('div');
-  div.innerHTML = href ? "<a target="_self" href=\"\n\"/>" : "<div a=\"\n\"/>";
+  div.innerHTML = href ? "<a href=\"\n\"/>" : "<div a=\"\n\"/>";
   return div.innerHTML.indexOf('&#10;') > 0
 }
 

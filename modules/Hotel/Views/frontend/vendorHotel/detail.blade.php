@@ -10,7 +10,7 @@
                 <a class="btn btn-info" href="{{route('hotel.vendor.room.index',['hotel_id'=>$row->id])}}">
                     <i class="fa fa-hand-o-right"></i> {{__("Manage Rooms")}}
                 </a>
-                <a target="_self" href="{{route('hotel.vendor.room.availability.index',['hotel_id'=>$row->id])}}" class="btn btn-warning">
+                <a href="{{route('hotel.vendor.room.availability.index',['hotel_id'=>$row->id])}}" class="btn btn-warning">
                     <i class="fa fa-calendar"></i> {{__("Availability Rooms")}}
                 </a>
             </div>

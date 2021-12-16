@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{__("All news")}}</h1>
             <div class="title-actions">
-                <a target="_self" href="{{url('admin/module/news/create')}}" class="btn btn-primary">{{__("Add new Post")}}</a>
+                <a href="{{url('admin/module/news/create')}}" class="btn btn-primary">{{__("Add new Post")}}</a>
             </div>
         </div>
         @include('admin.message')
@@ -72,7 +72,7 @@
                                                 <input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}">
                                             </td>
                                             <td class="title">
-                                                <a target="_self" href="{{$row->getEditUrl()}}">{{$row->title}}</a>
+                                                <a href="{{$row->getEditUrl()}}">{{$row->title}}</a>
                                             </td>
                                             <td>{{$row->getCategory->name ?? '' }}</td>
                                             <td>
@@ -85,7 +85,7 @@
                                             <td> {{ display_date($row->updated_at)}}</td>
                                             <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>
                                             <td>
-                                                <a target="_self" href="{{route('news.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}</a>
+                                                <a href="{{route('news.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}</a>
                                             </td>
                                         </tr>
                                     @endforeach

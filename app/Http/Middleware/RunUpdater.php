@@ -132,12 +132,12 @@
                     [
                         'name'  => 'topbar_left_text',
                         'val'   => '<div class="socials">
-    <a target="_self" href="#"><i class="fa fa-facebook"></i></a>
-    <a target="_self" href="#"><i class="fa fa-linkedin"></i></a>
-    <a target="_self" href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
 </div>
 <span class="line"></span>
-<a target="_self" href="mailto:contact@bookingcore.com">contact@bookingcore.com</a>',
+<a href="mailto:contact@bookingcore.com">contact@bookingcore.com</a>',
                         'group' => "general",
                     ]
                 );

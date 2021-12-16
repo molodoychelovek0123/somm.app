@@ -16,13 +16,13 @@ $countUnread = $checkNotify->where('read_at', null)->count();
 <div class="breadcrumb-page-bar" aria-label="breadcrumb">
     <ul class="page-breadcrumb">
         <li class="">
-            <a target="_self" href="{{url('/')}}"><i class='fa fa-home'></i> {{__('Home')}}</a>
+            <a href="{{url('/')}}"><i class='fa fa-home'></i> {{__('Home')}}</a>
             <i class="fa fa-angle-right"></i>
         </li>
         @foreach($breadcrumbs as $breadcrumb)
             <li class=" {{$breadcrumb['class'] ?? ''}}">
                 @if(!empty($breadcrumb['url']))
-                    <a target="_self" href="{{ $breadcrumb['url'] }}">{{$breadcrumb['name']}}</a>
+                    <a href="{{ $breadcrumb['url'] }}">{{$breadcrumb['name']}}</a>
                     <i class="fa fa-angle-right"></i>
                 @else
                     {{$breadcrumb['name']}}
@@ -38,7 +38,7 @@ $countUnread = $checkNotify->where('read_at', null)->count();
         <div class="dropdown-menu overflow-auto notify-items dropdown-container dropdown-menu-right dropdown-large" aria-labelledby="dropdownMenuButton">
             <div class="dropdown-toolbar">
                 <div class="dropdown-toolbar-actions">
-                    <a target="_self" href="#" class="markAllAsRead">{{__('Mark all as read')}}</a>
+                    <a href="#" class="markAllAsRead">{{__('Mark all as read')}}</a>
                 </div>
                 <h3 class="dropdown-toolbar-title">{{__('Notifications')}} (<span class="notif-count">{{$countUnread}}</span>)</h3>
             </div>
@@ -89,7 +89,7 @@ $countUnread = $checkNotify->where('read_at', null)->count();
                 @endif
             </ul>
             <div class="dropdown-footer text-center">
-                <a target="_self" href="{{route('core.notification.loadNotify')}}">{{__('View More')}}</a>
+                <a href="{{route('core.notification.loadNotify')}}">{{__('View More')}}</a>
             </div>
         </div>
     </div>

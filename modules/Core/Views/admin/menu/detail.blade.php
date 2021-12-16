@@ -100,7 +100,7 @@
                                         </div>
 
                                         <div class="d-flex justify-content-between">
-                                            <a target="_self" href='#' @click="deleteMenuItem($event,node,tree,path)"
+                                            <a href='#' @click="deleteMenuItem($event,node,tree,path)"
                                                class="alert-text danger delete-menu-item">{{__('Delete')}}</a>
                                             <span v-show="node.origin_name">{{__('Origin: ')}} <a
                                                         :href="node.origin_edit_url" target="_blank">@{{node.origin_name}}</a></span>

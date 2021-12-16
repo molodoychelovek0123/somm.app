@@ -36,7 +36,7 @@
             </a>
             @include ($service->checkout_booking_detail_modal_file ?? '')
         @endif
-        <a target="_self" href="{{route('user.booking.invoice',['code'=>$booking->code])}}" class="btn btn-xs btn-primary btn-info-booking open-new-window mt-1" onclick="window.open(this.href); return false;">
+        <a href="{{route('user.booking.invoice',['code'=>$booking->code])}}" class="btn btn-xs btn-primary btn-info-booking open-new-window mt-1" onclick="window.open(this.href); return false;">
             <i class="fa fa-print"></i>{{__("Invoice")}}
         </a>
         @if(!empty(setting_item("car_allow_vendor_can_change_their_booking_status")))
@@ -47,7 +47,7 @@
             <div class="dropdown-menu">
                 @if(!empty($statues))
                     @foreach($statues as $status)
-                        <a target="_self" href="{{ route("car.vendor.booking_report.bulk_edit" , ['id'=>$booking->id , 'status'=>$status]) }}">
+                        <a href="{{ route("car.vendor.booking_report.bulk_edit" , ['id'=>$booking->id , 'status'=>$status]) }}">
                             <i class="icofont-long-arrow-right"></i> {{__('Mark as: :name',['name'=>booking_status_to_text($status)])}}
                         </a>
                     @endforeach

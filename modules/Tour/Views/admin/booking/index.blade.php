@@ -36,8 +36,8 @@
                     <div class=""><i><span class="count-string">{{ __("Showing :from - :to of :total Class(es)",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span></i></div>
                     <div class="current-month">{{date('M-Y',$current_month)}}</div>
                     <div class="btn-group" role="group">
-                        <a target="_self" href="{{$prev_url}}" type="button" class="btn btn-secondary"><i class="icon ion-ios-arrow-back"></i></a>
-                        <a target="_self" href="{{$next_url}}" type="button" class="btn btn-secondary"><i class="icon ion-ios-arrow-forward"></i></a>
+                        <a href="{{$prev_url}}" type="button" class="btn btn-secondary"><i class="icon ion-ios-arrow-back"></i></a>
+                        <a href="{{$next_url}}" type="button" class="btn btn-secondary"><i class="icon ion-ios-arrow-forward"></i></a>
                     </div>
                 </div>
                 <table class="vec-view-container" width="100%" cellpadding="0" cellspacing="0">
@@ -72,7 +72,7 @@
                         <td class="vec-events" width="300px">
                             @foreach($rows as $row)
                                 <div class="vec-event-{{$row->id}} vec-event-name">
-                                        <a target="_self" href="{{$row->getEditUrl()}}" target="_blank" title="#{{$row->id}} - {{$row->title}}">#{{$row->id}} - {{$row->title}}</a>
+                                        <a href="{{$row->getEditUrl()}}" target="_blank" title="#{{$row->id}} - {{$row->title}}">#{{$row->id}} - {{$row->title}}</a>
                                 </div>
                             @endforeach
                         </td>

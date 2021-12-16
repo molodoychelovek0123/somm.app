@@ -26,7 +26,7 @@
             <div class="col-md-12">
                 <hr>
                 <input type="submit" class="btn btn-primary" value="{{__("Change Password")}}">
-                <a target="_self" href="{{ route("user.profile.index") }}" class="btn btn-default">{{__("Cancel")}}</a>
+                <a href="{{ route("user.profile.index") }}" class="btn btn-default">{{__("Cancel")}}</a>
             </div>
         </div>
     </form>

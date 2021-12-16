@@ -66,7 +66,7 @@
                                                 <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}">
                                                 </td>
                                                 <td class="title">
-                                                    <a target="_self" href="{{url('/admin/module/language/edit/'.$row->id)}}">
+                                                    <a href="{{url('/admin/module/language/edit/'.$row->id)}}">
                                                         @if($row->flag)
                                                             <span class="flag-icon flag-icon-{{$row->flag}}"></span>
                                                         @endif

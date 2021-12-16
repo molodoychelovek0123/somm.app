@@ -77,7 +77,7 @@
                                     </td>
                                     <th>{{$row['order'] ?? 0}}</th>
                                     <td>{{$row['required'] ? __("Yes") : 'No'}}</td>
-                                    <th><a target="_self" href="{{route('user.admin.role.verifyFieldsEdit',['id'=>$id])}}" class="btn btn-primary btn-sm"> <i class="fa fa-edit"></i>  {{__('Edit')}}</a></th>
+                                    <th><a href="{{route('user.admin.role.verifyFieldsEdit',['id'=>$id])}}" class="btn btn-primary btn-sm"> <i class="fa fa-edit"></i>  {{__('Edit')}}</a></th>
                                 </tr>
                             @endforeach
                             </tbody>

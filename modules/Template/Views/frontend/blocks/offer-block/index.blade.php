@@ -14,7 +14,7 @@
                             @endif
                             <h2 class="item-title">{{$item['title']}}</h2>
                             <p class="item-sub-title">{!! $item['desc'] !!}</p>
-                            <a target="_self" href="{{$item['link_more']}}" class="btn btn-default">{{$item['link_title']}}</a>
+                            <a href="{{$item['link_more']}}" class="btn btn-default">{{$item['link_title']}}</a>
                             <div class="img-cover" style="background: url('{{ get_file_url($item['background_image'],'full') ?? "" }}')"></div>
                         </div>
                     </div>

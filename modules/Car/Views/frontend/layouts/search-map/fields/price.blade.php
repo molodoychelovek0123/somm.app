@@ -22,7 +22,7 @@
                    readonly="" value="{{$price_range}}">
             <div class="text-right">
                 <br>
-                <a target="_self" href="#" onclick="return false;" class="btn btn-primary btn-sm btn-apply-advances">{{__("APPLY")}}</a>
+                <a href="#" onclick="return false;" class="btn btn-primary btn-sm btn-apply-advances">{{__("APPLY")}}</a>
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@ $lang_local = app()->getLocale();
         <tr>
             <td class="label">{{__('Event name')}}</td>
             <td class="val">
-                <a target="_self" href="{{$service->getDetailUrl()}}">{!! clean($translation->title) !!}</a>
+                <a href="{{$service->getDetailUrl()}}">{!! clean($translation->title) !!}</a>
             </td>
 
         </tr>
@@ -201,5 +201,5 @@ $lang_local = app()->getLocale();
     </table>
 </div>
 <div class="text-center mt20">
-    <a target="_self" href="{{ route("user.booking_history") }}" target="_blank" class="btn btn-primary manage-booking-btn">{{__('Manage Bookings')}}</a>
+    <a href="{{ route("user.booking_history") }}" target="_blank" class="btn btn-primary manage-booking-btn">{{__('Manage Bookings')}}</a>
 </div>

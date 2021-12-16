@@ -6,7 +6,7 @@
     <h2 class="title-bar">
         {{!empty($recovery) ?__('Recovery Hotels') : __("Manage Hotels")}}
         @if(Auth::user()->hasPermissionTo('hotel_create') && empty($recovery))
-            <a target="_self" href="{{ route("hotel.vendor.create") }}" class="btn-change-password">{{__("Add Hotel")}}</a>
+            <a href="{{ route("hotel.vendor.create") }}" class="btn-change-password">{{__("Add Hotel")}}</a>
         @endif
     </h2>
     @include('admin.message')

@@ -6,8 +6,8 @@
     <h2 class="title-bar">
         {{__("Manage Seats")}}
         <div class="title-action">
-            <a target="_self" href="{{route('flight.vendor.edit',['id'=>$currentFlight->id])}}" class="btn btn-info"><i class="fa fa-hand-o-right"></i> {{__("Back to flight")}}</a>
-            <a target="_self" href="{{ route("flight.vendor.seat.create",['flight_id'=>$currentFlight->id]) }}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> {{__("Add Seat")}}</a>
+            <a href="{{route('flight.vendor.edit',['id'=>$currentFlight->id])}}" class="btn btn-info"><i class="fa fa-hand-o-right"></i> {{__("Back to flight")}}</a>
+            <a href="{{ route("flight.vendor.seat.create",['flight_id'=>$currentFlight->id]) }}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> {{__("Add Seat")}}</a>
         </div>
     </h2>
     @include('admin.message')
@@ -67,7 +67,7 @@
                                 @foreach ($rows as $row)
                                     <tr>
                                         <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
-                                        <td><a target="_self" href="{{route('flight.admin.edit',$row->flight)}}">#{{$row->flight->id}}</a></td>
+                                        <td><a href="{{route('flight.admin.edit',$row->flight)}}">#{{$row->flight->id}}</a></td>
                                         <td>{{$row->seatType->name}}</td>
                                         <td>{{format_money($row->price)}}</td>
                                         <td>{{$row->max_passengers}}</td>

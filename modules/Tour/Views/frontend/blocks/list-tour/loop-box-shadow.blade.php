@@ -25,7 +25,7 @@
     </div>
     <div class="caption clear">
         <div class="title-address">
-            <a target="_self" href="{{$row->getDetailUrl()}}"> {!!<h3 class="title"> clean($translation->title) !!} </h3></a>
+            <a href="{{$row->getDetailUrl()}}"> {!!<h3 class="title"> clean($translation->title) !!} </h3></a>
             <p class="duration">
                 <span>
                     {{duration_format($row->duration)}}
