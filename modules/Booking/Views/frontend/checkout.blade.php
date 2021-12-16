@@ -41,7 +41,7 @@
             </div>
         </div>
         <p class="checkout-shop-center" style="display:none;position: absolute;top: 50%;transform: translateY(-50%);padding: 20px;z-index: 10;font-size: 20px;">
-            The checkout tab should have opened, if it didn't, click <a href="/" target="_blank"> here </a>
+            The checkout tab should have opened, if it didn't, click <a target="_self" href="/" target="_blank"> here </a>
         </p>
     </div>
 @endsection

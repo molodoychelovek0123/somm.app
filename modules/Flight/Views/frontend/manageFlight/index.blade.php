@@ -6,7 +6,7 @@
     <h2 class="title-bar">
         {{!empty($recovery) ?__('Recovery Flights') : __("Manage Flights")}}
         @if(Auth::user()->hasPermissionTo('flight_create')&& empty($recovery))
-            <a href="{{ route("flight.vendor.create") }}" class="btn-change-password">{{__("Add Flight")}}</a>
+            <a target="_self" href="{{ route("flight.vendor.create") }}" class="btn-change-password">{{__("Add Flight")}}</a>
         @endif
     </h2>
     @include('admin.message')

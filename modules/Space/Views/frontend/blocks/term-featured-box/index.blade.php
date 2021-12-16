@@ -16,7 +16,7 @@
                     $page_search = Modules\Space\Models\Space::getLinkForPageSearch(false , [ 'terms[]' =>  $item->id] );
                     ?>
                     <div class="col-md-6 col-md-4 col-lg-2 ">
-                        <a href="{{ $page_search }}">
+                        <a target="_self" href="{{ $page_search }}">
                             <div class="featured-item">
                                 <div class="image">
                                     <img src="{{$image_url}}" class="img-responsive" alt="{{$item->name}}">

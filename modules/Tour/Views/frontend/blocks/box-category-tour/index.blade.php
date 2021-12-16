@@ -20,7 +20,7 @@
                                 $page_search = $item_cat->getLinkForPageSearch(false , [ 'cat_id[]' =>  $item_cat->id] );
                             @endphp
                             <div class="item">
-                                <a href="{{ $page_search }}">
+                                <a target="_self" href="{{ $page_search }}">
                                     <img src="{{$image_url}}" alt="{{ $translate->name }}">
                                     <span class="text-title">{{ $translate->name }}</span>
                                 </a>

@@ -257,7 +257,7 @@
                         <div class="form-group {{ $errors->has('broadcast_driver') ? ' has-error ' : '' }}">
                             <label for="broadcast_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.broadcasting_label') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/broadcasting" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/broadcasting" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -275,7 +275,7 @@
                         <div class="form-group {{ $errors->has('cache_driver') ? ' has-error ' : '' }}">
                             <label for="cache_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.cache_label') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/cache" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/cache" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -293,7 +293,7 @@
                         <div class="form-group {{ $errors->has('session_driver') ? ' has-error ' : '' }}">
                             <label for="session_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.session_label') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/session" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/session" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -311,7 +311,7 @@
                         <div class="form-group {{ $errors->has('queue_driver') ? ' has-error ' : '' }}">
                             <label for="queue_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.queue_label') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/queues" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/queues" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -339,7 +339,7 @@
                             <label for="redis_hostname">
                                 {{ trans('installer_messages.environment.wizard.form.app_tabs.redis_host') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/redis" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/redis" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -389,7 +389,7 @@
                             <label for="mail_driver">
                                 {{ trans('installer_messages.environment.wizard.form.app_tabs.mail_driver_label') }}
                                 <sup>
-                                    <a href="https://laravel.com/docs/5.4/mail" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://laravel.com/docs/5.4/mail" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>
@@ -467,7 +467,7 @@
                             <label for="pusher_app_id">
                                 {{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_id_label') }}
                                 <sup>
-                                    <a href="https://pusher.com/docs/server_api_guide" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
+                                    <a target="_self" href="https://pusher.com/docs/server_api_guide" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
                                         <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
                                         <span class="sr-only">{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}</span>
                                     </a>

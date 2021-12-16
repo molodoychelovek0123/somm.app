@@ -1122,7 +1122,7 @@ jQuery(function ($) {
                 "            </div>\n" +
                 "            <div class=\"modal-body relative\">\n" +
                 "                <div class=\"form-group\">\n" +
-                "        <a href=\"#\" class=\"age-true age-btn btn btn-primary\">Yes I am</a><a href=\"/\" class=\"age-false age-btn btn btn-primary\">NO I AM NOT</a>\n" +
+                "        <a target="_self" href=\"#\" class=\"age-true age-btn btn btn-primary\">Yes I am</a><a target="_self" href=\"/\" class=\"age-false age-btn btn btn-primary\">NO I AM NOT</a>\n" +
                 "    </div>\n" +
                 "            </div>\n" +
                 "        </div>\n" +

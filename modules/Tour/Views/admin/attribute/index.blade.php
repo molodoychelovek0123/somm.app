@@ -60,15 +60,15 @@
                                         <tr>
                                             <td><input type="checkbox" class="check-item" name="ids[]" value="{{$row->id}}"></td>
                                             <td class="title">
-                                                <a href="{{route('tour.admin.attribute.edit', ['id' => $row->id]) }}">{{$row->name}}</a>
+                                                <a target="_self" href="{{route('tour.admin.attribute.edit', ['id' => $row->id]) }}">{{$row->name}}</a>
                                             </td>
                                             <td>
                                                 {{$row->position ?? 0}}
                                             </td>
                                             <td>
-                                                <a href="{{route('tour.admin.attribute.edit', ['id' => $row->id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
+                                                <a target="_self" href="{{route('tour.admin.attribute.edit', ['id' => $row->id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
                                                 </a>
-                                                <a href="{{route('tour.admin.attribute.term.index', ['attr_id' => $row->id]) }}" class="btn btn-sm btn-success"><i class="fa fa"></i> {{__("Manage Terms")}}
+                                                <a target="_self" href="{{route('tour.admin.attribute.term.index', ['attr_id' => $row->id]) }}" class="btn btn-sm btn-success"><i class="fa fa"></i> {{__("Manage Terms")}}
                                                 </a>
 
                                             </td>

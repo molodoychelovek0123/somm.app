@@ -2,7 +2,7 @@
     <div class="{{$container_class ?? 'container'}}">
         <div class="content">
             <div class="header-left">
-                <a href="{{url(app_get_locale(false,'/'))}}" class="bravo-logo">
+                <a target="_self" href="{{url(app_get_locale(false,'/'))}}" class="bravo-logo">
                     @php
                         $logo_id = setting_item("logo_id");
                         if(!empty($row->custom_logo)){
@@ -25,14 +25,14 @@
                         @include('Language::frontend.switcher')
                         @if(!Auth::id())
                             <li class="login-item">
-                                <a href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Sign in')}}</a>
+                                <a target="_self" href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Sign in')}}</a>
                             </li>
                             <li class="signup-item">
-                                <a href="#register" data-toggle="modal" data-target="#register" class="signup">{{__('Sign Up')}}</a>
+                                <a target="_self" href="#register" data-toggle="modal" data-target="#register" class="signup">{{__('Sign Up')}}</a>
                             </li>
                         @else
                             <li class="login-item dropdown">
-                                <a href="#" data-toggle="dropdown" class="is_login">
+                                <a target="_self" href="#" data-toggle="dropdown" class="is_login">
                                     @if($avatar_url = Auth::user()->getAvatarUrl())
                                         <img class="avatar" src="{{$avatar_url}}" alt="{{ Auth::user()->getDisplayName()}}">
                                     @else
@@ -44,18 +44,18 @@
                                 <ul class="dropdown-menu text-left">
 
                                     @if(Auth::user()->hasPermissionTo('dashboard_vendor_access'))
-                                        <li><a href="{{route('vendor.dashboard')}}"><i class="icon ion-md-analytics"></i> {{__("Vendor Dashboard")}}</a></li>
+                                        <li><a target="_self" href="{{route('vendor.dashboard')}}"><i class="icon ion-md-analytics"></i> {{__("Vendor Dashboard")}}</a></li>
                                     @endif
                                     <li class="@if(Auth::user()->hasPermissionTo('dashboard_vendor_access')) menu-hr @endif">
-                                        <a href="{{route('user.profile.index')}}"><i class="icon ion-md-construct"></i> {{__("My profile")}}</a>
+                                        <a target="_self" href="{{route('user.profile.index')}}"><i class="icon ion-md-construct"></i> {{__("My profile")}}</a>
                                     </li>
                                     @if(setting_item('inbox_enable'))
-                                    <li class="menu-hr"><a href="{{route('user.chat')}}"><i class="fa fa-comments"></i> {{__("Messages")}}</a></li>
+                                    <li class="menu-hr"><a target="_self" href="{{route('user.chat')}}"><i class="fa fa-comments"></i> {{__("Messages")}}</a></li>
                                     @endif
-                                    <li class="menu-hr"><a href="{{route('user.booking_history')}}"><i class="fa fa-clock-o"></i> {{__("Booking History")}}</a></li>
-                                    <li class="menu-hr"><a href="{{route('user.change_password')}}"><i class="fa fa-lock"></i> {{__("Change password")}}</a></li>
+                                    <li class="menu-hr"><a target="_self" href="{{route('user.booking_history')}}"><i class="fa fa-clock-o"></i> {{__("Booking History")}}</a></li>
+                                    <li class="menu-hr"><a target="_self" href="{{route('user.change_password')}}"><i class="fa fa-lock"></i> {{__("Change password")}}</a></li>
                                     @if(Auth::user()->hasPermissionTo('dashboard_access'))
-                                        <li class="menu-hr"><a href="{{url('/admin')}}"><i class="icon ion-ios-ribbon"></i> {{__("Admin Dashboard")}}</a></li>
+                                        <li class="menu-hr"><a target="_self" href="{{url('/admin')}}"><i class="icon ion-ios-ribbon"></i> {{__("Admin Dashboard")}}</a></li>
                                     @endif
                                     <li class="menu-hr">
                                         <a  href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> {{__('Logout')}}</a>
@@ -81,25 +81,25 @@
             <ul>
                 @if(!Auth::id())
                     <li>
-                        <a href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Sign in')}}</a>
+                        <a target="_self" href="#login" data-toggle="modal" data-target="#login" class="login">{{__('Sign in')}}</a>
                     </li>
                     <li>
-                        <a href="#register" data-toggle="modal" data-target="#register" class="signup">{{__('Sign Up')}}</a>
+                        <a target="_self" href="#register" data-toggle="modal" data-target="#register" class="signup">{{__('Sign Up')}}</a>
                     </li>
                 @else
                     <li>
-                        <a href="{{route('user.profile.index')}}">
+                        <a target="_self" href="{{route('user.profile.index')}}">
                             <i class="icofont-user-suited"></i> {{__("Hi, :Name",['name'=>Auth::user()->getDisplayName()])}}
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('user.profile.index')}}">
+                        <a target="_self" href="{{route('user.profile.index')}}">
                             <i class="icon ion-md-construct"></i> {{__("My profile")}}
                         </a>
                     </li>
                     @if(Auth::user()->hasPermissionTo('dashboard_access'))
                         <li>
-                            <a href="{{url('/admin')}}"><i class="icon ion-ios-ribbon"></i> {{__("Dashboard")}}</a>
+                            <a target="_self" href="{{url('/admin')}}"><i class="icon ion-ios-ribbon"></i> {{__("Dashboard")}}</a>
                         </li>
                     @endif
                     <li>
@@ -121,7 +121,7 @@
             </ul>
         </div>
         <div class="g-menu">
-            <?php generate_menu('primary') ?>
+            <?php generate_menu('primary',true) ?>
         </div>
     </div>
 </div>

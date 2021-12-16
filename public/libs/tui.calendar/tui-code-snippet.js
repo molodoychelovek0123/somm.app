@@ -1426,7 +1426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * var util = tui.util; // distribution file
 	 *
 	 * //-- #2. Use property --//
-	 *  var htmlEntityString = "<script> alert('test');</script><a href='test'>";
+	 *  var htmlEntityString = "<script> alert('test');</script><a target="_self" href='test'>";
 	 *  var result = util.encodeHTMLEntity(htmlEntityString);
 	 * //"&lt;script&gt; alert(&#39;test&#39;);&lt;/script&gt;&lt;a href=&#39;test&#39;&gt;"
 	 */
@@ -3543,7 +3543,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	
+
 	/**
 	 * @fileoverview
 	 *  Implements the Map object.

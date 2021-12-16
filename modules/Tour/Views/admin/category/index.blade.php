@@ -65,7 +65,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         <td class="title">
-                                            <a href="{{url('admin/module/experience/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
+                                            <a target="_self" href="{{url('admin/module/experience/category/edit/'.$row->id)}}">{{$prefix.' '.$row->name}}</a>
                                         </td>
                                         <td class="d-none d-md-block">{{$row->slug}}</td>
                                         <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>

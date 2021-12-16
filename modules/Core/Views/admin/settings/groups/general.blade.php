@@ -96,7 +96,7 @@
                                     <option @if($lang->locale == ($settings['site_locale'] ?? '') ) selected @endif value="{{$lang->locale}}">{{$lang->name}} - ({{$lang->locale}})</option>
                                 @endforeach
                             </select>
-                            <p><i><a href="{{url('admin/module/language')}}">{{__("Manage languages here")}}</a></i></p>
+                            <p><i><a target="_self" href="{{url('admin/module/language')}}">{{__("Manage languages here")}}</a></i></p>
                         </div>
                     </div>
                     <div class="form-group">

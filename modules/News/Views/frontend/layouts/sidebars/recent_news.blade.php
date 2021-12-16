@@ -10,7 +10,7 @@
                 <li>
                     @if($image_url = get_file_url($blog->image_id, 'thumb'))
                         <div class="thumb">
-                            <a href="{{ $blog->getDetailUrl(app()->getLocale()) }}">
+                            <a target="_self" href="{{ $blog->getDetailUrl(app()->getLocale()) }}">
                                 {!! get_image_tag($blog->image_id,'thumb',['class'=>'','alt'=>$blog->title]) !!}
                             </a>
                         </div>
@@ -18,14 +18,14 @@
                     <div class="content">
                         @if(!empty($blog->getCategory->name))
                             <div class="cate">
-                                <a href="{{$blog->getCategory->getDetailUrl()}}">
+                                <a target="_self" href="{{$blog->getCategory->getDetailUrl()}}">
                                     @php $translation_cat = $blog->getCategory->translateOrOrigin(app()->getLocale()); @endphp
                                     {{$translation_cat->name ?? ''}}
                                 </a>
                             </div>
                         @endif
                         <h3 class="thumb-list-item-title">
-                            <a href="{{ $blog->getDetailUrl(app()->getLocale()) }}">{!! clean($translation->title) !!}</a>
+                            <a target="_self" href="{{ $blog->getDetailUrl(app()->getLocale()) }}">{!! clean($translation->title) !!}</a>
                         </h3>
                     </div>
                 </li>

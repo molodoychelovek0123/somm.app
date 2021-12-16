@@ -3,9 +3,9 @@
         <div class="container">
             <nav class="py-3" aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-no-gutter mb-0 flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble">
-                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="#">Hotels</a></li>
-                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="#">London Hotels</a></li>
+                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a target="_self" href="#">Home</a></li>
+                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a target="_self" href="#">Hotels</a></li>
+                    <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a target="_self" href="#">London Hotels</a></li>
                     <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1 active" aria-current="page">Park Avenue Baker Street London</li>
                 </ol>
             </nav>

@@ -21,7 +21,7 @@
                 @endif
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-4">
                 <form action="{{route('user.admin.role.verifyFieldsStore')}}" class="needs-validation" novalidate>
@@ -77,7 +77,7 @@
                                     </td>
                                     <th>{{$row['order'] ?? 0}}</th>
                                     <td>{{$row['required'] ? __("Yes") : 'No'}}</td>
-                                    <th><a href="{{route('user.admin.role.verifyFieldsEdit',['id'=>$id])}}" class="btn btn-primary btn-sm"> <i class="fa fa-edit"></i>  {{__('Edit')}}</a></th>
+                                    <th><a target="_self" href="{{route('user.admin.role.verifyFieldsEdit',['id'=>$id])}}" class="btn btn-primary btn-sm"> <i class="fa fa-edit"></i>  {{__('Edit')}}</a></th>
                                 </tr>
                             @endforeach
                             </tbody>

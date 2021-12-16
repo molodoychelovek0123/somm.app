@@ -6,7 +6,7 @@ $vendor = $row->author;
 <div class="owner-info widget-box">
     <div class="media">
         <div class="media-left">
-            <a href="{{route('user.profile',['id'=>$vendor->user_name ?? $vendor->id])}}" target="_blank" class="avatar-cover" style="background-image: url('{{$vendor->getAvatarUrl()}}')" >
+            <a target="_self" href="{{route('user.profile',['id'=>$vendor->user_name ?? $vendor->id])}}" target="_blank" class="avatar-cover" style="background-image: url('{{$vendor->getAvatarUrl()}}')" >
             </a>
         </div>
         <div class="media-body">

@@ -44,7 +44,7 @@
 
                             <hr>
 
-                            <span>{{__('or')}} <a href="#" class="show-license-form">{{__("change license info")}}</a></span>
+                            <span>{{__('or')}} <a target="_self" href="#" class="show-license-form">{{__("change license info")}}</a></span>
 
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                                         <div>
                                             <input type="text" name="envato_license_key" value="{{setting_item('envato_license_key')}}" class="form-control">
                                         </div>
-                                        <span><i><a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank">{{__("How can I get my license key?")}}</a></i></span>
+                                        <span><i><a target="_self" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank">{{__("How can I get my license key?")}}</a></i></span>
                                     </div>
                                 </div>
                             </div>

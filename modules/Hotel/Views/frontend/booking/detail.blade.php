@@ -8,7 +8,7 @@
 					@php
 						$service_translation = $service->translateOrOrigin($lang_local);
 					@endphp
-					<h3 class="service-name"><a href="{{$service->getDetailUrl()}}">{!! clean($service_translation->title) !!}</a></h3>
+					<h3 class="service-name"><a target="_self" href="{{$service->getDetailUrl()}}">{!! clean($service_translation->title) !!}</a></h3>
 					@if($service_translation->address)
 						<p class="address"><i class="fa fa-map-marker"></i>
 							{{$service_translation->address}}
@@ -22,14 +22,14 @@
 						@else
 							{!! get_image_tag($service->image_id,'medium',['class'=>'img-responsive','alt'=>$service_translation->title]) !!}
 						@endif
-					
+
 					@endif
 				</div>
 				@php $vendor = $service->author; @endphp
 				@if($vendor->hasPermissionTo('dashboard_vendor_access') and !$vendor->hasPermissionTo('dashboard_access'))
 					<div class="mt-2">
 						<i class="icofont-info-circle"></i>
-						{{ __("Vendor") }}: <a href="{{route('user.profile',['id'=>$vendor->id])}}" target="_blank">{{$vendor->getDisplayName()}}</a>
+						{{ __("Vendor") }}: <a target="_self" href="{{route('user.profile',['id'=>$vendor->id])}}" target="_blank">{{$vendor->getDisplayName()}}</a>
 					</div>
 				@endif
 			</div>
@@ -76,7 +76,7 @@
 		</div>
 		{{--@include('Booking::frontend/booking/checkout-coupon')--}}
 		<div class="review-section total-review">
-			
+
 			<ul class="review-list">
 				@php $rooms = \Modules\Hotel\Models\HotelRoomBooking::getByBookingId($booking->id) @endphp
 				@if(!empty($rooms))
@@ -89,7 +89,7 @@
 						</li>
 					@endforeach
 						<li class="flex-wrap">
-							
+
 								<div class="flex-grow-0 flex-shrink-0 w-100">
 									<p class="text-center">
 										<a data-toggle="modal" data-target="#detailBookingDate{{$booking->code}}" aria-expanded="false"
@@ -159,7 +159,7 @@
 						</li>
 					@endforeach
 				@endif
-				
+
 				<li class="final-total d-block">
 					<div class="d-flex justify-content-between">
 						<div class="label">{{__("Total:")}}</div>

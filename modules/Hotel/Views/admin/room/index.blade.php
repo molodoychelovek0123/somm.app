@@ -4,8 +4,8 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{__("Room Management")}}</h1>
             <div class="title-actions">
-                <a href="{{route('hotel.admin.room.availability.index',['hotel_id'=>$hotel->id])}}" class="btn btn-warning btn-xs"><i class="fa fa-calendar"></i> {{__("Room Availability")}}</a>
-                <a href="{{route('hotel.admin.edit',['id'=>$hotel->id])}}" class="btn btn-info btn-xs"><i class="fa fa-hand-o-right"></i> {{__("Back to hotel")}}</a>
+                <a target="_self" href="{{route('hotel.admin.room.availability.index',['hotel_id'=>$hotel->id])}}" class="btn btn-warning btn-xs"><i class="fa fa-calendar"></i> {{__("Room Availability")}}</a>
+                <a target="_self" href="{{route('hotel.admin.edit',['id'=>$hotel->id])}}" class="btn btn-info btn-xs"><i class="fa fa-hand-o-right"></i> {{__("Back to hotel")}}</a>
             </div>
         </div>
         @include('admin.message')
@@ -68,13 +68,13 @@
                                                 <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}">
                                                 </td>
                                                 <td class="title">
-                                                    <a href="{{route('hotel.admin.room.edit',['hotel_id'=>$hotel->id,'id'=>$row->id])}}">{{$row->title}}</a>
+                                                    <a target="_self" href="{{route('hotel.admin.room.edit',['hotel_id'=>$hotel->id,'id'=>$row->id])}}">{{$row->title}}</a>
                                                 </td>
                                                 <td>{{$row->number}}</td>
                                                 <td>{{format_money($row->price)}}</td>
                                                 <td><span class="badge badge-{{ $row->status }}">{{ $row->status }}</span></td>
                                                 <td>
-                                                    <a href="{{route('hotel.admin.room.edit',['id'=>$row->id,'hotel_id'=>$hotel->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
+                                                    <a target="_self" href="{{route('hotel.admin.room.edit',['id'=>$row->id,'hotel_id'=>$hotel->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}
                                                     </a>
                                                 </td>
                                             </tr>

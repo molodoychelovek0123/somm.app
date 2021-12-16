@@ -5,7 +5,7 @@
 @section('content')
     <h2 class="title-bar">
         {{__("Wallet")}}
-        <a href="{{route('user.wallet.buy')}}" class="btn-change-password">{{__("Buy credits")}}</a>
+        <a target="_self" href="{{route('user.wallet.buy')}}" class="btn-change-password">{{__("Buy credits")}}</a>
     </h2>
     @include('admin.message')
     <div class="bravo-user-dashboard">

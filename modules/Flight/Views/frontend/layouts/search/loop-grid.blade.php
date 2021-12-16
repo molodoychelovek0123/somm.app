@@ -1,11 +1,11 @@
 <div class="card w-100 shadow-hover-3 mb-4">
-	<a href="#" class="d-block mb-0 mx-1 mt-1 p-3" tabindex="0">
+	<a target="_self" href="#" class="d-block mb-0 mx-1 mt-1 p-3" tabindex="0">
 		<img class="card-img-top" src="{{$row->airline->image_url}}" alt="{{$row->airline->name}}">
 	</a>
 	<div class="card-body px-3 pt-0 pb-3 my-0 mx-1">
 		<div class="row">
 			<div class="col-7">
-				<a href="#" class="card-title text-dark font-size-17 font-weight-bold" tabindex="0">{{$row->airportFrom->name}}</a>
+				<a target="_self" href="#" class="card-title text-dark font-size-17 font-weight-bold" tabindex="0">{{$row->airportFrom->name}}</a>
 			</div>
 			<div class="col-5">
 				<div class="text-right">

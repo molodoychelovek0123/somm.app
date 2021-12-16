@@ -163,14 +163,14 @@ if (!empty($menus))
     </div>
     <div class="user-profile-plan">
         @if( !Auth::user()->hasPermissionTo("dashboard_vendor_access") )
-            <a href=" {{ route("user.upgrade_vendor") }}">{{ __("Become a vendor") }}</a>
+            <a target="_self" href=" {{ route("user.upgrade_vendor") }}">{{ __("Become a vendor") }}</a>
         @endif
     </div>
     <div class="sidebar-menu">
         <ul class="main-menu">
             @foreach($menus as $menuItem)
                 <li class="{{$menuItem['class']}}">
-                    <a href="{{ url($menuItem['url']) }}">
+                    <a target="_self" href="{{ url($menuItem['url']) }}">
                         @if(!empty($menuItem['icon']))
                             <span class="icon text-center"><i class="{{$menuItem['icon']}}"></i></span>
                         @endif
@@ -183,7 +183,7 @@ if (!empty($menus))
                     @if(!empty($menuItem['children']))
                         <ul class="children">
                             @foreach($menuItem['children'] as $menuItem2)
-                                <li class="{{$menuItem2['class']}}"><a href="{{ url($menuItem2['url']) }}">
+                                <li class="{{$menuItem2['class']}}"><a target="_self" href="{{ url($menuItem2['url']) }}">
                                         @if(!empty($menuItem2['icon']))
                                             <i class="{{$menuItem2['icon']}}"></i>
                                         @endif
@@ -199,10 +199,10 @@ if (!empty($menus))
         <form id="logout-form-vendor" action="{{ route('auth.logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
-        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form-vendor').submit();"><i class="fa fa-sign-out"></i> {{__("Log Out")}}
+        <a target="_self" href="#" onclick="event.preventDefault(); document.getElementById('logout-form-vendor').submit();"><i class="fa fa-sign-out"></i> {{__("Log Out")}}
         </a>
     </div>
     <div class="logout">
-        <a href="{{url('/')}}" style="color: #1ABC9C"><i class="fa fa-long-arrow-left"></i> {{__("Back to Homepage")}}</a>
+        <a target="_self" href="{{url('/')}}" style="color: #1ABC9C"><i class="fa fa-long-arrow-left"></i> {{__("Back to Homepage")}}</a>
     </div>
 </div>

@@ -14,7 +14,7 @@ $locale = App::getLocale();
 ?>
 
 <div class="header-logo flex-shrink-0">
-    <h3 class="logo-text"><a href="{{url('/admin')}}">{{__('Somm app')}} <span class="app-version">{{config('app.version')}}</span></a></h3>
+    <h3 class="logo-text"><a target="_self" href="{{url('/admin')}}">{{__('Somm app')}} <span class="app-version">{{config('app.version')}}</span></a></h3>
 </div>
 <div class="header-widgets d-flex flex-grow-1">
     <div class="widgets-left d-flex flex-grow-1 align-items-center">
@@ -23,7 +23,7 @@ $locale = App::getLocale();
         </div>
         <div class="header-widget search-widget">
             {{--<input type="text" class="input-search form-control">--}}
-            <a href="{{url('/')}}" class="btn btn-link" target="_blank"><i class="fa fa-eye"></i> {{__('Home')}}
+            <a target="_self" href="{{url('/')}}" class="btn btn-link" target="_blank"><i class="fa fa-eye"></i> {{__('Home')}}
             </a>
         </div>
     </div>
@@ -65,7 +65,7 @@ $locale = App::getLocale();
             <div class="dropdown-menu overflow-auto notify-items dropdown-container dropdown-menu-right dropdown-large" aria-labelledby="dropdownMenuButton">
                 <div class="dropdown-toolbar">
                     <div class="dropdown-toolbar-actions">
-                        <a href="#" class="markAllAsRead">{{__('Mark all as read')}}</a>
+                        <a target="_self" href="#" class="markAllAsRead">{{__('Mark all as read')}}</a>
                     </div>
                     <h3 class="dropdown-toolbar-title">{{__('Notifications')}} (<span class="notif-count">{{$countUnread}}</span>)</h3>
                 </div>
@@ -118,7 +118,7 @@ $locale = App::getLocale();
                     @endif
                 </ul>
                 <div class="dropdown-footer text-center">
-                    <a href="{{route('core.admin.notification.loadNotify')}}">{{__('View More')}}</a>
+                    <a target="_self" href="{{route('core.admin.notification.loadNotify')}}">{{__('View More')}}</a>
                 </div>
             </div>
         </div>

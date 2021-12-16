@@ -31,7 +31,7 @@
                         <div class="g-header framed_header" >
                             <div class="left">
                                 <h1>{!! clean($translation->title) !!}</h1>
-                                <a href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app  </a>
+                                <a target="_self" href="<?php echo $_SERVER['HTTPS']; ?>" target="_blank" >View on Somm.app  </a>
                             </div>
 
                         </div>

@@ -69,7 +69,7 @@
             if (!empty($content)) {
                 foreach (self::CODE as $item => $value) {
                     if($item == "link_approved"){
-                        $content = str_replace($value, "<a href='".url('admin/module/user/userUpgradeRequest')."'>".url('admin/module/user/userUpgradeRequest')."</a>", $content);
+                        $content = str_replace($value, "<a target="_self" href='".url('admin/module/user/userUpgradeRequest')."'>".url('admin/module/user/userUpgradeRequest')."</a>", $content);
                     }elseif ( $item == "button_verify") {
                         $content = str_replace($value, $this->buttonVerify($event), $content);
                     }else{

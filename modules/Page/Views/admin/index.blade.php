@@ -5,20 +5,20 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{ __('All Page')}}</h1>
             <div class="title-actions">
-                <a href="{{route('page.admin.create')}}" class="btn btn-primary">{{ __('Add new page')}}</a>
+                <a target="_self" href="{{route('page.admin.create')}}" class="btn btn-primary">{{ __('Add new page')}}</a>
             </div>
         </div>
         @include('admin.message')
         <div class="filter-div d-flex justify-content-between ">
-            <div class="col-left"> 
+            <div class="col-left">
                 @if(!empty($rows))
                 <form method="post" action="{{url('admin/module/page/bulkEdit')}}" class="filter-form filter-form-left d-flex justify-content-start">
                     {{csrf_field()}}
                     <select name="action" class="form-control">
                         <option value="">{{__(" Bulk Actions ")}}</option>
-                        <option value="publish">{{__(" Publish ")}}</option> 
+                        <option value="publish">{{__(" Publish ")}}</option>
                         <option value="draft">{{__(" Move to Draft ")}}</option>
-                        <option value="delete">{{__(" Delete ")}}</option> 
+                        <option value="delete">{{__(" Delete ")}}</option>
                     </select>
                     <button data-confirm="{{__("Do you want to delete?")}}" class="btn-info btn btn-icon dungdt-apply-form-btn" type="button">{{__('Apply')}}</button>
                 </form>
@@ -31,7 +31,7 @@
                 </form>
             </div>
         </div>
-        <div class="panel"> 
+        <div class="panel">
             <div class="panel-body">
                 <form action="" class="bravo-form-item">
                     <table class="table table-hover">
@@ -51,7 +51,7 @@
                                     <tr>
                                         <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row->id}}"></td>
                                         <td class="title">
-                                            <a href="{{url('admin/module/page/edit/'.$row->id)}}"> {{$row->title}}  </a>
+                                            <a target="_self" href="{{url('admin/module/page/edit/'.$row->id)}}"> {{$row->title}}  </a>
                                         </td>
                                         <td class="author">
                                             @if(!empty($row->getAuthor))
@@ -63,7 +63,7 @@
                                         <td class="date">{{ display_date($row->updated_at)}}</td>
                                         <td> <span class="badge badge-{{ $row->status }}">{{ $row->status }}</span> </td>
                                         <td>
-                                            <a href="{{route('page.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}</a>
+                                            <a target="_self" href="{{route('page.admin.edit',['id'=>$row->id])}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> {{__('Edit')}}</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -52,7 +52,7 @@ class EnquirySendListen
                 switch ($value){
                     case "[service_link]":
                             $service = $event->enquiry->service;
-                        $text = '<a href="'.$service->getDetailUrl().'" target="_blank"> '.$service->title.' </a>';
+                        $text = '<a target="_self" href="'.$service->getDetailUrl().'" target="_blank"> '.$service->title.' </a>';
                         $content = str_ireplace($value, $text, $content);
                         break;
                     case "[service_name]":
@@ -61,7 +61,7 @@ class EnquirySendListen
                         break;
                     case "[vendor_link]":
                         $user = $event->enquiry->vendor;
-                        $text = '<a href="'.url('admin/module/user/edit/'.$event->enquiry->vendor_id).'" target="_blank"> '.$user->first_name." ".$user->last_name.' </a>';
+                        $text = '<a target="_self" href="'.url('admin/module/user/edit/'.$event->enquiry->vendor_id).'" target="_blank"> '.$user->first_name." ".$user->last_name.' </a>';
                         $content = str_ireplace($value, $text, $content);
                         break;
                     case "[vendor_name]":

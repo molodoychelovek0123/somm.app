@@ -187,7 +187,7 @@ if (!empty($menus)){
 <ul class="main-menu">
     @foreach($menus as $menuItem)
         @php $menuItem['class'] .= " ".str_ireplace("/","_",$menuItem['url']) @endphp
-        <li class="{{$menuItem['class']}}"><a href="{{ url($menuItem['url']) }}">
+        <li class="{{$menuItem['class']}}"><a target="_self" href="{{ url($menuItem['url']) }}">
                 @if(!empty($menuItem['icon']))
                     <span class="icon text-center"><i class="{{$menuItem['icon']}}"></i></span>
                 @endif
@@ -199,7 +199,7 @@ if (!empty($menus)){
                 <span class="btn-toggle"><i class="fa fa-angle-left pull-right"></i></span>
                 <ul class="children">
                     @foreach($menuItem['children'] as $menuItem2)
-                        <li class="{{$menuItem['class']}}"><a href="{{ url($menuItem2['url']) }}">
+                        <li class="{{$menuItem['class']}}"><a target="_self" href="{{ url($menuItem2['url']) }}">
                                 @if(!empty($menuItem2['icon']))
                                     <i class="{{$menuItem2['icon']}}"></i>
                                 @endif

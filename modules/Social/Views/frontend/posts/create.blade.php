@@ -21,7 +21,7 @@
 
                     </div>
                     <ul class="list-unstyled post-add-files">
-                        <li><a href="#" class="btn text-center btn-light btn-sm"><i class="svg-icon picture-icon"></i></a></li>
+                        <li><a target="_self" href="#" class="btn text-center btn-light btn-sm"><i class="svg-icon picture-icon"></i></a></li>
                     </ul>
                 </div>
             </div>

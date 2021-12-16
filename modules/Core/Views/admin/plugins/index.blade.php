@@ -48,7 +48,7 @@
                                     <td><input type="checkbox" name="ids[]" class="check-item" value="{{$row['module_name']}}">
                                     </td>
                                     <td class="title">
-                                        <a href="#">{{$row['title']}}</a>
+                                        <a target="_self" href="#">{{$row['title']}}</a>
                                     </td>
                                     <td>
                                         {{$row['desc']}}

@@ -5,7 +5,7 @@
         <div class="header">
             @if($image_tag = get_image_tag($row->image_id,'full',['alt'=>$translation->title]))
                 <header class="post-header">
-                    <a href="{{$row->getDetailUrl()}}">
+                    <a target="_self" href="{{$row->getDetailUrl()}}">
                         {!! $image_tag !!}
                     </a>
                 </header>
@@ -15,7 +15,7 @@
                         @php $t = $category->translateOrOrigin(app()->getLocale()); @endphp
                         <ul>
                             <li>
-                                <a href="{{$category->getDetailUrl(app()->getLocale())}}">
+                                <a target="_self" href="{{$category->getDetailUrl(app()->getLocale())}}">
                                     {{$t->name ?? ''}}
                                 </a>
                             </li>

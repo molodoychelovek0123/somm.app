@@ -9,7 +9,7 @@
             @if($list_tags)
                 @foreach($list_tags as $tag)
                     @php $translation = $tag->translateOrOrigin(app()->getLocale()) @endphp
-                    <a href="{{ $tag->getDetailUrl(app()->getLocale()) }}" class="tag-cloud-link">{{$translation->name}}</a>
+                    <a target="_self" href="{{ $tag->getDetailUrl(app()->getLocale()) }}" class="tag-cloud-link">{{$translation->name}}</a>
                 @endforeach
             @endif
         </ul>

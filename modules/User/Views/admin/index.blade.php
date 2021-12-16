@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{ __('All Users')}}</h1>
             <div class="title-actions">
-                <a href="{{url('admin/module/user/create')}}" class="btn btn-primary">{{ __('Add new user')}}</a>
+                <a target="_self" href="{{url('admin/module/user/create')}}" class="btn btn-primary">{{ __('Add new user')}}</a>
                 <a class="btn btn-warning btn-icon" href="{{ route("user.admin.export") }}" target="_blank" title="{{ __("Export to excel") }}">
                     <i class="icon ion-md-cloud-download"></i> {{ __("Export to excel") }}
                 </a>
@@ -64,7 +64,7 @@
                             <tr>
                                 <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item"></td>
                                 <td class="title">
-                                    <a href="{{url('admin/module/user/edit/'.$row->id)}}">{{$row->getDisplayName()}}</a>
+                                    <a target="_self" href="{{url('admin/module/user/edit/'.$row->id)}}">{{$row->getDisplayName()}}</a>
                                 </td>
                                 <td>{{$row->email}}</td>
                                 <td>{{$row->balance}}</td>
@@ -91,7 +91,7 @@
                                                 <a class="dropdown-item"  href="#" ><i class="fa fa-check"></i> {{__('Email verified')}}</a>
                                             @endif
                                             <a class="dropdown-item" href="{{url('admin/module/user/password/'.$row->id)}}"><i class="fa fa-lock"></i> {{__('Change Password')}}</a>
-                                            <a href="{{route('user.admin.wallet.addCredit',['id'=>$row->id])}}" class="dropdown-item"><i class="fa fa-plus"></i> {{__("Add Credit")}}</a>
+                                            <a target="_self" href="{{route('user.admin.wallet.addCredit',['id'=>$row->id])}}" class="dropdown-item"><i class="fa fa-plus"></i> {{__("Add Credit")}}</a>
                                         </div>
                                     </div>
                                 </td>

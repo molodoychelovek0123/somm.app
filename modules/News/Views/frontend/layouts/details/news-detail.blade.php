@@ -10,7 +10,7 @@
                     @php $t = $category->translateOrOrigin(app()->getLocale()); @endphp
                     <ul>
                         <li>
-                            <a href="{{$category->getDetailUrl(app()->getLocale())}}">
+                            <a target="_self" href="{{$category->getDetailUrl(app()->getLocale())}}">
                                 {{$t->name ?? ''}}
                             </a>
                         </li>
@@ -38,7 +38,7 @@
                 {{__("Tags:")}}
                 @foreach($tags as $tag)
                     @php $t = $tag->translateOrOrigin(app()->getLocale()); @endphp
-                    <a href="{{ $tag->getDetailUrl(app()->getLocale()) }}" class="tag-item"> {{$t->name ?? ''}} </a>
+                    <a target="_self" href="{{ $tag->getDetailUrl(app()->getLocale()) }}" class="tag-item"> {{$t->name ?? ''}} </a>
                 @endforeach
             </div>
         @endif
@@ -48,4 +48,4 @@
         </div>
     </div>
 </div>
- 
+

@@ -5,11 +5,11 @@
         {{-- Header and search bar --}}
         <div class="m-header">
             <nav>
-                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">{{__('MESSAGES')}}</span> </a>
+                <a target="_self" href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">{{__('MESSAGES')}}</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
-                    <a href="#" onclick="return false;" ><i class="fas fa-cog settings-btn"></i></a>
-                    <a href="#" onclick="return false;" class="listView-x"><i class="fas fa-times"></i></a>
+                    <a target="_self" href="#" onclick="return false;" ><i class="fas fa-cog settings-btn"></i></a>
+                    <a target="_self" href="#" onclick="return false;" class="listView-x"><i class="fas fa-times"></i></a>
                 </nav>
             </nav>
             {{-- Search input --}}
@@ -72,7 +72,7 @@
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a onclick="return false;" href="#" class="add-to-favorite"><i class="fas fa-star"></i></a>
-{{--                    <a href="{{ route('home') }}"><i class="fas fa-home"></i></a>--}}
+{{--                    <a target="_self" href="{{ route('home') }}"><i class="fas fa-home"></i></a>--}}
                     <a onclick="return false;" href="#" class="show-infoSide"><i class="fas fa-info-circle"></i></a>
                 </nav>
             </nav>

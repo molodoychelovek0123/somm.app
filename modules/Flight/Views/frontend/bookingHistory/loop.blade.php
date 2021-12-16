@@ -18,7 +18,7 @@
         {{__("Departure time")}} : {{display_datetime($booking->start_date)}} <br>
         {{__("Arrival Time ")}} : {{display_datetime($booking->end_date)}} <br>
         {{__("Duration")}} : {{__(':duration hrs',['duration'=>@$booking->service->duration])}}
-       
+
     </td>
     <td>{{format_money($booking->total)}}</td>
     <td>{{format_money($booking->paid)}}</td>
@@ -31,7 +31,7 @@
             </a>
             @include ($service->checkout_booking_detail_modal_file ?? '')
         @endif
-        <a href="{{route('user.booking.invoice',['code'=>$booking->code])}}" class="btn btn-xs btn-primary btn-info-booking open-new-window mt-1" onclick="window.open(this.href); return false;">
+        <a target="_self" href="{{route('user.booking.invoice',['code'=>$booking->code])}}" class="btn btn-xs btn-primary btn-info-booking open-new-window mt-1" onclick="window.open(this.href); return false;">
             <i class="fa fa-print"></i>{{__("Invoice")}}
         </a>
     </td>

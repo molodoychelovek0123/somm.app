@@ -32,9 +32,9 @@
         </div>
         <div class="text-right">
             <div class="header-status-control">
-                <a href="{{ url("/admin/module/user/verification") }}">{{__("All Verification")}}</a> -
-                <a href="{{ url("/admin/module/user/verification?status=pending") }}">{{__("Pending")}}</a> -
-                <a href="{{ url("/admin/module/user/verification?status=approved") }}">{{__("Approved")}}</a>
+                <a target="_self" href="{{ url("/admin/module/user/verification") }}">{{__("All Verification")}}</a> -
+                <a target="_self" href="{{ url("/admin/module/user/verification?status=pending") }}">{{__("Pending")}}</a> -
+                <a target="_self" href="{{ url("/admin/module/user/verification?status=approved") }}">{{__("Approved")}}</a>
             </div>
             <p><i>{{__('Found :total items',['total'=>$rows->total()])}}</i></p>
         </div>
@@ -62,7 +62,7 @@
                                         <td><input type="checkbox" name="ids[]" value="{{$row->id}}" class="check-item">
                                         </td>
                                         <td class="title">
-                                            <a href="{{route('user.admin.verification.detail',['id'=>$row->id])}}">{{$row->getDisplayName()}}</a>
+                                            <a target="_self" href="{{route('user.admin.verification.detail',['id'=>$row->id])}}">{{$row->getDisplayName()}}</a>
                                         </td>
                                         <td>{{$row->email}}</td>
                                         <td>{{$row->phone}}</td>

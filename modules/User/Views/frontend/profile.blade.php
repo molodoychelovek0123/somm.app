@@ -5,7 +5,7 @@
 @section('content')
     <h2 class="title-bar">
         {{__("Settings")}}
-        <a href="{{route('user.change_password')}}" class="btn-change-password">{{__("Change Password")}}</a>
+        <a target="_self" href="{{route('user.change_password')}}" class="btn-change-password">{{__("Change Password")}}</a>
     </h2>
     @include('admin.message')
     <form action="{{route('user.profile.update')}}" method="post" class="input-has-icon">

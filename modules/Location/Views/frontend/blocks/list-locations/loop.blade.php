@@ -17,7 +17,7 @@
     }
 @endphp
 <div class="destination-item @if(!$row->image_id) no-image  @endif">
-    @if(!empty($link_location)) <a href="{{$link_location}}">  @endif
+    @if(!empty($link_location)) <a target="_self" href="{{$link_location}}">  @endif
         <div class="image" @if($row->image_id) style="background: url({{$row->getImageUrl()}})" @endif >
             <div class="effect"></div>
             <div class="content">
@@ -29,7 +29,7 @@
                                 @php $count = $row->getDisplayNumberServiceInLocation($type) @endphp
                                 @if(!empty($count))
                                     @if(empty($link_location))
-                                        <a href="{{ $row->getLinkForPageSearch( $type ) }}" target="_blank">
+                                        <a target="_self" href="{{ $row->getLinkForPageSearch( $type ) }}" target="_blank">
                                             {{$count}}
                                         </a>
                                     @else

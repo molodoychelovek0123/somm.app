@@ -1,6 +1,6 @@
 <div class="{{$demo['class'] ?? 'col-lg-4 col-md-6 col-sm-6'}}">
     <div class="item">
-        <a href="{{$demo['url']}}" class="item-img" target="blank">
+        <a target="_self" href="{{$demo['url']}}" class="item-img" target="blank">
             <div class="new">New</div>
             <div class="soon">Hot</div>
             <img src="{{url('landing/'.$demo['thumb'])}}" alt="{{$demo['name']}}" class="img-responsive"/>

@@ -10,12 +10,13 @@ class MenuWalker {
         $this->menu = $menu;
     }
 
-    public function generate() {
+    public function generate($mobile) {
         $items = json_decode( $this->menu->items, true );
         if ( ! empty( $items ) ) {
             echo '<ul class="main-menu menu-generated">';
             $this->generateTree( $items );
-            echo "<li class=\" depth-0 products-item\">
+            if(!$mobile) {
+                echo "<li class=\" depth-0 products-item\">
                       <div class=\"sommProductsBtn\"> OUR PRODUCTS </div>
                       <div class=\"sommProductsModal\">
                         <div class=\"textcontainer\">
@@ -62,8 +63,9 @@ class MenuWalker {
                       </div>
                     </li>
                         ";
+            }
+                echo '</ul>';
 
-            echo '</ul>';
         }
     }
 

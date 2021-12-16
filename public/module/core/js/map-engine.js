@@ -90,7 +90,7 @@
             me.map = L.map(me.id).setView(center, zoom);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution: '&copy; <a target="_self" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(me.map);
 
             var rd = me.getOption('ready');

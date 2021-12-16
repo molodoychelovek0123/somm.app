@@ -1,5 +1,5 @@
 <div class="item">
-    <a href="{{ route("hotel.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
+    <a target="_self" href="{{ route("hotel.search",['_layout'=>'map']) }}">{{__("Show on the map")}}</a>
 </div>
 <div class="item">
     @php

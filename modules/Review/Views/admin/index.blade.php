@@ -50,15 +50,15 @@
         </div>
         <div class="text-right">
             <div class="header-status-control">
-                <a href="{{ url("/admin/module/review") }}">{{__("All Reviews")}}
+                <a target="_self" href="{{ url("/admin/module/review") }}">{{__("All Reviews")}}
                     <span>({{ \Modules\Review\Models\Review::countReviewByStatus() }})</span> </a> -
-                <a href="{{ url("/admin/module/review?status=approved") }}">{{__("Approved")}}
+                <a target="_self" href="{{ url("/admin/module/review?status=approved") }}">{{__("Approved")}}
                     <span>({{ \Modules\Review\Models\Review::countReviewByStatus("approved") }})</span></a> -
-                <a href="{{ url("/admin/module/review?status=pending") }}">{{__("Pending")}}
+                <a target="_self" href="{{ url("/admin/module/review?status=pending") }}">{{__("Pending")}}
                     <span>({{ \Modules\Review\Models\Review::countReviewByStatus("pending") }})</span></a> -
-                <a href="{{ url("/admin/module/review?status=spam") }}">{{__("Spam")}}
+                <a target="_self" href="{{ url("/admin/module/review?status=spam") }}">{{__("Spam")}}
                     <span>({{ \Modules\Review\Models\Review::countReviewByStatus("spam") }})</span></a> -
-                <a href="{{ url("/admin/module/review?status=trash") }}">{{__("Trash")}}
+                <a target="_self" href="{{ url("/admin/module/review?status=trash") }}">{{__("Trash")}}
                     <span>({{ \Modules\Review\Models\Review::countReviewByStatus("trash") }})</span></a>
             </div>
             <p><i>{{__('Found :total items',['total'=>$rows->total()])}}</i></p>
@@ -88,9 +88,9 @@
                                     </td>
                                     <td>
                                         @if(!empty( $metaUser =  $row->getUserInfo))
-                                            <a href="{{ url("/admin/module/review?customer_id=".$metaUser->id) }}">{{ $metaUser->email ?? 'Email' }}</a>
+                                            <a target="_self" href="{{ url("/admin/module/review?customer_id=".$metaUser->id) }}">{{ $metaUser->email ?? 'Email' }}</a>
                                             <p>
-                                                <a href="{{ url("/admin/module/review?s=".$row->author_ip) }}">{{$row->author_ip}}</a>
+                                                <a target="_self" href="{{ url("/admin/module/review?s=".$row->author_ip) }}">{{$row->author_ip}}</a>
                                             </p>
                                         @else
                                             {{__("[Author Deleted]")}}
@@ -157,7 +157,7 @@
                                     </td>
                                     <td>
                                         @if(!empty($service))
-                                            <a href="{{ url("/admin/module/review?service_id=".$service->id)."&object_model=".$service->type }}">
+                                            <a target="_self" href="{{ url("/admin/module/review?service_id=".$service->id)."&object_model=".$service->type }}">
                                                 {{ $service->title }}
                                             </a>
                                             <p>
@@ -171,13 +171,13 @@
                                     </td>
                                     <td>
                                         @if(!empty($service))
-                                            <a href="{{ url("/admin/module/review?service=".$service->getModelName()) }}" class="badge badge-dark">{{  $service->getModelName() }}</a>
+                                            <a target="_self" href="{{ url("/admin/module/review?service=".$service->getModelName()) }}" class="badge badge-dark">{{  $service->getModelName() }}</a>
                                         @else
                                             {{__("[Deleted]")}}
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{ url("/admin/module/review?status=".$row->status) }}" class="badge badge-{{ $row->status }}">{{ $row->status }}</a>
+                                        <a target="_self" href="{{ url("/admin/module/review?status=".$row->status) }}" class="badge badge-{{ $row->status }}">{{ $row->status }}</a>
                                     </td>
                                     <td>{{ display_datetime($row->updated_at)}}</td>
                                 </tr>

@@ -216,7 +216,7 @@
         @endif
         @if(!Auth::id())
             <div class="review-message">
-                {!!  __("You must <a href='#login' data-toggle='modal' data-target='#login'>sign in</a> to write review") !!}
+                {!!  __("You must <a target="_self" href='#login' data-toggle='modal' data-target='#login'>sign in</a> to write review") !!}
             </div>
         @endif
     </div>

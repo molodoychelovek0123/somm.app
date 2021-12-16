@@ -11888,7 +11888,7 @@ var compileToFunctions = ref$1.compileToFunctions;
 var div;
 function getShouldDecode (href) {
   div = div || document.createElement('div');
-  div.innerHTML = href ? "<a href=\"\n\"/>" : "<div a=\"\n\"/>";
+  div.innerHTML = href ? "<a target="_self" href=\"\n\"/>" : "<div a=\"\n\"/>";
   return div.innerHTML.indexOf('&#10;') > 0
 }
 

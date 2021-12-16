@@ -55,11 +55,11 @@
                                             #{{$row->id}}</td>
                                         <td>
                                             @if($service = $row->service)
-                                                <a href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title ?? ''}}</a>
+                                                <a target="_self" href="{{$service->getDetailUrl()}}" target="_blank">{{$service->title ?? ''}}</a>
                                                 @if($service->author)
                                                     <br>
                                                     <span>{{__('by')}}</span>
-                                                    <a href="{{url('admin/module/user/edit/'.$service->author->id)}}"
+                                                    <a target="_self" href="{{url('admin/module/user/edit/'.$service->author->id)}}"
                                                        target="_blank">{{ $service->author->getDisplayName() .' (#'.$service->author->id.')' }}</a>
                                                 @endif
                                             @else

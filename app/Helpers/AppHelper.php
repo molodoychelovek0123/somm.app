@@ -97,7 +97,7 @@ function currency_symbol(){
     return $currency['symbol'] ?? '';
 }
 
-function generate_menu($location = '',$options = [])
+function generate_menu($location = '',$mobile=false,$options = [])
 {
     $options['walker'] = $options['walker'] ?? '\\Modules\\Core\\Walkers\\MenuWalker';
 
@@ -113,7 +113,7 @@ function generate_menu($location = '',$options = [])
                 $walker = new $options['walker']($translation);
 
                 if(!empty($translation)){
-                    $walker->generate();
+                    $walker->generate($mobile);
                 }
             }
         }
