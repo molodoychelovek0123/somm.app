@@ -1,4 +1,5 @@
 <div class="bravo_single_book_wrap @if(setting_item('tour_enable_inbox')) has-vendor-box @endif">
+    @if($row->display_price > 0)
     <div class="bravo_single_book">
         <div id="bravo_tour_book_app" v-cloak>
             @if($row->discount_percent)
@@ -126,5 +127,10 @@
             </div>
         </div>
     </div>
+    @else
+        <div class="bravo_single_book">
+            <div id="bravo_tour_book_app"><div class="form-head"><div class="price"><span class="label">At the moment, this profile isn't hosting any related Experiences.</span> </div></div>   </div>
+        </div>
+    @endif
 </div>
 @include("Booking::frontend.global.enquiry-form",['service_type'=>'tour'])
