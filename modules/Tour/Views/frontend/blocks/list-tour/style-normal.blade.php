@@ -8,6 +8,7 @@
                 </div>
             @endif
         </div>
+        <a href="/experience" class="view-all">view all</a>
     @endif
     <div class="list-item">
         @if($style_list === "normal")
