@@ -34,6 +34,7 @@
                         @include('Tour::frontend.blocks.list-tour.loop-box-shadow')
                     </div>
                 @endforeach
+                    <a class="btn-more" href="/experience">View all</a>
             </div>
         @endif
     </div>
